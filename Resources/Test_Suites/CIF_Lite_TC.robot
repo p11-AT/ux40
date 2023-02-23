@@ -1,7 +1,7 @@
 *** Settings ***
 Library  Selenium2Library
-Resource    ../../Resources/Variables/CIFLite_Repo.robot
-Resource    ../../Resources/Keyword/CIF_Lite_TC_Keyword.robot
+Resource    ../../Resources/Repository/CIFLite_Repo.robot
+Resource    ../../Resources/Keywords/CIF_Lite_TC_Keyword.robot
 
 *** Test Cases ***
 

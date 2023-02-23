@@ -2,7 +2,7 @@
 Library  Selenium2Library
 Library  Dialogs
 Library  String
-Resource    ../../Resources/Variables/CIFLite_Repo.robot
+Resource    ../../Resources/Repository/CIFLite_Repo.robot
 
 *** Keywords ***
 Open Browser - Chrome
