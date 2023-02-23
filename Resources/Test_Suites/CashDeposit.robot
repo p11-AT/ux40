@@ -9,6 +9,7 @@ Library           OperatingSystem
 Library           Process
 Library           DateTime
 
+Suite Teardown      Close All Browsers
 *** Test Cases ***
 MBTC Website - Branch Transaction List
     Branch Transaction List Validation

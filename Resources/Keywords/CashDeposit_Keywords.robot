@@ -2,6 +2,7 @@
 Library     Selenium2Library
 Resource    ../Repository/CashDeposit_Repository.robot
 Library     String
+Library     Dialogs
 
 *** Keywords ***
 Branch Transaction List Validation
@@ -18,8 +19,8 @@ Branch Transaction List Validation
     Page should contain element                ${BOOK_APPOINTMENTS_LABEL}
     Page should contain element                ${BOOK_NOW_BUTTON}
     Click element                              ${BOOK_NOW_BUTTON}
-Initiation of Cash Deposit Request
 
+Initiation of Cash Deposit Request
     Wait until page contains element          ${Metrobank_Label}
     Sleep                                     3s
     Execute JavaScript                        window.scrollTo(1,600)
@@ -182,13 +183,13 @@ Date of Transaction Validation
 #    ${GET_DATE_COUNT_PAGE1}                   Get element count                             ${ENABLED_APPOINTMENT_DATE}
     Click element                             ${NEXT_BUTTON_CALENDAR}
     ${GET_DATE_COUNT_PAGE2}                   Get element count                             ${ENABLED_APPOINTMENT_DATE}
-#    ${CONVERT_TO_INT_PAGE1}                   Convert to string                             ${GET_DATE_COUNT_PAGE1}
-#    ${CONVERT_TO_INT_PAGE2}                   Convert to string                             ${GET_DATE_COUNT_PAGE2}
-#    ${EVALUATE_DATE_COUNT}                    Evaluate                                       ${CONVERT_TO_INT_PAGE2}
+#    ${CONVERT_TO_INT_PAGE1}                   Convert to string                            ${GET_DATE_COUNT_PAGE1}
+#    ${CONVERT_TO_INT_PAGE2}                   Convert to string                            ${GET_DATE_COUNT_PAGE2}
+#    ${EVALUATE_DATE_COUNT}                    Evaluate                                     ${CONVERT_TO_INT_PAGE2}
     log                                        ${GET_DATE_COUNT_PAGE2}
     Sleep                                     3s
 #    ${COUNT_ENABLED_DATES}                    Get element count                             ${ENABLED_APPOINTMENT_DATE}
-    Press keys                                None                                          ESC
+    Press keys                                None                                           ESC
 
 Digital Form Happy Path
     Sleep                                     3s
@@ -198,28 +199,34 @@ Digital Form Happy Path
     Press Keys                                ${Amount_Textfield}                           CTRL+a      BACKSPACE
     Press Keys                                ${Depositors_MobileNumber_textfield}          CTRL+a      BACKSPACE
     Scroll element into view                  ${Depositors_MobileNumber_Label}
-    Input text                                ${Depositors_MobileNumber_textfield}          9455586601
-    Set suite variable                        ${MOBILE_INPUT_DIGITAL_FORM}                  +63 945 558 6601
+    Input text                                ${Depositors_MobileNumber_textfield}          9687698900
+    ${GET_MOBILE_NUMBER_VALUE}                Get Value                                     ${Depositors_MobileNumber_textfield}
+    Set suite variable                        ${MOBILE_INPUT_DIGITAL_FORM}                  +63 ${GET_MOBILE_NUMBER_VALUE}
     Scroll element into view                  ${Apointment_Details_Label}
     Input text                                ${Email_Address_Textfield}                    loro.ryancristopher@gmail.com
-    Set suite variable                        ${EMAIL_INPUT_DIGITAL_FORM}                   loro.ryancristopher@gmail.com
+    ${GET_VALUE_FROM_EMAIL_ADD}               Get Value                                     ${Email_Address_Textfield}
+    Set suite variable                        ${EMAIL_INPUT_DIGITAL_FORM}                   ${GET_VALUE_FROM_EMAIL_ADD}
     Execute JavaScript                        window.scrollTo(1,400)
     Click element                             ${Brach_Dropdown}
     Sleep                                     2s
     Click element                             ${Branch_option_Legazpi}
+    ${GET_VALUE_FROM_BRANCH}                  Get Value                                     ${Brach_Dropdown}
     Set suite variable                        ${BRANCH_INPUT_DIGITAL_FORM}                  Makati - Legazpi
     Execute JavaScript                        window.scrollTo(1,500)
     Click element                             ${Date_Picker}
     Sleep                                     2s
     Click element                             ${Select_AppointmentDate}
-    ${GET_USER_APPOINTMENT}                   Get element attribute                          //input[@name='appointmentDate']     value
-    Set suite variable                        ${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}         ${GET_USER_APPOINTMENT}
+    ${GET_USER_APPOINTMENT}                   Get element attribute                           //input[@name='appointmentDate']     value
+    Set suite variable                        ${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}          ${GET_USER_APPOINTMENT}
     Execute JavaScript                        window.scrollTo(1,1000)
     Input text                                ${Account_Number_Textfield}                     9010000856004
+    ${GET_VALUE_FROM_ACCOUNT_NUMBER}          Get Value                                       ${Account_Number_Textfield}
     Set suite variable                        ${ACCOUNT_NUMBER_DIGITAL_FORM}                  9010 0008 5600 4
     Input text                                ${Account_Name_Textfield}                       Ryan Cristopher Loro
-    Set suite variable                        ${ACCOUNT_NAME_DIGITAL_FORM}                    Ryan Cristopher Loro
+    ${GET_VALUE_FROM_ACCNAME}                 Get Value                                       ${Account_Name_Textfield}
+    Set suite variable                        ${ACCOUNT_NAME_DIGITAL_FORM}                    ${GET_VALUE_FROM_ACCNAME}
     Input text                                ${Amount_Textfield}                             25000
+    ${GET_VALUE_FROM_AMOUNT}                  Get Value                                       ${Amount_Textfield}
     Set suite variable                        ${CUSTOMER_AMOUT_DIGITAL_FORM}                  ${CURRENCY_VARIABLE} 25,000.00
     Click element                             ${Account_Name_Label}
     Sleep                                     3s
