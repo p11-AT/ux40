@@ -14,3 +14,6 @@ Check ID List
 
 Selecting ID from the list
     ID Card Capture - Scenario 2
+
+Upload photo from photo library
+    Upload Photo Non Jumio ID

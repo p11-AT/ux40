@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230223 08:35:46.378" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230223 10:42:10.143" rpa="false" schemaversion="3">
 <suite id="s1" name="Upload ID TC" source="C:\Users\KatrinaTandogconsult\PycharmProjects\P11_Automation\ux40\Resources\Test_Suites\Upload_ID_TC.robot">
 <test id="s1-t1" name="Check Identity Verification Intro Page" line="8">
 <kw name="Open Browser - Chrome" library="Upload_ID_TC_Keyword">
@@ -9,179 +9,118 @@
 <arg>${BROWSER_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230223 08:35:46.615" level="INFO">Opening browser 'chrome' to base url 'https://web-dev-ux40-customer.nprod.platform-11.com/apply/id/select'.</msg>
-<status status="PASS" starttime="20230223 08:35:46.615" endtime="20230223 08:35:48.728"/>
+<msg timestamp="20230223 10:42:10.296" level="INFO">Opening browser 'chrome' to base url 'https://web-dev-ux40-customer.nprod.platform-11.com/apply/id/select'.</msg>
+<status status="PASS" starttime="20230223 10:42:10.296" endtime="20230223 10:42:12.654"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230223 08:35:48.728" endtime="20230223 08:35:48.891"/>
+<status status="PASS" starttime="20230223 10:42:12.654" endtime="20230223 10:42:12.770"/>
 </kw>
-<status status="PASS" starttime="20230223 08:35:46.615" endtime="20230223 08:35:48.891"/>
+<status status="PASS" starttime="20230223 10:42:10.296" endtime="20230223 10:42:12.770"/>
 </kw>
 <kw name="ID Card Capture - Scenario 1" library="Upload_ID_TC_Keyword">
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 08:35:50.891" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 08:35:48.891" endtime="20230223 08:35:50.891"/>
+<msg timestamp="20230223 10:42:14.771" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 10:42:12.771" endtime="20230223 10:42:14.771"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${IDVerification_Header}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:50.925" level="INFO">Element '//p[contains(text(),'Identity Verification')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:50.891" endtime="20230223 08:35:50.925"/>
+<msg timestamp="20230223 10:42:14.790" level="INFO">Element '//p[contains(text(),'Identity Verification')]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.771" endtime="20230223 10:42:14.790"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${IDVerification_Title_1}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:50.963" level="INFO">Element '//p[contains(text(),'You are applying for a')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:50.925" endtime="20230223 08:35:50.963"/>
+<msg timestamp="20230223 10:42:14.800" level="INFO">Element '//p[contains(text(),'You are applying for a')]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.790" endtime="20230223 10:42:14.800"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${IDVerification_Title_2}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:50.995" level="INFO">Element '//p[contains(text(),'Regular Savings Account with Debit Card')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:50.963" endtime="20230223 08:35:50.995"/>
+<msg timestamp="20230223 10:42:14.816" level="INFO">Element '//p[contains(text(),'Regular Savings Account with Debit Card')]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.800" endtime="20230223 10:42:14.816"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${Subtext_1}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:51.010" level="INFO">Element '//p[contains(text(),'Help us verify your identity with a few extra steps')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:50.995" endtime="20230223 08:35:51.010"/>
+<msg timestamp="20230223 10:42:14.831" level="INFO">Element '//p[contains(text(),'Help us verify your identity with a few extra steps')]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.816" endtime="20230223 10:42:14.831"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${Subtext_2}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:51.048" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[1]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:51.010" endtime="20230223 08:35:51.048"/>
+<msg timestamp="20230223 10:42:14.847" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[1]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.831" endtime="20230223 10:42:14.847"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${Subtext_3}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:51.070" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[2]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:51.048" endtime="20230223 08:35:51.070"/>
+<msg timestamp="20230223 10:42:14.859" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[2]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.847" endtime="20230223 10:42:14.859"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ChooseID_Label}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:51.086" level="INFO">Element '//div[contains(text(),'Choose your ID')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:51.070" endtime="20230223 08:35:51.086"/>
+<msg timestamp="20230223 10:42:14.875" level="INFO">Element '//div[contains(text(),'Choose your ID')]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.859" endtime="20230223 10:42:14.875"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ChooseID_Dropdown}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 08:35:51.128" level="INFO">Element '//*[@role="button" and @aria-haspopup="listbox"]' is displayed.</msg>
-<status status="PASS" starttime="20230223 08:35:51.086" endtime="20230223 08:35:51.128"/>
+<msg timestamp="20230223 10:42:14.891" level="INFO">Element '//*[@role="button" and @aria-haspopup="listbox"]' is displayed.</msg>
+<status status="PASS" starttime="20230223 10:42:14.875" endtime="20230223 10:42:14.891"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 08:35:56.129" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230223 08:35:51.128" endtime="20230223 08:35:56.129"/>
+<msg timestamp="20230223 10:42:19.891" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 10:42:14.891" endtime="20230223 10:42:19.891"/>
 </kw>
-<status status="PASS" starttime="20230223 08:35:48.891" endtime="20230223 08:35:56.129"/>
+<status status="PASS" starttime="20230223 10:42:12.771" endtime="20230223 10:42:19.891"/>
 </kw>
-<status status="PASS" starttime="20230223 08:35:46.615" endtime="20230223 08:35:56.129"/>
+<status status="PASS" starttime="20230223 10:42:10.296" endtime="20230223 10:42:19.891"/>
 </test>
 <test id="s1-t2" name="Check ID List" line="12">
 <kw name="Validate list" library="Upload_ID_TC_Keyword">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${ChooseID_Listbox}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230223 08:35:56.129" level="INFO">Clicking element '//*[@aria-haspopup='listbox']'.</msg>
-<status status="PASS" starttime="20230223 08:35:56.129" endtime="20230223 08:35:56.241"/>
+<msg timestamp="20230223 10:42:19.891" level="INFO">Clicking element '//*[@aria-haspopup='listbox']'.</msg>
+<status status="PASS" starttime="20230223 10:42:19.891" endtime="20230223 10:42:19.979"/>
 </kw>
 <kw name="Page Should Contain Element" library="Selenium2Library">
-<arg>${list_immigrant_COR}</arg>
+<arg>${label_immigrant_COR}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230223 08:35:56.491" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20230223 08:35:56.491" level="FAIL">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"] Alien Certificate of Registration or Immigrant Certificate of Registration because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"] Alien Certificate of Registration or Immigrant Certificate of Registration' is not a valid XPath expression.
-  (Session info: chrome=110.0.5481.104)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00986643]
-	(No symbol) [0x0091BE21]
-	(No symbol) [0x0081DA9D]
-	(No symbol) [0x008209E4]
-	(No symbol) [0x008208AD]
-	(No symbol) [0x00820B30]
-	(No symbol) [0x00850FAC]
-	(No symbol) [0x0085147B]
-	(No symbol) [0x00888DFC]
-	(No symbol) [0x0086FDC4]
-	(No symbol) [0x00886B09]
-	(No symbol) [0x0086FB76]
-	(No symbol) [0x008449C1]
-	(No symbol) [0x00845E5D]
-	GetHandleVerifier [0x00BFA142+2497106]
-	GetHandleVerifier [0x00C285D3+2686691]
-	GetHandleVerifier [0x00C2BB9C+2700460]
-	GetHandleVerifier [0x00A33B10+635936]
-	(No symbol) [0x00924A1F]
-	(No symbol) [0x0092A418]
-	(No symbol) [0x0092A505]
-	(No symbol) [0x0093508B]
-	BaseThreadInitThunk [0x761800F9+25]
-	RtlGetAppContainerNamedObjectPath [0x77267BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77267B8E+238]
-</msg>
-<status status="FAIL" starttime="20230223 08:35:56.241" endtime="20230223 08:35:56.530"/>
+<msg timestamp="20230223 10:42:19.997" level="INFO">Current page contains element '//span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"]'.</msg>
+<status status="PASS" starttime="20230223 10:42:19.979" endtime="20230223 10:42:19.997"/>
 </kw>
-<status status="FAIL" starttime="20230223 08:35:56.129" endtime="20230223 08:35:56.530"/>
+<status status="PASS" starttime="20230223 10:42:19.891" endtime="20230223 10:42:19.997"/>
 </kw>
-<status status="FAIL" starttime="20230223 08:35:56.129" endtime="20230223 08:35:56.530">InvalidSelectorException: Message: invalid selector: Unable to locate an element with the xpath expression //span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"] Alien Certificate of Registration or Immigrant Certificate of Registration because of the following error:
-SyntaxError: Failed to execute 'evaluate' on 'Document': The string '//span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"] Alien Certificate of Registration or Immigrant Certificate of Registration' is not a valid XPath expression.
-  (Session info: chrome=110.0.5481.104)
-Stacktrace:
-Backtrace:
-	(No symbol) [0x00986643]
-	(No symbol) [0x0091BE21]
-	(No symbol) [0x0081DA9D]
-	(No symbol) [0x008209E4]
-	(No symbol) [0x008208AD]
-	(No symbol) [0x00820B30]
-	(No symbol) [0x00850FAC]
-	(No symbol) [0x0085147B]
-	(No symbol) [0x00888DFC]
-	(No symbol) [0x0086FDC4]
-	(No symbol) [0x00886B09]
-	(No symbol) [0x0086FB76]
-	(No symbol) [0x008449C1]
-	(No symbol) [0x00845E5D]
-	GetHandleVerifier [0x00BFA142+2497106]
-	GetHandleVerifier [0x00C285D3+2686691]
-	GetHandleVerifier [0x00C2BB9C+2700460]
-	GetHandleVerifier [0x00A33B10+635936]
-	(No symbol) [0x00924A1F]
-	(No symbol) [0x0092A418]
-	(No symbol) [0x0092A505]
-	(No symbol) [0x0093508B]
-	BaseThreadInitThunk [0x761800F9+25]
-	RtlGetAppContainerNamedObjectPath [0x77267BBE+286]
-	RtlGetAppContainerNamedObjectPath [0x77267B8E+238]
-</status>
+<status status="PASS" starttime="20230223 10:42:19.891" endtime="20230223 10:42:19.998"/>
 </test>
 <test id="s1-t3" name="Selecting ID from the list" line="15">
 <kw name="ID Card Capture - Scenario 2" library="Upload_ID_TC_Keyword">
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 08:35:58.530" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 08:35:56.530" endtime="20230223 08:35:58.530"/>
+<msg timestamp="20230223 10:42:22.000" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 10:42:19.999" endtime="20230223 10:42:22.000"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${browser}</var>
 <arg>${list_Company_ID_Sign}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230223 08:35:58.530" level="INFO">${browser} = Company ID with signaturess</msg>
-<status status="PASS" starttime="20230223 08:35:58.530" endtime="20230223 08:35:58.530"/>
+<msg timestamp="20230223 10:42:22.000" level="INFO">${browser} = Company ID with signaturess</msg>
+<status status="PASS" starttime="20230223 10:42:22.000" endtime="20230223 10:42:22.000"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${browser}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230223 08:35:58.530" level="INFO">Company ID with signaturess</msg>
-<status status="PASS" starttime="20230223 08:35:58.530" endtime="20230223 08:35:58.530"/>
+<msg timestamp="20230223 10:42:22.000" level="INFO">Company ID with signaturess</msg>
+<status status="PASS" starttime="20230223 10:42:22.000" endtime="20230223 10:42:22.000"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${browser}' == '${list_immigrant_COR}'</arg>
@@ -192,42 +131,155 @@ Backtrace:
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[2]</arg>
 <arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_Foreign_Passport}'</arg>
+<arg>'${browser}' == '${list_DL}'</arg>
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[3]</arg>
 <arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_GSIS}'</arg>
+<arg>'${browser}' == '${list_Foreign_Passport}'</arg>
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[4]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_GSIS}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[5]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Government_Owned_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[6]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Integrated_Bar_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[7]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_OFW_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[8]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_PRC_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[9]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_PWD_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[10]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Nat_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[11]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_PhilPassport_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[12]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Postal_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[13]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_PhilHealth_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[14]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_School_Certification_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[15]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_SSS_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[16]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_School_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[17]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Seafarer_Doc_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[18]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Seaman_Book_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[19]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Senior_Citizen_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[20]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_UMID_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[21]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Voter_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[22]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Click Element" library="Selenium2Library">
 <arg>(${list_radio_button})[2]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230223 08:35:58.530" level="INFO">Clicking element '(//*[@class="PrivateSwitchBase-input css-1m9pwf3"])[2]'.</msg>
-<status status="PASS" starttime="20230223 08:35:58.530" endtime="20230223 08:35:58.646"/>
+<msg timestamp="20230223 10:42:22.000" level="INFO">Clicking element '(//*[@class="PrivateSwitchBase-input css-1m9pwf3"])[2]'.</msg>
+<status status="PASS" starttime="20230223 10:42:22.000" endtime="20230223 10:42:22.081"/>
 </kw>
-<status status="PASS" starttime="20230223 08:35:58.530" endtime="20230223 08:35:58.646"/>
+<status status="PASS" starttime="20230223 10:42:22.000" endtime="20230223 10:42:22.081"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230223 10:42:26.081" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230223 10:42:22.081" endtime="20230223 10:42:26.081"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${select_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230223 08:35:58.646" level="INFO">Clicking element '//*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-rfth2q"]'.</msg>
-<status status="PASS" starttime="20230223 08:35:58.646" endtime="20230223 08:35:58.785"/>
+<msg timestamp="20230223 10:42:26.081" level="INFO">Clicking element '//*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-rfth2q"]'.</msg>
+<status status="PASS" starttime="20230223 10:42:26.081" endtime="20230223 10:42:26.174"/>
 </kw>
-<status status="PASS" starttime="20230223 08:35:56.530" endtime="20230223 08:35:58.785"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230223 10:42:29.175" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 10:42:26.174" endtime="20230223 10:42:29.175"/>
 </kw>
-<status status="PASS" starttime="20230223 08:35:56.530" endtime="20230223 08:35:58.785"/>
+<status status="PASS" starttime="20230223 10:42:19.999" endtime="20230223 10:42:29.175"/>
+</kw>
+<status status="PASS" starttime="20230223 10:42:19.999" endtime="20230223 10:42:29.175"/>
 </test>
-<status status="FAIL" starttime="20230223 08:35:46.378" endtime="20230223 08:35:58.793"/>
+<test id="s1-t4" name="Upload photo from photo library" line="18">
+<kw name="Upload Photo Non Jumio ID" library="Upload_ID_TC_Keyword">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${UploadPhoto_NonJumio_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230223 10:42:29.175" level="INFO">Clicking element '//button[text()="Upload from photo library"]'.</msg>
+<msg timestamp="20230223 10:42:29.302" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20230223 10:42:29.303" level="FAIL">Element with locator '//button[text()="Upload from photo library"]' not found.</msg>
+<status status="FAIL" starttime="20230223 10:42:29.175" endtime="20230223 10:42:29.305"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230223 10:42:29.305" endtime="20230223 10:42:29.305"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ChooseFile_NonJumio_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20230223 10:42:29.305" endtime="20230223 10:42:29.305"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230223 10:42:29.305" endtime="20230223 10:42:29.305"/>
+</kw>
+<status status="FAIL" starttime="20230223 10:42:29.175" endtime="20230223 10:42:29.305"/>
+</kw>
+<status status="FAIL" starttime="20230223 10:42:29.175" endtime="20230223 10:42:29.306">Element with locator '//button[text()="Upload from photo library"]' not found.</status>
+</test>
+<status status="FAIL" starttime="20230223 10:42:10.143" endtime="20230223 10:42:29.307"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="1" skip="0">All Tests</stat>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="2" fail="1" skip="0" id="s1" name="Upload ID TC">Upload ID TC</stat>
+<stat pass="3" fail="1" skip="0" id="s1" name="Upload ID TC">Upload ID TC</stat>
 </suite>
 </statistics>
 <errors>

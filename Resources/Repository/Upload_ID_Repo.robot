@@ -17,9 +17,10 @@ ${ChooseID_Windows_Proceed_Btn}         /html/body/div[2]/div[3]/div/div/button[
 ${ID_Dropdown_Label_1}                  //p[contains(text(),'Choose your ID')]
 ${ID_Dropdown_Label_2}                  //p[contains(text(),'Select from 22 options')]
 
-#Check list of IDS
+#   Check list of IDS
 ${label_immigrant_COR}                   //span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"]
 ${label_Company_ID_Sign}                 //span[text()="Company ID with signatures"]
+${label_DL}                              //span[text()="Driver’s license"]
 ${label_Foreign_Passport}                //span[text()="Foreign passport (non-Philippine issued)"]
 ${label_GSIS}                            //span[text()="GSIS e-Card"]
 ${label_Government_Owned_ID}             //span[text()="Government Office and Government Owned and Controlled Corporations ID"]
@@ -30,6 +31,7 @@ ${label_PWD_ID}                          //span[text()="Persons with Disabilitie
 ${label_Nat_ID}                          //span[text()="Philippine National ID (PhilID/PhilSys)"]
 ${label_PhilPassport_ID}                 //span[text()="Philippine passport"]
 ${label_Postal_ID}                       //span[text()="Postal ID"]
+${label_ePhilHealth_ID}                  //span[text()="Printed ePhilID"]
 ${label_School_Certification_ID}         //span[text()="Public or Government School certification"]
 ${label_SSS_ID}                          //span[text()="SSS ID"]
 ${label_School_ID}                       //span[text()="School ID with photo"]
@@ -39,9 +41,10 @@ ${label_Senior_Citizen_ID}               //span[text()="Senior Citizen Card"]
 ${label_UMID_ID}                         //span[text()="UMID"]
 ${label_Voter_ID}                        //span[text()="Voter’s ID with QR code"]
 
-#Picker
+#   Picker
 ${list_immigrant_COR}                   Alien Certificate of Registration or Immigrant Certificate of Registration
 ${list_Company_ID_Sign}                 Company ID with signaturess
+${list_DL}                              Driver’s license
 ${list_Foreign_Passport}                Foreign passport (non-Philippine issued)
 ${list_GSIS}                            GSIS e-Card
 ${list_Government_Owned_ID}             Government Office and Government Owned and Controlled Corporations ID
@@ -52,14 +55,31 @@ ${list_PWD_ID}                          Persons with Disabilities ID
 ${list_Nat_ID}                          Philippine National ID (PhilID/PhilSys)
 ${list_PhilPassport_ID}                 Philippine passport
 ${list_Postal_ID}                       Postal ID
+${list_PhilHealth_ID}                   Printed ePhilID
 ${list_School_Certification_ID}         Public or Government School certification
 ${list_SSS_ID}                          SSS ID
 ${list_School_ID}                       School ID with photo
-${list_Seafarer_Doc_ID}                 Seafarer's Identification Document
-${list_Seaman_Book_ID}                  Seaman's Book
+${list_Seafarer_Doc_ID}                 Seafarers Identification Document
+${list_Seaman_Book_ID}                  Seamans Book
 ${list_Senior_Citizen_ID}               Senior Citizen Card
 ${list_UMID_ID}                         UMID
-${list_Voter_ID}                        Voter’s ID with QR code
-${list_radio_button}                    //*[@class="PrivateSwitchBase-input css-1m9pwf3"]
+${list_Voter_ID}                        Voters ID with QR code
 
-${select_button}                    //*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-rfth2q"]
+${list_radio_button}                            //*[@class="PrivateSwitchBase-input css-1m9pwf3"]
+
+${select_button}                                //*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-rfth2q"]
+
+${TakePhoto_NonJumio_btn}                       //button[text()="Take photo"]
+${UploadPhoto_NonJumio_btn}                     //label[text()="Upload from photo library"]
+
+#   Non- Jumio Supported - Upload Front page
+${ChooseFile_NonJumio_Text_1}                   //p[text()="Step 1 of 2"]
+${ChooseFile_NonJumio_Text_2}                   //p[text()="Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only."]
+${ChooseFile_NonJumio_Back_Btn}                 //button[text()="Back"]
+${ChooseFile_NonJumio_btn}                      //input[@type='file']
+
+#   Upload Front page - Review
+${NonJumio_Review_Text_1}                       //*[@id="__next"]/div/div/div[3]/div/div[1]/h6
+${NonJumio_Review_Text_2}                       //p[text()="Please check if the photo has no shadows and is not blurry and shows your clear signature (if applicable)."]
+${NonJumio_TryAgain_Btn}                        //button[text()="Try again"]
+${NonJumio_Continue_Btn}                        //button[text()="Continue"]
