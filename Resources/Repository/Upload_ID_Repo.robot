@@ -83,3 +83,38 @@ ${NonJumio_Review_Text_1}                       //*[@id="__next"]/div/div/div[3]
 ${NonJumio_Review_Text_2}                       //p[text()="Please check if the photo has no shadows and is not blurry and shows your clear signature (if applicable)."]
 ${NonJumio_TryAgain_Btn}                        //button[text()="Try again"]
 ${NonJumio_Continue_Btn}                        //button[text()="Continue"]
+
+#   Non- Jumio Supported - Upload Back page
+${ChooseFile_NonJumioBack_Text_1}               //p[text()="Step 2 of 2"]
+${ChooseFile_NonJumioBack_Text_2}               //p[text()="Upload Back"]
+${ChooseFile_NonJumioBack_Text_3}               //*[@id="__next"]/div/div/div[3]/div/div[4]/p
+
+#   Upload Back page - Review
+${NonJumio_Review_Text_1}                       //*[@id="__next"]/div/div/div[3]/div/div[1]/h6
+${NonJumio_Review_Text_2}                       //p[text()="Please check if the photo has no shadows and is not blurry and shows your clear signature (if applicable)."]
+${NonJumio_TryAgain_Btn}                        //button[text()="Try again"]
+${NonJumio_Continue_Btn}                        //button[text()="Continue"]
+
+#   Proceed - Jumio Supported
+${JumioSupported_Proceed_Btn}                           //button[text()="Proceed"]
+${JumioSupported_Frame}                                 //*[@id="__next"]/div/div/div[3]/div/div/iframe
+${JumioSupported_Upload_Btn}                            //*[@id="button-source-upload"]
+${JumioSupported_Upload_Title}                          //*[@id="header-capture"]/app-file-upload-id-card-subtype
+${JumioSupported_Upload_Sub_Text_1}                     //*[@id="app-root"]/div/div/div/div/main/div/app-id-capture/div/app-capture/app-file-field/div/div[2]/app-file-label/label/app-steps-caption/h3
+${JumioSupported_Upload_Sub_Text_2}                     //*[@id="app-root"]/div/div/div/div/main/div/app-id-capture/div/app-capture/app-file-field/div/div[2]/app-file-label/label/div
+${JumioSupported_Upload_ChooseFile_Btn}                 //*[@id="app-root"]/div/div/div/div/main/div/app-id-capture/div/app-capture/app-file-field/div/div[2]/app-file-label/label/app-field-button
+
+#   Review Uploaded - Jumio Supported
+${JumioSupported_Upload_Review_Area}                    //*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[1]/div
+${JumioSupported_Upload_Review_Title}                   //*[@id="preview-headline"]
+${JumioSupported_Upload_Review_Text_1}                  //*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[1]/span
+${JumioSupported_Upload_Review_Text_2}                  //*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[2]
+${JumioSupported_Upload_Review_Text_3}                  //*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[3]
+${JumioSupported_Upload_Tooltip}                        //*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[1]/app-info-button/button
+${JumioSupported_Upload_Tooltip_Close}                  //*[@class="info-button__close"]
+${JumioSupported_Upload_TryAgain}                       //*[@id="preview-retry"]
+${JumioSupported_Upload_Confirm}                        //*[@id="preview-confirm"]
+
+
+
+${Selfie_Capture_URL}                           https://web-dev-ux40-customer.nprod.platform-11.com/apply/id/selfie-capture

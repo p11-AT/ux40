@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230223 14:17:29.263" rpa="false" schemaversion="3">
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20230227 13:24:21.120" rpa="false" schemaversion="3">
 <suite id="s1" name="Upload ID TC" source="C:\Users\KatrinaTandogconsult\PycharmProjects\P11_Automation\ux40\Resources\Test_Suites\Upload_ID_TC.robot">
 <test id="s1-t1" name="Check Identity Verification Intro Page" line="8">
 <kw name="Open Browser - Chrome" library="Upload_ID_TC_Keyword">
@@ -9,118 +9,118 @@
 <arg>${BROWSER_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20230223 14:17:29.469" level="INFO">Opening browser 'chrome' to base url 'https://web-dev-ux40-customer.nprod.platform-11.com/apply/id/select'.</msg>
-<status status="PASS" starttime="20230223 14:17:29.468" endtime="20230223 14:17:31.436"/>
+<msg timestamp="20230227 13:24:21.340" level="INFO">Opening browser 'chrome' to base url 'https://web-dev-ux40-customer.nprod.platform-11.com/apply/id/select'.</msg>
+<status status="PASS" starttime="20230227 13:24:21.339" endtime="20230227 13:24:23.089"/>
 </kw>
 <kw name="Maximize Browser Window" library="Selenium2Library">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20230223 14:17:31.436" endtime="20230223 14:17:31.549"/>
+<status status="PASS" starttime="20230227 13:24:23.090" endtime="20230227 13:24:23.211"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:29.468" endtime="20230223 14:17:31.549"/>
+<status status="PASS" starttime="20230227 13:24:21.339" endtime="20230227 13:24:23.211"/>
 </kw>
 <kw name="ID Card Capture - Scenario 1" library="Upload_ID_TC_Keyword">
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:33.550" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:31.550" endtime="20230223 14:17:33.550"/>
+<msg timestamp="20230227 13:24:25.213" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:23.212" endtime="20230227 13:24:25.213"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${IDVerification_Header}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.571" level="INFO">Element '//p[contains(text(),'Identity Verification')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.550" endtime="20230223 14:17:33.571"/>
+<msg timestamp="20230227 13:24:25.234" level="INFO">Element '//p[contains(text(),'Identity Verification')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.213" endtime="20230227 13:24:25.234"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${IDVerification_Title_1}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.592" level="INFO">Element '//p[contains(text(),'You are applying for a')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.571" endtime="20230223 14:17:33.592"/>
+<msg timestamp="20230227 13:24:25.252" level="INFO">Element '//p[contains(text(),'You are applying for a')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.234" endtime="20230227 13:24:25.252"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${IDVerification_Title_2}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.612" level="INFO">Element '//p[contains(text(),'Regular Savings Account with Debit Card')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.592" endtime="20230223 14:17:33.612"/>
+<msg timestamp="20230227 13:24:25.268" level="INFO">Element '//p[contains(text(),'Regular Savings Account with Debit Card')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.252" endtime="20230227 13:24:25.268"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${Subtext_1}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.630" level="INFO">Element '//p[contains(text(),'Help us verify your identity with a few extra steps')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.612" endtime="20230223 14:17:33.630"/>
+<msg timestamp="20230227 13:24:25.284" level="INFO">Element '//p[contains(text(),'Help us verify your identity with a few extra steps')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.269" endtime="20230227 13:24:25.285"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${Subtext_2}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.643" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[1]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.630" endtime="20230223 14:17:33.643"/>
+<msg timestamp="20230227 13:24:25.300" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[1]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.285" endtime="20230227 13:24:25.300"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${Subtext_3}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.661" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[2]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.643" endtime="20230223 14:17:33.661"/>
+<msg timestamp="20230227 13:24:25.314" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[2]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.300" endtime="20230227 13:24:25.314"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ChooseID_Label}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.686" level="INFO">Element '//div[contains(text(),'Choose your ID')]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.661" endtime="20230223 14:17:33.687"/>
+<msg timestamp="20230227 13:24:25.327" level="INFO">Element '//div[contains(text(),'Choose your ID')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.314" endtime="20230227 13:24:25.327"/>
 </kw>
 <kw name="Element Should Be Visible" library="Selenium2Library">
 <arg>${ChooseID_Dropdown}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:33.704" level="INFO">Element '//*[@role="button" and @aria-haspopup="listbox"]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:33.687" endtime="20230223 14:17:33.704"/>
+<msg timestamp="20230227 13:24:25.342" level="INFO">Element '//*[@role="button" and @aria-haspopup="listbox"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:25.328" endtime="20230227 13:24:25.342"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:38.706" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:33.704" endtime="20230223 14:17:38.707"/>
+<msg timestamp="20230227 13:24:30.343" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:25.342" endtime="20230227 13:24:30.343"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:31.549" endtime="20230223 14:17:38.707"/>
+<status status="PASS" starttime="20230227 13:24:23.211" endtime="20230227 13:24:30.343"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:29.468" endtime="20230223 14:17:38.708"/>
+<status status="PASS" starttime="20230227 13:24:21.339" endtime="20230227 13:24:30.343"/>
 </test>
 <test id="s1-t2" name="Check ID List" line="12">
 <kw name="Validate list" library="Upload_ID_TC_Keyword">
 <kw name="Click Element" library="Selenium2Library">
 <arg>${ChooseID_Listbox}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230223 14:17:38.712" level="INFO">Clicking element '//*[@aria-haspopup='listbox']'.</msg>
-<status status="PASS" starttime="20230223 14:17:38.711" endtime="20230223 14:17:38.798"/>
+<msg timestamp="20230227 13:24:30.344" level="INFO">Clicking element '//*[@aria-haspopup='listbox']'.</msg>
+<status status="PASS" starttime="20230227 13:24:30.344" endtime="20230227 13:24:30.420"/>
 </kw>
 <kw name="Page Should Contain Element" library="Selenium2Library">
 <arg>${label_immigrant_COR}</arg>
 <doc>Verifies that element ``locator`` is found on the current page.</doc>
-<msg timestamp="20230223 14:17:38.809" level="INFO">Current page contains element '//span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"]'.</msg>
-<status status="PASS" starttime="20230223 14:17:38.798" endtime="20230223 14:17:38.810"/>
+<msg timestamp="20230227 13:24:30.434" level="INFO">Current page contains element '//span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"]'.</msg>
+<status status="PASS" starttime="20230227 13:24:30.420" endtime="20230227 13:24:30.434"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:38.711" endtime="20230223 14:17:38.810"/>
+<status status="PASS" starttime="20230227 13:24:30.344" endtime="20230227 13:24:30.434"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:38.710" endtime="20230223 14:17:38.810"/>
+<status status="PASS" starttime="20230227 13:24:30.343" endtime="20230227 13:24:30.435"/>
 </test>
-<test id="s1-t3" name="Selecting ID from the list" line="15">
-<kw name="ID Card Capture - Scenario 2" library="Upload_ID_TC_Keyword">
+<test id="s1-t3" name="Selecting ID from the list (Non-Jumio Supported ID)" line="15">
+<kw name="ID Card Capture - Select Non Jumio Supported ID" library="Upload_ID_TC_Keyword">
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:40.812" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:38.811" endtime="20230223 14:17:40.812"/>
+<msg timestamp="20230227 13:24:32.436" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:30.436" endtime="20230227 13:24:32.436"/>
 </kw>
 <kw name="Set Variable" library="BuiltIn">
 <var>${browser}</var>
 <arg>${list_Company_ID_Sign}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<msg timestamp="20230223 14:17:40.812" level="INFO">${browser} = Company ID with signaturess</msg>
-<status status="PASS" starttime="20230223 14:17:40.812" endtime="20230223 14:17:40.812"/>
+<msg timestamp="20230227 13:24:32.437" level="INFO">${browser} = Company ID with signaturess</msg>
+<status status="PASS" starttime="20230227 13:24:32.436" endtime="20230227 13:24:32.437"/>
 </kw>
 <kw name="Log" library="BuiltIn">
 <arg>${browser}</arg>
 <doc>Logs the given message with the given level.</doc>
-<msg timestamp="20230223 14:17:40.812" level="INFO">Company ID with signaturess</msg>
-<status status="PASS" starttime="20230223 14:17:40.812" endtime="20230223 14:17:40.812"/>
+<msg timestamp="20230227 13:24:32.437" level="INFO">Company ID with signaturess</msg>
+<status status="PASS" starttime="20230227 13:24:32.437" endtime="20230227 13:24:32.437"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>'${browser}' == '${list_immigrant_COR}'</arg>
@@ -130,10 +130,6 @@
 <arg>'${browser}' == '${list_Company_ID_Sign}'</arg>
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[2]</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_DL}'</arg>
-<arg>Click Element</arg>
-<arg>(${list_radio_button})[3]</arg>
 <arg>ELSE IF</arg>
 <arg>'${browser}' == '${list_Foreign_Passport}'</arg>
 <arg>Click Element</arg>
@@ -155,25 +151,9 @@
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[8]</arg>
 <arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_PRC_ID}'</arg>
-<arg>Click Element</arg>
-<arg>(${list_radio_button})[9]</arg>
-<arg>ELSE IF</arg>
 <arg>'${browser}' == '${list_PWD_ID}'</arg>
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[10]</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_Nat_ID}'</arg>
-<arg>Click Element</arg>
-<arg>(${list_radio_button})[11]</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_PhilPassport_ID}'</arg>
-<arg>Click Element</arg>
-<arg>(${list_radio_button})[12]</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_Postal_ID}'</arg>
-<arg>Click Element</arg>
-<arg>(${list_radio_button})[13]</arg>
 <arg>ELSE IF</arg>
 <arg>'${browser}' == '${list_PhilHealth_ID}'</arg>
 <arg>Click Element</arg>
@@ -182,10 +162,6 @@
 <arg>'${browser}' == '${list_School_Certification_ID}'</arg>
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[15]</arg>
-<arg>ELSE IF</arg>
-<arg>'${browser}' == '${list_SSS_ID}'</arg>
-<arg>Click Element</arg>
-<arg>(${list_radio_button})[16]</arg>
 <arg>ELSE IF</arg>
 <arg>'${browser}' == '${list_School_ID}'</arg>
 <arg>Click Element</arg>
@@ -202,6 +178,391 @@
 <arg>'${browser}' == '${list_Senior_Citizen_ID}'</arg>
 <arg>Click Element</arg>
 <arg>(${list_radio_button})[20]</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Element" library="Selenium2Library">
+<arg>(${list_radio_button})[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:24:32.439" level="INFO">Clicking element '(//*[@class="PrivateSwitchBase-input css-1m9pwf3"])[2]'.</msg>
+<status status="PASS" starttime="20230227 13:24:32.438" endtime="20230227 13:24:32.503"/>
+</kw>
+<status status="PASS" starttime="20230227 13:24:32.437" endtime="20230227 13:24:32.503"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:35.504" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:32.503" endtime="20230227 13:24:35.504"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${select_button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:24:35.505" level="INFO">Clicking element '//*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-rfth2q"]'.</msg>
+<status status="PASS" starttime="20230227 13:24:35.504" endtime="20230227 13:24:35.586"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:38.586" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:35.586" endtime="20230227 13:24:38.586"/>
+</kw>
+<status status="PASS" starttime="20230227 13:24:30.436" endtime="20230227 13:24:38.586"/>
+</kw>
+<status status="PASS" starttime="20230227 13:24:30.435" endtime="20230227 13:24:38.587"/>
+</test>
+<test id="s1-t4" name="Upload photo from photo library : Non-Jumio Supported ID (Front and Back)" line="18">
+<kw name="Upload Photo Non Jumio ID" library="Upload_ID_TC_Keyword">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${UploadPhoto_NonJumio_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:24:38.589" level="INFO">Clicking element '//label[text()="Upload from photo library"]'.</msg>
+<status status="PASS" starttime="20230227 13:24:38.588" endtime="20230227 13:24:38.625"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:40.626" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:38.626" endtime="20230227 13:24:40.626"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ChooseFile_NonJumio_Text_1}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:24:40.644" level="INFO">Element '//p[text()="Step 1 of 2"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:40.626" endtime="20230227 13:24:40.644"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:42.645" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:40.644" endtime="20230227 13:24:42.645"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ChooseFile_NonJumio_Text_2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:24:42.663" level="INFO">Element '//p[text()="Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only."]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:42.645" endtime="20230227 13:24:42.663"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:44.663" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:42.663" endtime="20230227 13:24:44.663"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ChooseFile_NonJumio_Back_Btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:24:44.679" level="INFO">Element '//button[text()="Back"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:44.663" endtime="20230227 13:24:44.679"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:46.680" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:44.679" endtime="20230227 13:24:46.680"/>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<arg>${ChooseFile_NonJumio_btn}</arg>
+<arg>C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//CompID_jpg_front.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230227 13:24:46.682" level="INFO">Sending C:\Users\KatrinaTandogconsult\Desktop\Diff_Image_Filetype\CompID_jpg_front.jpg to browser.</msg>
+<status status="PASS" starttime="20230227 13:24:46.680" endtime="20230227 13:24:46.716"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:51.718" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:46.717" endtime="20230227 13:24:51.718"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${NonJumio_Review_Text_1}</arg>
+<arg>Review your ID Front</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:24:51.721" level="INFO">Verifying element '//*[@id="__next"]/div/div/div[3]/div/div[1]/h6' contains exact text 'Review your ID Front'.</msg>
+<status status="PASS" starttime="20230227 13:24:51.719" endtime="20230227 13:24:51.748"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${NonJumio_Review_Text_2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:24:51.766" level="INFO">Element '//p[text()="Please check if the photo has no shadows and is not blurry and shows your clear signature (if applicable)."]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:51.748" endtime="20230227 13:24:51.766"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${NonJumio_TryAgain_Btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:24:51.782" level="INFO">Element '//button[text()="Try again"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:51.767" endtime="20230227 13:24:51.782"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${NonJumio_Continue_Btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:24:51.799" level="INFO">Element '//button[text()="Continue"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:51.782" endtime="20230227 13:24:51.799"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:55.800" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:51.799" endtime="20230227 13:24:55.800"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${NonJumio_Continue_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:24:55.802" level="INFO">Clicking element '//button[text()="Continue"]'.</msg>
+<status status="PASS" starttime="20230227 13:24:55.801" endtime="20230227 13:24:55.847"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:24:59.848" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:55.847" endtime="20230227 13:24:59.848"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ChooseFile_NonJumioBack_Text_1}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:24:59.876" level="INFO">Element '//p[text()="Step 2 of 2"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:24:59.849" endtime="20230227 13:24:59.876"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:01.877" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:24:59.876" endtime="20230227 13:25:01.877"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ChooseFile_NonJumioBack_Text_2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:01.894" level="INFO">Element '//p[text()="Upload Back"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:01.877" endtime="20230227 13:25:01.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:03.895" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:01.894" endtime="20230227 13:25:03.895"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${ChooseFile_NonJumioBack_Text_3}</arg>
+<arg>Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.\n\nMake sure it shows your clear signature (if applicable).</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:25:03.897" level="INFO">Verifying element '//*[@id="__next"]/div/div/div[3]/div/div[4]/p' contains exact text 'Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.
+
+Make sure it shows your clear signature (if applicable).'.</msg>
+<status status="PASS" starttime="20230227 13:25:03.896" endtime="20230227 13:25:03.921"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:05.922" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:03.921" endtime="20230227 13:25:05.922"/>
+</kw>
+<kw name="Choose File" library="Selenium2Library">
+<arg>${ChooseFile_NonJumio_btn}</arg>
+<arg>C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//CompID_jpg_back.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230227 13:25:05.924" level="INFO">Sending C:\Users\KatrinaTandogconsult\Desktop\Diff_Image_Filetype\CompID_jpg_back.jpg to browser.</msg>
+<status status="PASS" starttime="20230227 13:25:05.922" endtime="20230227 13:25:05.965"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:10.966" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:05.966" endtime="20230227 13:25:10.966"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${NonJumio_Review_Text_1}</arg>
+<arg>Review your ID Back</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:25:10.967" level="INFO">Verifying element '//*[@id="__next"]/div/div/div[3]/div/div[1]/h6' contains exact text 'Review your ID Back'.</msg>
+<status status="PASS" starttime="20230227 13:25:10.966" endtime="20230227 13:25:10.983"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${NonJumio_Review_Text_2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:10.996" level="INFO">Element '//p[text()="Please check if the photo has no shadows and is not blurry and shows your clear signature (if applicable)."]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:10.983" endtime="20230227 13:25:10.996"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${NonJumio_TryAgain_Btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:11.008" level="INFO">Element '//button[text()="Try again"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:10.996" endtime="20230227 13:25:11.008"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${NonJumio_Continue_Btn}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:11.020" level="INFO">Element '//button[text()="Continue"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:11.008" endtime="20230227 13:25:11.021"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:15.022" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:11.021" endtime="20230227 13:25:15.022"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${NonJumio_Continue_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:25:15.023" level="INFO">Clicking element '//button[text()="Continue"]'.</msg>
+<status status="PASS" starttime="20230227 13:25:15.023" endtime="20230227 13:25:15.064"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:19.064" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:15.064" endtime="20230227 13:25:19.064"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230227 13:25:19.064" endtime="20230227 13:25:21.201"/>
+</kw>
+<status status="PASS" starttime="20230227 13:24:38.588" endtime="20230227 13:25:21.202"/>
+</kw>
+<status status="PASS" starttime="20230227 13:24:38.587" endtime="20230227 13:25:21.203"/>
+</test>
+<test id="s1-t5" name="Check Identity Verification Intro Page" line="21">
+<kw name="Open Browser - Chrome" library="Upload_ID_TC_Keyword">
+<arg>${IDSELECT_URL}</arg>
+<arg>chrome</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${BROWSER_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230227 13:25:21.205" level="INFO">Opening browser 'chrome' to base url 'https://web-dev-ux40-customer.nprod.platform-11.com/apply/id/select'.</msg>
+<status status="PASS" starttime="20230227 13:25:21.204" endtime="20230227 13:25:22.875"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230227 13:25:22.875" endtime="20230227 13:25:22.996"/>
+</kw>
+<status status="PASS" starttime="20230227 13:25:21.204" endtime="20230227 13:25:22.996"/>
+</kw>
+<kw name="ID Card Capture - Scenario 1" library="Upload_ID_TC_Keyword">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:24.998" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:22.997" endtime="20230227 13:25:24.998"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${IDVerification_Header}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.021" level="INFO">Element '//p[contains(text(),'Identity Verification')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:24.998" endtime="20230227 13:25:25.021"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${IDVerification_Title_1}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.042" level="INFO">Element '//p[contains(text(),'You are applying for a')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:25.021" endtime="20230227 13:25:25.043"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${IDVerification_Title_2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.060" level="INFO">Element '//p[contains(text(),'Regular Savings Account with Debit Card')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:25.043" endtime="20230227 13:25:25.060"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${Subtext_1}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.077" level="INFO">Element '//p[contains(text(),'Help us verify your identity with a few extra steps')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:25.060" endtime="20230227 13:25:25.077"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${Subtext_2}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.095" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[1]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:25.077" endtime="20230227 13:25:25.095"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${Subtext_3}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.112" level="INFO">Element '//*[@id="__next"]/div/div/div[3]/div/div[3]/span[2]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:25.095" endtime="20230227 13:25:25.112"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ChooseID_Label}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.131" level="INFO">Element '//div[contains(text(),'Choose your ID')]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:25.113" endtime="20230227 13:25:25.131"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${ChooseID_Dropdown}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:25:25.146" level="INFO">Element '//*[@role="button" and @aria-haspopup="listbox"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:25:25.131" endtime="20230227 13:25:25.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:30.146" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:25.146" endtime="20230227 13:25:30.146"/>
+</kw>
+<status status="PASS" starttime="20230227 13:25:22.997" endtime="20230227 13:25:30.146"/>
+</kw>
+<status status="PASS" starttime="20230227 13:25:21.203" endtime="20230227 13:25:30.147"/>
+</test>
+<test id="s1-t6" name="Check ID List" line="25">
+<kw name="Validate list" library="Upload_ID_TC_Keyword">
+<kw name="Click Element" library="Selenium2Library">
+<arg>${ChooseID_Listbox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:25:30.149" level="INFO">Clicking element '//*[@aria-haspopup='listbox']'.</msg>
+<status status="PASS" starttime="20230227 13:25:30.149" endtime="20230227 13:25:30.222"/>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<arg>${label_immigrant_COR}</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230227 13:25:30.235" level="INFO">Current page contains element '//span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"]'.</msg>
+<status status="PASS" starttime="20230227 13:25:30.222" endtime="20230227 13:25:30.235"/>
+</kw>
+<status status="PASS" starttime="20230227 13:25:30.148" endtime="20230227 13:25:30.235"/>
+</kw>
+<status status="PASS" starttime="20230227 13:25:30.148" endtime="20230227 13:25:30.235"/>
+</test>
+<test id="s1-t7" name="Selecting ID from the list (Jumio Supported ID)" line="28">
+<kw name="ID Card Capture - Select Jumio Supported ID" library="Upload_ID_TC_Keyword">
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:25:32.237" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:30.236" endtime="20230227 13:25:32.238"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${browser}</var>
+<arg>${list_DL}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230227 13:25:32.239" level="INFO">${browser} = Driver’s license</msg>
+<status status="PASS" starttime="20230227 13:25:32.238" endtime="20230227 13:25:32.240"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${browser}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230227 13:25:32.241" level="INFO">Driver’s license</msg>
+<status status="PASS" starttime="20230227 13:25:32.240" endtime="20230227 13:25:32.241"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${browser}' == '${list_DL}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[3]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_PRC_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[9]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Nat_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[11]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_PhilPassport_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[12]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_Postal_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[13]</arg>
+<arg>ELSE IF</arg>
+<arg>'${browser}' == '${list_SSS_ID}'</arg>
+<arg>Click Element</arg>
+<arg>(${list_radio_button})[16]</arg>
 <arg>ELSE IF</arg>
 <arg>'${browser}' == '${list_UMID_ID}'</arg>
 <arg>Click Element</arg>
@@ -212,157 +573,319 @@
 <arg>(${list_radio_button})[22]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
 <kw name="Click Element" library="Selenium2Library">
-<arg>(${list_radio_button})[2]</arg>
+<arg>(${list_radio_button})[3]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230223 14:17:40.812" level="INFO">Clicking element '(//*[@class="PrivateSwitchBase-input css-1m9pwf3"])[2]'.</msg>
-<status status="PASS" starttime="20230223 14:17:40.812" endtime="20230223 14:17:40.881"/>
+<msg timestamp="20230227 13:25:32.244" level="INFO">Clicking element '(//*[@class="PrivateSwitchBase-input css-1m9pwf3"])[3]'.</msg>
+<status status="PASS" starttime="20230227 13:25:32.243" endtime="20230227 13:25:32.306"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:40.812" endtime="20230223 14:17:40.882"/>
+<status status="PASS" starttime="20230227 13:25:32.242" endtime="20230227 13:25:32.306"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:44.882" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:40.882" endtime="20230223 14:17:44.882"/>
+<msg timestamp="20230227 13:25:35.308" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:32.306" endtime="20230227 13:25:35.308"/>
 </kw>
 <kw name="Click Element" library="Selenium2Library">
 <arg>${select_button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230223 14:17:44.882" level="INFO">Clicking element '//*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-rfth2q"]'.</msg>
-<status status="PASS" starttime="20230223 14:17:44.882" endtime="20230223 14:17:44.970"/>
+<msg timestamp="20230227 13:25:35.310" level="INFO">Clicking element '//*[@class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-rfth2q"]'.</msg>
+<status status="PASS" starttime="20230227 13:25:35.309" endtime="20230227 13:25:35.397"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>5s</arg>
+<arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:49.971" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:44.970" endtime="20230223 14:17:49.971"/>
+<msg timestamp="20230227 13:25:38.398" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:35.397" endtime="20230227 13:25:38.398"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:38.811" endtime="20230223 14:17:49.971"/>
+<status status="PASS" starttime="20230227 13:25:30.236" endtime="20230227 13:25:38.398"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:38.810" endtime="20230223 14:17:49.972"/>
+<status status="PASS" starttime="20230227 13:25:30.235" endtime="20230227 13:25:38.398"/>
 </test>
-<test id="s1-t4" name="Upload photo from photo library" line="18">
-<kw name="Upload Photo Non Jumio ID" library="Upload_ID_TC_Keyword">
-<kw name="Click Element" library="Selenium2Library">
-<arg>${UploadPhoto_NonJumio_btn}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20230223 14:17:49.972" level="INFO">Clicking element '//label[text()="Upload from photo library"]'.</msg>
-<status status="PASS" starttime="20230223 14:17:49.972" endtime="20230223 14:17:50.008"/>
+<test id="s1-t8" name="Upload Photo Jumio ID" line="31">
+<kw name="Upload Photo - Jumio Supported ID" library="Upload_ID_TC_Keyword">
+<kw name="Click Button" library="Selenium2Library">
+<arg>${JumioSupported_Proceed_Btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230227 13:25:38.401" level="INFO">Clicking button '//button[text()="Proceed"]'.</msg>
+<status status="PASS" starttime="20230227 13:25:38.400" endtime="20230227 13:25:38.449"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>20s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:52.008" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:50.008" endtime="20230223 14:17:52.008"/>
+<msg timestamp="20230227 13:25:58.450" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:38.450" endtime="20230227 13:25:58.450"/>
 </kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${ChooseFile_NonJumio_Text_1}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:52.024" level="INFO">Element '//p[text()="Step 1 of 2"]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:52.008" endtime="20230223 14:17:52.024"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:54.024" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:52.024" endtime="20230223 14:17:54.024"/>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${ChooseFile_NonJumio_Text_2}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:54.030" level="INFO">Element '//p[text()="Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only."]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:54.024" endtime="20230223 14:17:54.030"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:56.031" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:54.030" endtime="20230223 14:17:56.032"/>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${ChooseFile_NonJumio_Back_Btn}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:17:56.061" level="INFO">Element '//button[text()="Back"]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:17:56.032" endtime="20230223 14:17:56.061"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:17:58.062" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:56.061" endtime="20230223 14:17:58.062"/>
-</kw>
-<kw name="Choose File" library="Selenium2Library">
-<arg>${ChooseFile_NonJumio_btn}</arg>
-<arg>C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//CompID_jpg_front.jpg</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20230223 14:17:58.062" level="INFO">Sending C:\Users\KatrinaTandogconsult\Desktop\Diff_Image_Filetype\CompID_jpg_front.jpg to browser.</msg>
-<status status="PASS" starttime="20230223 14:17:58.062" endtime="20230223 14:17:58.110"/>
+<kw name="Select Frame" library="Selenium2Library">
+<arg>${JumioSupported_Frame}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20230227 13:25:58.451" level="INFO">Selecting frame '//*[@id="__next"]/div/div/div[3]/div/div/iframe'.</msg>
+<status status="PASS" starttime="20230227 13:25:58.450" endtime="20230227 13:25:58.482"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:18:03.111" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20230223 14:17:58.110" endtime="20230223 14:18:03.111"/>
+<msg timestamp="20230227 13:26:03.483" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:25:58.482" endtime="20230227 13:26:03.483"/>
 </kw>
 <kw name="Element Text Should Be" library="Selenium2Library">
-<arg>${NonJumio_Review_Text_1}</arg>
-<arg>Review your ID Front</arg>
+<arg>${JumioSupported_Upload_Btn}</arg>
+<arg>Upload file from this device</arg>
 <doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
-<msg timestamp="20230223 14:18:03.112" level="INFO">Verifying element '//*[@id="__next"]/div/div/div[3]/div/div[1]/h6' contains exact text 'Review your ID Front'.</msg>
-<status status="PASS" starttime="20230223 14:18:03.111" endtime="20230223 14:18:03.139"/>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${NonJumio_Review_Text_2}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:18:03.161" level="INFO">Element '//p[text()="Please check if the photo has no shadows and is not blurry and shows your clear signature (if applicable)."]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:18:03.139" endtime="20230223 14:18:03.161"/>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${NonJumio_TryAgain_Btn}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:18:03.168" level="INFO">Element '//button[text()="Try again"]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:18:03.161" endtime="20230223 14:18:03.168"/>
-</kw>
-<kw name="Element Should Be Visible" library="Selenium2Library">
-<arg>${NonJumio_Continue_Btn}</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20230223 14:18:03.184" level="INFO">Element '//button[text()="Continue"]' is displayed.</msg>
-<status status="PASS" starttime="20230223 14:18:03.168" endtime="20230223 14:18:03.184"/>
+<msg timestamp="20230227 13:26:03.483" level="INFO">Verifying element '//*[@id="button-source-upload"]' contains exact text 'Upload file from this device'.</msg>
+<status status="PASS" starttime="20230227 13:26:03.483" endtime="20230227 13:26:03.506"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>4s</arg>
+<arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:18:07.184" level="INFO">Slept 4 seconds</msg>
-<status status="PASS" starttime="20230223 14:18:03.184" endtime="20230223 14:18:07.185"/>
+<msg timestamp="20230227 13:26:08.506" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:03.506" endtime="20230227 13:26:08.506"/>
 </kw>
-<kw name="Click Button" library="Selenium2Library">
-<arg>${NonJumio_Continue_Btn}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20230223 14:18:07.188" level="INFO">Clicking button '//button[text()="Continue"]'.</msg>
-<status status="PASS" starttime="20230223 14:18:07.186" endtime="20230223 14:18:07.256"/>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:26:08.507" level="INFO">Clicking element '//*[@id="button-source-upload"]'.</msg>
+<status status="PASS" starttime="20230227 13:26:08.506" endtime="20230227 13:26:08.602"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:26:18.604" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:08.603" endtime="20230227 13:26:18.604"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Title}</arg>
+<arg>Upload front of identity card</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:26:18.605" level="INFO">Verifying element '//*[@id="header-capture"]/app-file-upload-id-card-subtype' contains exact text 'Upload front of identity card'.</msg>
+<status status="PASS" starttime="20230227 13:26:18.604" endtime="20230227 13:26:18.624"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:26:21.626" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:18.625" endtime="20230227 13:26:21.626"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Sub_Text_1}</arg>
+<arg>Step 1 of 3</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:26:21.627" level="INFO">Verifying element '//*[@id="app-root"]/div/div/div/div/main/div/app-id-capture/div/app-capture/app-file-field/div/div[2]/app-file-label/label/app-steps-caption/h3' contains exact text 'Step 1 of 3'.</msg>
+<status status="PASS" starttime="20230227 13:26:21.626" endtime="20230227 13:26:21.648"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:26:24.650" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:21.649" endtime="20230227 13:26:24.650"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Sub_Text_2}</arg>
+<arg>Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:26:24.651" level="INFO">Verifying element '//*[@id="app-root"]/div/div/div/div/main/div/app-id-capture/div/app-capture/app-file-field/div/div[2]/app-file-label/label/div' contains exact text 'Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.'.</msg>
+<status status="PASS" starttime="20230227 13:26:24.650" endtime="20230227 13:26:24.672"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:26:27.673" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:24.672" endtime="20230227 13:26:27.673"/>
+</kw>
+<status status="PASS" starttime="20230227 13:25:38.400" endtime="20230227 13:26:27.673"/>
+</kw>
+<status status="PASS" starttime="20230227 13:25:38.399" endtime="20230227 13:26:27.674"/>
+</test>
+<test id="s1-t9" name="Upload Photo_Jumio Supported ID_JPG file" line="34">
+<kw name="Upload Photo - Jumio Supported ID - JPG file" library="Upload_ID_TC_Keyword">
+<kw name="Choose File" library="Selenium2Library">
+<arg>${ChooseFile_NonJumio_btn}</arg>
+<arg>C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//DLFront_jpg.jpg</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<msg timestamp="20230227 13:26:27.677" level="INFO">Sending C:\Users\KatrinaTandogconsult\Desktop\Diff_Image_Filetype\DLFront_jpg.jpg to browser.</msg>
+<status status="PASS" starttime="20230227 13:26:27.676" endtime="20230227 13:26:27.713"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:26:47.715" level="INFO">Slept 20 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:27.713" endtime="20230227 13:26:47.715"/>
+</kw>
+<status status="PASS" starttime="20230227 13:26:27.675" endtime="20230227 13:26:47.716"/>
+</kw>
+<status status="PASS" starttime="20230227 13:26:27.674" endtime="20230227 13:26:47.716"/>
+</test>
+<test id="s1-t10" name="Upload Photo_Review Uploaded Photo" line="37">
+<kw name="Review Uploaded Photo -Jumio Supported ID - Front" library="Upload_ID_TC_Keyword">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Review_Area}</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230227 13:26:47.720" endtime="20230227 13:26:47.746"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:26:52.747" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:47.746" endtime="20230227 13:26:52.747"/>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Confirm}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230227 13:26:52.749" endtime="20230227 13:26:53.069"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:26:56.072" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:53.070" endtime="20230227 13:26:56.072"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Tooltip}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:26:56.098" level="INFO">Element '//*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[1]/app-info-button/button' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:26:56.072" endtime="20230227 13:26:56.098"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20230223 14:18:09.257" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20230223 14:18:07.256" endtime="20230223 14:18:09.257"/>
+<msg timestamp="20230227 13:26:58.100" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:56.098" endtime="20230227 13:26:58.100"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:49.972" endtime="20230223 14:18:09.257"/>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Tooltip}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:26:58.102" level="INFO">Clicking element '//*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[1]/app-info-button/button'.</msg>
+<status status="PASS" starttime="20230227 13:26:58.101" endtime="20230227 13:26:58.168"/>
 </kw>
-<status status="PASS" starttime="20230223 14:17:49.972" endtime="20230223 14:18:09.257"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:01.170" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230227 13:26:58.169" endtime="20230227 13:27:01.170"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Tooltip_Close}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:27:01.172" level="INFO">Clicking element '//*[@class="info-button__close"]'.</msg>
+<status status="PASS" starttime="20230227 13:27:01.171" endtime="20230227 13:27:01.236"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:03.236" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:01.236" endtime="20230227 13:27:03.236"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Review_Title}</arg>
+<arg>Check photo</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:27:03.239" level="INFO">Verifying element '//*[@id="preview-headline"]' contains exact text 'Check photo'.</msg>
+<status status="PASS" starttime="20230227 13:27:03.237" endtime="20230227 13:27:03.265"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:05.267" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:03.266" endtime="20230227 13:27:05.267"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Review_Text_1}</arg>
+<arg>Have you checked if your ID is supported?</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:27:05.270" level="INFO">Verifying element '//*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[1]/span' contains exact text 'Have you checked if your ID is supported?'.</msg>
+<status status="PASS" starttime="20230227 13:27:05.268" endtime="20230227 13:27:05.299"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:07.300" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:05.299" endtime="20230227 13:27:07.300"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Review_Text_2}</arg>
+<arg>Can you read the details?</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:27:07.301" level="INFO">Verifying element '//*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[2]' contains exact text 'Can you read the details?'.</msg>
+<status status="PASS" starttime="20230227 13:27:07.300" endtime="20230227 13:27:07.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:09.322" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:07.320" endtime="20230227 13:27:09.322"/>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Review_Text_3}</arg>
+<arg>Can you see the whole ID?</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<msg timestamp="20230227 13:27:09.324" level="INFO">Verifying element '//*[@id="app-root"]/div/div/div/div/main/div/app-id-preview/app-preview/div/div[2]/ul/li[3]' contains exact text 'Can you see the whole ID?'.</msg>
+<status status="PASS" starttime="20230227 13:27:09.323" endtime="20230227 13:27:09.348"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:11.349" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:09.348" endtime="20230227 13:27:11.349"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${JumioSupported_Upload_TryAgain}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:27:11.374" level="INFO">Element '//*[@id="preview-retry"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:27:11.350" endtime="20230227 13:27:11.374"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:13.375" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:11.374" endtime="20230227 13:27:13.375"/>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Confirm}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20230227 13:27:13.400" level="INFO">Element '//*[@id="preview-confirm"]' is displayed.</msg>
+<status status="PASS" starttime="20230227 13:27:13.376" endtime="20230227 13:27:13.400"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:15.402" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:13.401" endtime="20230227 13:27:15.402"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${JumioSupported_Upload_Confirm}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230227 13:27:15.404" level="INFO">Clicking element '//*[@id="preview-confirm"]'.</msg>
+<status status="PASS" starttime="20230227 13:27:15.403" endtime="20230227 13:27:15.468"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230227 13:27:20.469" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230227 13:27:15.468" endtime="20230227 13:27:20.469"/>
+</kw>
+<kw name="Close Browser" library="Selenium2Library">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20230227 13:27:20.469" endtime="20230227 13:27:22.604"/>
+</kw>
+<status status="PASS" starttime="20230227 13:26:47.719" endtime="20230227 13:27:22.604"/>
+</kw>
+<status status="PASS" starttime="20230227 13:26:47.718" endtime="20230227 13:27:22.604"/>
 </test>
-<status status="PASS" starttime="20230223 14:17:29.263" endtime="20230223 14:18:09.257"/>
+<status status="PASS" starttime="20230227 13:24:21.122" endtime="20230227 13:27:22.605"/>
 </suite>
 <statistics>
 <total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
+<stat pass="10" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Upload ID TC">Upload ID TC</stat>
+<stat pass="10" fail="0" skip="0" id="s1" name="Upload ID TC">Upload ID TC</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20230227 13:25:21.203" level="WARN">Multiple tests with name 'Check Identity Verification Intro Page' executed in suite 'Upload ID TC'.</msg>
+<msg timestamp="20230227 13:25:30.147" level="WARN">Multiple tests with name 'Check ID List' executed in suite 'Upload ID TC'.</msg>
 </errors>
 </robot>
