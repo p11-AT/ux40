@@ -25,6 +25,41 @@ ID Card Capture - Scenario 1
 Validate list
     Click Element                           ${ChooseID_Listbox}
     Page Should Contain Element             ${label_immigrant_COR}
+    Page Should Contain Element             ${label_Company_ID_Sign}
+    Page Should Contain Element             ${label_DL}
+    Page Should Contain Element             ${label_Foreign_Passport}
+    Page Should Contain Element             ${label_GSIS}
+    Page Should Contain Element             ${label_Government_Owned_ID}
+    Page Should Contain Element             ${label_Integrated_Bar_ID}
+    Sleep                                   5s
+#    Scroll up to ePhilHealth
+    Scroll Element Into View                ${label_ePhilHealth_ID}
+    Sleep                                   5s
+    Page Should Contain Element             ${label_OFW_ID}
+    Page Should Contain Element             ${label_PRC_ID}
+    Page Should Contain Element             ${label_PWD_ID}
+    Page Should Contain Element             ${label_Nat_ID}
+    Page Should Contain Element             ${label_PhilPassport_ID}
+    Page Should Contain Element             ${label_Postal_ID}
+    Page Should Contain Element             ${label_ePhilHealth_ID}
+    Sleep                                   5s
+#    Scroll up to UMID
+    Scroll Element Into View                ${label_UMID_ID}
+    Sleep                                   5s
+    Page Should Contain Element             ${label_School_Certification_ID}
+    Page Should Contain Element             ${label_SSS_ID}
+    Page Should Contain Element             ${label_School_ID}
+    Page Should Contain Element             ${label_Seafarer_Doc_ID}
+    Page Should Contain Element             ${label_Seaman_Book_ID}
+    Page Should Contain Element             ${label_Senior_Citizen_ID}
+    Page Should Contain Element             ${label_UMID_ID}
+    Sleep                                   5s
+    #    Scroll up to Voter's ID
+    Scroll Element Into View                ${label_Voter_ID}
+    Sleep                                   5s
+    Page Should Contain Element             ${label_Voter_ID}
+    Sleep                                   5s
+
 
 ID Card Capture - Select Non Jumio Supported ID
 #Selecting ID from List
@@ -54,7 +89,7 @@ ID Card Capture - Select Non Jumio Supported ID
 
 Upload Photo Non Jumio ID
     Click Element                           ${UploadPhoto_NonJumio_btn}
-    Sleep                                   2s
+    Sleep                                   5s
 #   Check Upload Front ID Intro
     Element Should Be Visible               ${ChooseFile_NonJumio_Text_1}
     Sleep                                   2s
@@ -64,7 +99,7 @@ Upload Photo Non Jumio ID
     Sleep                                   2s
 #    Upload Front ID
     Choose File                             ${ChooseFile_NonJumio_btn}    C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//CompID_jpg_front.jpg
-    Sleep    5s
+    Sleep    7s
 
 #   Review Upload-Front ID
     Element Text Should Be              ${NonJumio_Review_Text_1}    Review your ID Front
@@ -75,16 +110,16 @@ Upload Photo Non Jumio ID
     Click Element                       ${NonJumio_Continue_Btn}
 
 #   Upload-Back ID Intro
-    Sleep                           4s
-    Element Should Be Visible       ${ChooseFile_NonJumioBack_Text_1}
-    Sleep                           2s
-    Element Should Be Visible       ${ChooseFile_NonJumioBack_Text_2}
-    Sleep                           2s
-    Element Text Should Be          ${ChooseFile_NonJumioBack_Text_3}    Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.\n\nMake sure it shows your clear signature (if applicable).
-    Sleep                           2s
+    Sleep                               5s
+    Element Should Be Visible           ${ChooseFile_NonJumioBack_Text_1}
+    Sleep                               2s
+    Element Should Be Visible           ${ChooseFile_NonJumioBack_Text_2}
+    Sleep                               2s
+    Element Text Should Be              ${ChooseFile_NonJumioBack_Text_3}    Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.\n\nMake sure it shows your clear signature (if applicable).
+    Sleep                               2s
 #    Upload Back ID
-    Choose File                     ${ChooseFile_NonJumio_btn}    C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//CompID_jpg_back.jpg
-    Sleep                           5s
+    Choose File                         ${ChooseFile_NonJumio_btn}    C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//CompID_jpg_back.jpg
+    Sleep                               5s
 
 #   Review Upload-Back ID
     Element Text Should Be              ${NonJumio_Review_Text_1}    Review your ID Back
@@ -114,7 +149,7 @@ ID Card Capture - Select Jumio Supported ID
     Click Element    ${select_button}
     Sleep    3s
 
-Upload Photo - Jumio Supported ID Intro
+Upload Photo - Jumio Supported ID Intro - Front
     Click Button                        ${JumioSupported_Proceed_Btn}
     Sleep                               20s
     Select Frame                        ${JumioSupported_Frame}
@@ -130,11 +165,11 @@ Upload Photo - Jumio Supported ID Intro
     Element Text Should Be              ${JumioSupported_Upload_Sub_Text_2}     Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.
     Sleep                               3s
 
-Upload Photo - Jumio Supported ID - JPG file
+Upload Photo - Jumio Supported ID - JPG file - Front
     Choose File                         ${ChooseFile_NonJumio_btn}              C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//DLFront_jpg.jpg
     Sleep                               20s
 
-Review Uploaded Photo -Jumio Supported ID - Front
+Review Uploaded Photo -Jumio Supported ID
     Wait Until Element Is Visible       ${JumioSupported_Upload_Review_Area}            10s
     Sleep    5s
     Scroll Element Into View            ${JumioSupported_Upload_Confirm}
@@ -153,13 +188,24 @@ Review Uploaded Photo -Jumio Supported ID - Front
     Sleep    2s
     Element Text Should Be              ${JumioSupported_Upload_Review_Text_3}            Can you see the whole ID?
     Sleep    2s
-    Element Should Be Visible    ${JumioSupported_Upload_TryAgain}
+    Element Should Be Visible           ${JumioSupported_Upload_TryAgain}
     Sleep    2s
-    Element Should Be Visible    ${JumioSupported_Upload_Confirm}
+    Element Should Be Visible           ${JumioSupported_Upload_Confirm}
     Sleep    2s
-    Click Element    ${JumioSupported_Upload_Confirm}
+    Click Element                       ${JumioSupported_Upload_Confirm}
     Sleep    5s
-    Close Browser
+
+Upload Photo - Jumio Supported ID Intro - Back
+    Element Text Should Be              ${JumioSupported_Upload_Title}          Upload back of identity card
+    Sleep                               3s
+    Element Text Should Be              ${JumioSupported_Upload_Sub_Text_1}     Step 2 of 3
+    Sleep                               3s
+    Element Text Should Be              ${JumioSupported_Upload_Sub_Text_2}     Upload a color image of the entire document. Screenshots are not allowed. JPG, JPEG or PNG format only.
+    Sleep                               3s
+
+Upload Photo - Jumio Supported ID - JPG file - Back
+    Choose File                         ${ChooseFile_NonJumio_btn}              C://Users//KatrinaTandogconsult//Desktop//Diff_Image_Filetype//DLBack_jpg.jpg
+    Sleep                               20s
 
 
 

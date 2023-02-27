@@ -19,7 +19,7 @@ ${ID_Dropdown_Label_2}                  //p[contains(text(),'Select from 22 opti
 
 #   Check list of IDS
 ${label_immigrant_COR}                   //span[text()="Alien Certificate of Registration or Immigrant Certificate of Registration"]
-${label_Company_ID_Sign}                 //span[text()="Company ID with signatures"]
+${label_Company_ID_Sign}                 //span[text()="Company ID with signature"]
 ${label_DL}                              //span[text()="Driver’s license"]
 ${label_Foreign_Passport}                //span[text()="Foreign passport (non-Philippine issued)"]
 ${label_GSIS}                            //span[text()="GSIS e-Card"]
@@ -115,6 +115,7 @@ ${JumioSupported_Upload_Tooltip_Close}                  //*[@class="info-button_
 ${JumioSupported_Upload_TryAgain}                       //*[@id="preview-retry"]
 ${JumioSupported_Upload_Confirm}                        //*[@id="preview-confirm"]
 
+#   Check Upload Back - Intro
 
 
 ${Selfie_Capture_URL}                           https://web-dev-ux40-customer.nprod.platform-11.com/apply/id/selfie-capture
