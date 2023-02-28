@@ -60,6 +60,30 @@ ENTER OTP v2
     ${otp}          Get Value From User             Please Provide OTP code
     Input Text      ${element_field}        ${otp}
 
+GET BACKGROUND COLOR
+    [Arguments]     ${ElementField}     ${static_color_val}
+    Wait Until Element Is Visible       ${ElementField}     ${wait_long}
+    ${elem1}    Get Webelement          ${ElementField}
+    ${color}    Call Method             ${elem1}    value_of_css_property    background-color
+    Log                                 ${color}
+    Log                                 ${static_color_val}
+    Should Be Equal As Strings          ${color}    ${static_color_val}
+
+VALIDATING LEGENDS LABEL
+    [Arguments]                 ${element_field}        ${legend1}      ${legend2}      ${legend3}
+    ${getcount}                 Get Element Count    ${element_field}
+    ${legend_list_1}            Create List       ${legend1}     ${legend2}      ${legend3}
+    ${legend_list_2}            Create List
+    FOR    ${counter}    IN RANGE    1    ${getcount}+1
+        Log    ${counter}
+        ${textval}              Get Text    (${element_field})[${counter}]
+        Append To List          ${legend_list_2}        ${textval}
+        Log                     ${legend_list_2}
+    END
+    Log                         ${legend_list_1}
+    Log                         ${legend_list_2}
+    Lists Should Be Equal       ${legend_list_1}    ${legend_list_2}
+
 *** Comments ***
 GET BACKGROUND COLOR
     [Arguments]     ${ElementField}     ${Color}

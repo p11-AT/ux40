@@ -32,7 +32,7 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
 #    Capture Page Screenshot             bottom page.png
 
 
-46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 1
+46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 1
     [Documentation]
     ...     *** Owner RJ ***
     ...     Created 2/27/2023
@@ -48,7 +48,7 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     Wait Until Element Is Visible       ${ep46966_acquisition_totalregitereduser}       ${wait_short}
     Capture Page Screenshot             Total registered user.png
 
-46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 2
+46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 2
     [Documentation]
     ...     *** Owner RJ ***
     ...     Created 2/27/2023
@@ -62,3 +62,29 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
 
     Wait Until Element Is Visible       ${ep46966_acquisition_percentgrowthnewuser}         ${wait_short}
     Wait Until Element Is Visible       ${ep46966_acquisition_percentproglefttotartget}     ${wait_short}
+    Wait Until Element Is Visible       ${ep46966_acquisition_targetcount}                  ${wait_short}
+
+46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 3
+    [Documentation]
+    ...     *** Owner RJ ***
+    ...     Created 2/28/2023
+    ...     Updated 2/28/2023
+    ...     The progress or current achievement versus target should be visualized
+    ...     - GIVEN a user is in the Acquisition section of the dashboard
+    ...     - WHEN a user looks at "Total Registered Users"
+    ...     - THEN a user should see a bar graph showing the current achievement vs target where the blue bar is the previous count and
+    ...     the green bar is the new count of users in the selected period (See #4 on the image guide above)
+
+    Wait Until Element Is Visible       ${ep46966_acquisition_bargraphusercount}            ${wait_short}
+
+#46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 4
+#    [Documentation]
+#    ...     *** Owner RJ ***
+#    ...     Created 2/27/2023
+#    ...     Updated 2/27/2023
+#    ...     Show a bubble on the graph when the user hovers on it
+#    ...     - GIVEN a user is in the Acquisition section of the dashboard
+#    ...     - WHEN user hovers on ANY point in the graph the bar graph
+#    ...     - THEN display a bubble that shows the new users added in a fixed area (follow the UI on Figma).
+#
+#

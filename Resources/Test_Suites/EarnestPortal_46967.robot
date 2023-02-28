@@ -47,7 +47,7 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     Scroll Element Into View            (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]
     Wait Until Element Is Visible       (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]       20s
     ### VALIDATING LEGEND VALID TEXT/LABEL
-    VALIDATING LEGENDS LABEL            ${earnestportal_legend_label}
+    VALIDATING LEGENDS LABEL            ${earnestportal_legend_label}       ${legend_branch}        ${legend_online}        ${legend_earnest}
     ### VALIDATING BACKGROUND COLOR OF LEGEND
     GET BACKGROUND COLOR                (${earnestportal_legend_color})[1]      ${earnestportal_color_green1}
     GET BACKGROUND COLOR                (${earnestportal_legend_color})[2]      ${earnestportal_color_pink1}

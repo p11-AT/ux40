@@ -12,30 +12,6 @@ Resource        ../../Resources/Repository/EarnestPortal_46967_Repository.robot
 Resource        ../../Resources/Repository/Common_Repository.robot
 
 *** Keywords ***
-VALIDATING LEGENDS LABEL
-    [Arguments]                 ${element_field}
-    ${getcount}                 Get Element Count    ${earnestportal_legend_label}
-    ${legend_list_1}            Create List       Branch     Online      Earnest
-    ${legend_list_2}            Create List
-    FOR    ${counter}    IN RANGE    1    ${getcount}+1
-        Log    ${counter}
-        ${textval}              Get Text    (${earnestportal_legend_label})[${counter}]
-        Append To List          ${legend_list_2}        ${textval}
-        Log                     ${legend_list_2}
-
-    END
-    Log                         ${legend_list_2}
-    Lists Should Be Equal       ${legend_list_1}    ${legend_list_2}
-
-GET BACKGROUND COLOR
-    [Arguments]     ${ElementField}     ${static_color_val}
-    Wait Until Element Is Visible       ${ElementField}     ${wait_long}
-    ${elem1}    Get Webelement          ${ElementField}
-    ${color}    Call Method             ${elem1}    value_of_css_property    background-color
-    Log                                 ${color}
-    Log                                 ${static_color_val}
-    Should Be Equal As Strings          ${color}    ${static_color_val}      #rgb(216, 246, 183) #rgba(0, 166, 90, 1)       # green
-
 GET BACKGROUND COLOR v2
     [Arguments]     ${ElementField}
     Wait Until Element Is Visible       ${ElementField}     ${wait_long}

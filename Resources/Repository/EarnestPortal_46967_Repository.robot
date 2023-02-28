@@ -27,7 +27,6 @@ ${earnestportal_ep_img}                                         //img[@alt='earn
 ### LABELS ###
 ${earnestportal_legend_label}                                   (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1dpqs7r']/div/div
 ${earnestportal_legend_color}                                   (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1dpqs7r']/div/div/div
-${earnestportal_legend_color}                                   (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1dpqs7r']/div/div/div
 # ACTIVE INVESTOR
 ${earnestportal_activeinvestor_vsperiod_percentage}             ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-k008qs']/p[1]
 ${earnestportal_activeinvestor_vssovtarget_percentage}          ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-1m29ivc']/p[1]
@@ -58,11 +57,3 @@ ${earnestportal_totaltransaction_targetcount}                   ((//*/*/*[@class
 ${earnestportal_totaltransaction_bargraph}                      ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[2]/div/div/div/canvas
 ${earnestportal_totaltransaction_percentearnestsov}             ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div/p[@class='MuiTypography-root MuiTypography-body1 css-14j5dp3']
 ${earnestportal_totaltransaction_datebelowsov}                  ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-0']/p
-
-
-### COLOR ###
-${earnestportal_color_green1}                                   rgba(216, 246, 183, 1)
-${earnestportal_color_pink1}                                    rgba(243, 200, 208, 1)
-${earnestportal_color_blue1}                                    rgba(187, 228, 255, 1)
-${earnestportal_color_red1}                                     rgba(233, 0, 33, 1)
-${earnestportal_color_gray1}                                    rgba(139, 140, 149, 1)
