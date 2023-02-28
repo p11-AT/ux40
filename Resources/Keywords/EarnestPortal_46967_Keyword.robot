@@ -8,7 +8,7 @@ Library    Collections
 Resource        ../../Resources/Keywords/CommonKeyword.robot
 
 ### REPOSITORY ###
-Resource        ../../Resources/Repository/EarnestPortal_Repository.robot
+Resource        ../../Resources/Repository/EarnestPortal_46967_Repository.robot
 Resource        ../../Resources/Repository/Common_Repository.robot
 
 *** Keywords ***

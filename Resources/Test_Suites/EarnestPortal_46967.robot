@@ -3,11 +3,11 @@ Library         Selenium2Library
 Library         DateTime
 
 ### KEYWORDS ###
-Resource        ../../Resources/Keywords/EarnestPortal_Keyword.robot
+Resource        ../../Resources/Keywords/EarnestPortal_46967_Keyword.robot
 Resource        ../../Resources/Keywords/CommonKeyword.robot
 
 ### REPOSITORY ###
-Resource        ../../Resources/Repository/EarnestPortal_Repository.robot
+Resource        ../../Resources/Repository/EarnestPortal_46967_Repository.robot
 Resource        ../../Resources/Repository/Login_Repository.robot
 Resource        ../../Resources/Repository/Common_Repository.robot
 

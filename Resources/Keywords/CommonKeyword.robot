@@ -11,7 +11,7 @@ Library             DateTime
 
 ### REPOSITORY
 Resource            ../../Resources/Repository/Common_Repository.robot
-Resource            ../../Resources/Repository/EarnestPortal_Repository.robot
+Resource            ../../Resources/Repository/EarnestPortal_46967_Repository.robot
 Resource            ../../Resources/Repository/EarnestPortal_46966_Repository.robot
 
 *** Keywords ***
