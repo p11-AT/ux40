@@ -58,3 +58,14 @@ TC 6 EMAIL OTP VERIFICATION
     Capture Page Screenshot             email otp.png
     Wait Until Element Is Enabled       ${submit_btn}           ${wait_long}
     Click Element                       ${submit_btn}
+
+
+
+
+
+
+    select *  from cash_deposit  where channel_ref_id = 'AD90765F'
+select * from "transaction" where txn_ref_id = 'ac194a7c-d488-4719-b66c-6b1575a6d8fc'
+select * from cash_deposit where txn_date  = '2023-02-24 00:00:00.000'
+select * from "transaction"
+SELECT COUNT(*) from "transaction"

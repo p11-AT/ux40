@@ -154,3 +154,29 @@ ${ACCOUNT_NAME_DIGITAL_FORM}
 ${CUSTOMER_AMOUT_DIGITAL_FORM}
 
 
+#Variables for Confirmation Screen
+${YOU_ARE_NOW_BOOKED_LABEL}             //h6[text()='You are now booked for Cash Deposit']
+${CHECK_ICON}                           (//*[local-name() = 'svg'])[3]
+${WE_SENT_BOOOKING_LABEL}               //p[@class='MuiTypography-root MuiTypography-body1 css-3uv7fu']
+${WE_WILL_ALSO_SEND_LABEL}              //p[text()='We will also send the status of your booking to this number.']
+${REFERENCE_N0_LABEL_CONFIRMATION}      //p[text()='Reference No.']
+${USER_REFERENCE_N0_CONFIRMATION}       //p[@class='MuiTypography-root MuiTypography-body1 css-1l25mry']
+${DEPOSITORS_MOBILE_CONFIRMATION}       //p[text()='Depositor’s Mobile No.']
+${MOBILE_NUM_VALUE_CONFIRMATION}        //*[@id="__next"]/div/div[3]/div/div/div[5]/div[1]/div[2]/p
+${DEPOSITORS_EMAIL_CONFIRMATION}        //p[text()='Depositor’s Email Address']
+${EMAIL_VALUE_CONFIRMATION}             //*[@id="__next"]/div/div[3]/div/div/div[5]/div[2]/div[2]/p
+${BRANCH_CONFIRMATION_PAGE}             //p[text()='Branch']
+${BRANCH_VALUE_CONFIRMATION}            //*[@id="__next"]/div/div[3]/div/div/div[5]/div[3]/div[2]/p
+${APPOINTMENT_DATE_CONFIRMATION}        //p[text()='Appointment Date']
+${APPOINTMENT_VALUE_CONFIRMATION}       //*[@id="__next"]/div/div[3]/div/div/div[5]/div[4]/div[2]/p
+${ACCOUNT_NUMBER_LABEL_CONFIRMATION}    //p[text()='Account Number']
+${ACCOUNT_NUMBER_VALUE_CONFIRMATION}    //*[@id="__next"]/div/div[3]/div/div/div[5]/div[5]/div[2]/p
+${ACCOUNT_NAME_LABEL_CONFIRMATION}      //p[text()='Account Name']
+${ACCOUNT_NAME_VALUE_CONFIRMATION}      //*[@id="__next"]/div/div[3]/div/div/div[5]/div[6]/div[2]/p
+${AMOUNT_TO_DEPOSIT_CONFIRMATION}       //p[text()='Amount to Deposit']
+${AMOUNT_VALUE_CONFIRMATION_PAGE}       //*[@id="__next"]/div/div[3]/div/div/div[5]/div[7]/div[2]/p
+${BOOK_A_NEW_TRANSACTION_BTN}           //button[text()='Book a new transaction']
+${RETURN_TO_METROBANK_BTN}              //button[text()='Return to Metrobank Online']
+
+
+

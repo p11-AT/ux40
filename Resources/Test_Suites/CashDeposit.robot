@@ -62,4 +62,11 @@ Transaction Summary without Email Address
 Edit Customer Details
     Click Edit Details Button
 
+Confirmation Screen Validation
+    View and Navigate to Transaction Confirmation Screen
 
+Confirmation Screen Data Validation
+    Confirmation Screen Data Validation
+
+Click Book a new Transaction button
+    Click Book a new Transaction button

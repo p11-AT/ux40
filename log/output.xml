@@ -1,0 +1,2675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.11.1 on win32)" generated="20230223 15:02:34.401" rpa="false">
+<suite id="s1" name="CashDeposit" source="C:\Users\RyanChristopherLoroc\PycharmProjects\P11_Automation\ux40\Resources\Test_Suites\CashDeposit.robot">
+<test id="s1-t1" name="MBTC Website - Branch Transaction List">
+<kw name="Branch Transaction List Validation" library="CashDeposit_Keywords">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${metrobank_Url}</arg>
+<arg>${BROWSER_CHROME}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:35.077" level="INFO">Opening browser 'CHROME' to base url 'https://web-dev-ux40-customer.nprod.platform-11.com/ct'.</msg>
+<status status="PASS" starttime="20230223 15:02:35.077" endtime="20230223 15:02:39.833"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230223 15:02:39.833" endtime="20230223 15:02:39.981"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:02:41.982" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:02:39.981" endtime="20230223 15:02:41.982"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${SELF_SERVICE_LABEL}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:41.982" endtime="20230223 15:02:41.999"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${SELF_SERVICE_LABEL}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.015" level="INFO">Current page contains element '//p[text()='Self-Service']'.</msg>
+<status status="PASS" starttime="20230223 15:02:41.999" endtime="20230223 15:02:42.015"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${SELF_SERVICE_DETAILS1}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.032" level="INFO">Current page contains element '//p[text()='Quick actions for busy people. Select an']'.</msg>
+<status status="PASS" starttime="20230223 15:02:42.015" endtime="20230223 15:02:42.032"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${SELF_SERVICE_DETAILS2}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.049" level="INFO">Current page contains element '//p[text()='action to get started.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:42.032" endtime="20230223 15:02:42.049"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${VIEW_ALL_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.074" level="INFO">Current page contains element '//button[text()='VIEW ALL']'.</msg>
+<status status="PASS" starttime="20230223 15:02:42.049" endtime="20230223 15:02:42.074"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${BOOK_NOW_BUTTON}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:42.074" endtime="20230223 15:02:42.379"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${MAKE_A_BRANCH_TXN_LABEL}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.404" level="INFO">Current page contains element '//p[text()='Make a branch transaction']'.</msg>
+<status status="PASS" starttime="20230223 15:02:42.379" endtime="20230223 15:02:42.404"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${BOOK_APPOINTMENTS_LABEL}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.421" level="INFO">Current page contains element '//p[text()='Book your appointments online to get accomodated right away.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:42.404" endtime="20230223 15:02:42.428"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${BOOK_NOW_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.439" level="INFO">Current page contains element '//button[text()='BOOK NOW']'.</msg>
+<status status="PASS" starttime="20230223 15:02:42.428" endtime="20230223 15:02:42.439"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${BOOK_NOW_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:42.439" level="INFO">Clicking element '//button[text()='BOOK NOW']'.</msg>
+<status status="PASS" starttime="20230223 15:02:42.439" endtime="20230223 15:02:42.527"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:35.077" endtime="20230223 15:02:42.527"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:35.069" endtime="20230223 15:02:42.527" critical="yes"></status>
+</test>
+<test id="s1-t2" name="Initiation of Cash Deposit Request">
+<kw name="Initiation of Cash Deposit Request" library="CashDeposit_Keywords">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Metrobank_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:42.535" endtime="20230223 15:02:43.415"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:02:46.415" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:02:43.415" endtime="20230223 15:02:46.415"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,600)</arg>
+</arguments>
+<msg timestamp="20230223 15:02:46.417" level="INFO">Executing JavaScript:
+window.scrollTo(1,600)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:02:46.416" endtime="20230223 15:02:46.425"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:02:48.425" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:02:46.425" endtime="20230223 15:02:48.425"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Choose_Txn_label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:48.443" level="INFO">Current page contains element '//p[text()='Choose a transaction']'.</msg>
+<status status="PASS" starttime="20230223 15:02:48.425" endtime="20230223 15:02:48.443"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Cash_Deposit_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:48.470" level="INFO">Current page contains element '//p[text()='Cash Deposit']'.</msg>
+<status status="PASS" starttime="20230223 15:02:48.443" endtime="20230223 15:02:48.470"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Cash_Deposit_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:48.473" level="INFO">Clicking element '//p[text()='Cash Deposit']'.</msg>
+<status status="PASS" starttime="20230223 15:02:48.473" endtime="20230223 15:02:48.542"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.543" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:02:48.542" endtime="20230223 15:02:51.543"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:42.527" endtime="20230223 15:02:51.543"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:42.527" endtime="20230223 15:02:51.543" critical="yes"></status>
+</test>
+<test id="s1-t3" name="View and navigate to Terms and condition">
+<kw name="Terms &amp; Condition and Data Consent Validation" library="CashDeposit_Keywords">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Branch_transaction_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:51.543" endtime="20230223 15:02:51.564"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${X_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.593" level="INFO">Current page contains element '//*[@id="__next"]/div/div[1]/div[2]/button'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.572" endtime="20230223 15:02:51.593"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Book_Appointment_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.615" level="INFO">Current page contains element '//p[text()='You are booking an appointment for']'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.593" endtime="20230223 15:02:51.615"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Cash_Deposit_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.639" level="INFO">Current page contains element '//p[text()='Cash Deposit']'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.615" endtime="20230223 15:02:51.639"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Summary_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.664" level="INFO">Current page contains element '//p[text()='SUMMARY']'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.639" endtime="20230223 15:02:51.664"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${TandC_Privacy_Policy_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.693" level="INFO">Current page contains element '//p[text()='Terms &amp; Conditions and Privacy Policy']'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.664" endtime="20230223 15:02:51.693"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Here_Is_a_ShortSummary_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.715" level="INFO">Current page contains element '//p[text()='Here is a short summary of the Terms &amp; Conditions (T&amp;C) of Use and the Privacy Policy of our Know Your Customer (KYC) customer verification process to help you understand them better.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.693" endtime="20230223 15:02:51.715"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${T&amp;C_One_Details}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.743" level="INFO">Current page contains element '//p[text()='By undergoing the KYC process, you agree to comply with, and be bound by, all the terms of use. This also means that you fulfill the requirements, including:']'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.715" endtime="20230223 15:02:51.743"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${T&amp;C_One_Next_Details1}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.763" level="INFO">Current page contains element '//p[text()='You do not have an existing Regular Savings Account with Debit Card or any Metrobank account']'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.743" endtime="20230223 15:02:51.763"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${T&amp;C_One_Next_Details2}</arg>
+<arg>You are a Filipino currently residing in the Philippines</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.771" level="INFO">Verifying element '//p[contains(text(),'You are a ')]' contains exact text 'You are a Filipino currently residing in the Philippines'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.763" endtime="20230223 15:02:51.822"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${T&amp;C_One_Next_Details3}</arg>
+<arg>You are at least 18 years old</arg>
+</arguments>
+<msg timestamp="20230223 15:02:51.822" level="INFO">Verifying element '//p[contains(text(),'You are at least ')]' contains exact text 'You are at least 18 years old'.</msg>
+<status status="PASS" starttime="20230223 15:02:51.822" endtime="20230223 15:02:51.879"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Privacy_Act_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:51.883" endtime="20230223 15:02:52.195"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${T&amp;C_Two_details}</arg>
+</arguments>
+<assign>
+<var>${Get_T&amp;C_Two_Details}</var>
+</assign>
+<msg timestamp="20230223 15:02:52.251" level="INFO">${Get_T&amp;C_Two_Details} = You agree to maintain a minimum average daily balance (ADB) of P2,000 every month, and will accept a fee of P300 if the ADB does not reach the minimum for 2 consecutive months.</msg>
+<status status="PASS" starttime="20230223 15:02:52.195" endtime="20230223 15:02:52.252"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${T&amp;C_Two_details}</arg>
+<arg>You agree to maintain a minimum average daily balance (ADB) of P2,000 every month, and will accept a fee of P300 if the ADB does not reach the minimum for 2 consecutive months.</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.252" level="INFO">Verifying element '//p[contains(text(),'You agree to maintain a minimum average daily balance (ADB) of ')]' contains exact text 'You agree to maintain a minimum average daily balance (ADB) of P2,000 every month, and will accept a fee of P300 if the ADB does not reach the minimum for 2 consecutive months.'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.252" endtime="20230223 15:02:52.284"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${T&amp;C_Two_Next_Details}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.312" level="INFO">Current page contains element '//p[text()='You agree to your account being closed if it has no balance for 90 days.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.284" endtime="20230223 15:02:52.312"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${T&amp;C_Three_Detail1}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.334" level="INFO">Current page contains element '//p[text()='You agree to accurately provide all personal data needed to properly verify your identity.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.312" endtime="20230223 15:02:52.334"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${T&amp;C_Three_Detail2}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.367" level="INFO">Current page contains element '//p[text()='If the information you provide is incorrect or incomplete, your account may not be created or could be closed.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.334" endtime="20230223 15:02:52.367"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${T&amp;C_Three_Detail3}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.396" level="INFO">Current page contains element '//p[text()='Your privacy is protected by the Data Privacy Act and Metrobank’s data security policies. Jumio, a third-party partner of Metrobank, will have access to your data as part of the verification process.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.367" endtime="20230223 15:02:52.396"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Data_Consent_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:52.396" endtime="20230223 15:02:52.697"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Full_MSA_T&amp;C}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.723" level="INFO">Current page contains element '//a[text()='FULL METROBANK SAVINGS ACCOUNT T&amp;C']'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.697" endtime="20230223 15:02:52.723"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Full_Account_OpeningT&amp;C}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.748" level="INFO">Current page contains element '//a[text()='FULL ACCOUNT OPENING T&amp;C']'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.723" endtime="20230223 15:02:52.748"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Full_Privacy&amp;Policy}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:52.773" level="INFO">Current page contains element '//a[text()='FULL PRIVACY POLICY']'.</msg>
+<status status="PASS" starttime="20230223 15:02:52.753" endtime="20230223 15:02:52.773"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:02:55.773" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:02:52.773" endtime="20230223 15:02:55.773"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Next_Button_T&amp;C}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:55.773" endtime="20230223 15:02:56.087"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Data_Consent_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.112" level="INFO">Current page contains element '//p[text()='Data Consent']'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.087" endtime="20230223 15:02:56.112"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Data_Consent_Details1}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.146" level="INFO">Current page contains element '//p[text()='You allow Metrobank to share your personal information with subsidiaries and affiliates within the Metrobank Group, as well as with its trusted partners.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.112" endtime="20230223 15:02:56.146"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Data_Consent_Details2}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.171" level="INFO">Current page contains element '//p[text()='You also agree to receive offers and services that may be relevant and suitable for your needs.']'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.146" endtime="20230223 15:02:56.171"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Full_Data_Consent}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.187" level="INFO">Current page contains element '//a[text()='FULL DATA CONSENT']'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.171" endtime="20230223 15:02:56.187"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${T&amp;C_Data&amp;Privacy_Checkbox}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.210" level="INFO">Current page contains element '//*[@id="__next"]/div/div[3]/div/div[16]/div[1]/div/label/span/input'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.187" endtime="20230223 15:02:56.210"></status>
+</kw>
+<kw name="Element Should Contain" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>${T&amp;C_DataPrivacy_Label}</arg>
+<arg>I agree to Metrobank’s TERMS AND CONDITIONS</arg>
+<arg>and DATA PRIVACY POLICY</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.258" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/div[16]/div[2]/div' contains text 'I agree to Metrobank’s TERMS AND CONDITIONS'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.210" endtime="20230223 15:02:56.258"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${DataConsent_Checkbox}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.282" level="INFO">Current page contains element '//*[@id="__next"]/div/div[3]/div/div[17]/div[1]/div/label/span/input'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.258" endtime="20230223 15:02:56.282"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${DataConsent_Checkbox_Label}</arg>
+<arg>I agree to Metrobank’s DATA CONSENT</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.285" level="INFO">Verifying element '//*[@id="__next"]/div/div[3]/div/div[17]/div[2]/div' contains exact text 'I agree to Metrobank’s DATA CONSENT'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.282" endtime="20230223 15:02:56.359"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${By_CLicking_Next_Label}</arg>
+<arg>By clicking Next, you are allowing Metrobank to process your application using your personal information and data.</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.359" level="INFO">Verifying element '//p[contains(text(),'By clicking ')]' contains exact text 'By clicking Next, you are allowing Metrobank to process your application using your personal information and data.'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.359" endtime="20230223 15:02:56.411"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Next_Button_T&amp;C}</arg>
+<arg>Next</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.412" level="INFO">Verifying element '//button/b[text()='Next']' contains exact text 'Next'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.411" endtime="20230223 15:02:56.442"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:51.543" endtime="20230223 15:02:56.442"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:51.543" endtime="20230223 15:02:56.442" critical="yes"></status>
+</test>
+<test id="s1-t4" name="T&amp;C Next Button Validation">
+<kw name="T&amp;C Next Button Validation" library="CashDeposit_Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${T&amp;C_Data&amp;Privacy_Checkbox}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:56.449" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/div[16]/div[1]/div/label/span/input'.</msg>
+<status status="PASS" starttime="20230223 15:02:56.442" endtime="20230223 15:02:56.533"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:02:58.533" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:02:56.533" endtime="20230223 15:02:58.533"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${Next_Button_T&amp;C}</arg>
+</arguments>
+<assign>
+<var>${Validate_disabled}</var>
+</assign>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Next_Button_T&amp;C}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:58.533" level="INFO">Clicking element '//button/b[text()='Next']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230223 15:02:59.782" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230223 15:02:59.633" endtime="20230223 15:02:59.782"></status>
+</kw>
+<msg timestamp="20230223 15:02:59.842" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;b&gt;...&lt;/b&gt; is not clickable at point (631, 623). Other element would receive the click: &lt;div class="MuiBox-root css-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=110.0.5481.178)
+</msg>
+<status status="FAIL" starttime="20230223 15:02:58.533" endtime="20230223 15:02:59.842"></status>
+</kw>
+<msg timestamp="20230223 15:02:59.842" level="INFO">${Validate_disabled} = False</msg>
+<status status="PASS" starttime="20230223 15:02:58.533" endtime="20230223 15:02:59.842"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'True'=='${Validate_disabled}'</arg>
+<arg>Passed</arg>
+<arg>"Element should not be clickable"</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:02:59.842" endtime="20230223 15:02:59.849"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${T&amp;C_Data&amp;Privacy_Checkbox}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:59.849" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/div[16]/div[1]/div/label/span/input'.</msg>
+<status status="PASS" starttime="20230223 15:02:59.849" endtime="20230223 15:02:59.928"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${DataConsent_Checkbox}</arg>
+</arguments>
+<msg timestamp="20230223 15:02:59.928" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/div[17]/div[1]/div/label/span/input'.</msg>
+<status status="PASS" starttime="20230223 15:02:59.928" endtime="20230223 15:03:00.047"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Click Element</arg>
+<arg>${Next_Button_T&amp;C}</arg>
+</arguments>
+<assign>
+<var>${Validate_disabled}</var>
+</assign>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Next_Button_T&amp;C}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:00.053" level="INFO">Clicking element '//button/b[text()='Next']'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230223 15:03:01.302" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230223 15:03:01.172" endtime="20230223 15:03:01.302"></status>
+</kw>
+<msg timestamp="20230223 15:03:01.307" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;b&gt;...&lt;/b&gt; is not clickable at point (631, 623). Other element would receive the click: &lt;div class="MuiBox-root css-0"&gt;...&lt;/div&gt;
+  (Session info: chrome=110.0.5481.178)
+</msg>
+<status status="FAIL" starttime="20230223 15:03:00.047" endtime="20230223 15:03:01.307"></status>
+</kw>
+<msg timestamp="20230223 15:03:01.307" level="INFO">${Validate_disabled} = False</msg>
+<status status="PASS" starttime="20230223 15:03:00.047" endtime="20230223 15:03:01.307"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>'True'=='${Validate_disabled}'</arg>
+<arg>Passed</arg>
+<arg>"Element should not be clickable"</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:03:01.307" endtime="20230223 15:03:01.313"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${T&amp;C_Data&amp;Privacy_Checkbox}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:01.313" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/div[16]/div[1]/div/label/span/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:01.313" endtime="20230223 15:03:01.414"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Next_Button_T&amp;C}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:01.415" level="INFO">Clicking element '//button/b[text()='Next']'.</msg>
+<status status="PASS" starttime="20230223 15:03:01.415" endtime="20230223 15:03:01.482"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.483" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:01.482" endtime="20230223 15:03:04.483"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:56.442" endtime="20230223 15:03:04.483"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:02:56.442" endtime="20230223 15:03:04.483" critical="yes"></status>
+</test>
+<test id="s1-t5" name="View and Navigate to Cash Deposit Digital Form">
+<kw name="View and Navigate to Cash Deposit Digital Form" library="CashDeposit_Keywords">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Branch_transaction_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:03:04.486" endtime="20230223 15:03:04.528"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${X_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.543" level="INFO">Current page contains element '//*[@id="__next"]/div/div[1]/div[2]/button'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.528" endtime="20230223 15:03:04.543"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Book_Appointment_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.560" level="INFO">Current page contains element '//p[text()='You are booking an appointment for']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.543" endtime="20230223 15:03:04.560"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Cash_Deposit_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.572" level="INFO">Current page contains element '//p[text()='Cash Deposit']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.560" endtime="20230223 15:03:04.572"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Cash_Deposit_Details}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.592" level="INFO">Current page contains element '//h6[text()='Cash Deposit Details']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.572" endtime="20230223 15:03:04.592"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Provide_The_Details_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.602" level="INFO">Current page contains element '//p[text()='Provide the details below to make your appointment.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.592" endtime="20230223 15:03:04.602"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Depositor_Contact_Details}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.634" level="INFO">Current page contains element '//p[text()='Depositor Contact Details']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.609" endtime="20230223 15:03:04.634"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Depositor_Contact_Details1}</arg>
+<arg>The depositor is the one who will be present in the branch to make the cash deposit transaction.\n\nWe will send your booking confirmation and status to the contact details you will provide below.</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.634" level="INFO">Verifying element '//p[contains(text(),'The depositor is the one who will be present')]' contains exact text 'The depositor is the one who will be present in the branch to make the cash deposit transaction.
+
+We will send your booking confirmation and status to the contact details you will provide below.'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.634" endtime="20230223 15:03:04.676"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_Label}</arg>
+<arg>Depositor’s Mobile Number\n*</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.676" level="INFO">Verifying element '//div[text()='Depositor’s Mobile Number ']' contains exact text 'Depositor’s Mobile Number
+*'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.676" endtime="20230223 15:03:04.725"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_textfield}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.782" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[3]/div/div[1]/input' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:04.725" endtime="20230223 15:03:04.782"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Mobile_Number_Phil_Icon}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.833" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[3]/div/div[1]/div/div[1]' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:04.782" endtime="20230223 15:03:04.833"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Mobile_Number_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.882" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[3]/div/div[1]/div/div[2]' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:04.833" endtime="20230223 15:03:04.882"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,400)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.882" level="INFO">Executing JavaScript:
+window.scrollTo(1,400)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:04.882" endtime="20230223 15:03:04.897"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Depositors_Email_Address_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.923" level="INFO">Current page contains element '//div[text()='Depositor’s Email Address']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.902" endtime="20230223 15:03:04.923"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.973" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:04.923" endtime="20230223 15:03:04.973"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Apointment_Details_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:04.993" level="INFO">Current page contains element '//p[text()='Appointment Details']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.973" endtime="20230223 15:03:04.993"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Choose_WhereandWhen_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.014" level="INFO">Current page contains element '//p[text()='Choose where and when you want to set your appointment.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:04.993" endtime="20230223 15:03:05.014"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Choose_a_Branch_Label}</arg>
+<arg>Choose a branch\n*</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.023" level="INFO">Verifying element '//div[text()='Choose a branch']' contains exact text 'Choose a branch
+*'.</msg>
+<status status="PASS" starttime="20230223 15:03:05.022" endtime="20230223 15:03:05.087"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Branches_Limited_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.113" level="INFO">Current page contains element '//p[text()='Branches are limited in the meantime.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:05.087" endtime="20230223 15:03:05.113"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Brach_Dropdown}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.162" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[6]/div/div/div/div[1]/select' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:05.113" endtime="20230223 15:03:05.170"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Brach_Dropdown}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.170" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/form/div/div[6]/div/div/div/div[1]/select'.</msg>
+<status status="PASS" starttime="20230223 15:03:05.170" endtime="20230223 15:03:05.263"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Branch_option_Paseo}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.285" level="INFO">Current page contains element '//option[text()='Makati - Paseo']'.</msg>
+<status status="PASS" starttime="20230223 15:03:05.263" endtime="20230223 15:03:05.285"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Branch_option_Legazpi}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.302" level="INFO">Current page contains element '//option[text()='Makati - Legazpi']'.</msg>
+<status status="PASS" starttime="20230223 15:03:05.285" endtime="20230223 15:03:05.308"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${branch_option_libertad}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:05.322" level="INFO">Current page contains element '//option[text()='Pasay - Libertad']'.</msg>
+<status status="PASS" starttime="20230223 15:03:05.308" endtime="20230223 15:03:05.322"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:07.323" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:05.322" endtime="20230223 15:03:07.324"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ESC</arg>
+</arguments>
+<msg timestamp="20230223 15:03:07.325" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg timestamp="20230223 15:03:07.325" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20230223 15:03:07.325" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20230223 15:03:07.324" endtime="20230223 15:03:07.366"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Appointment_Date_Label}</arg>
+<arg>Appointment Date\n*</arg>
+</arguments>
+<msg timestamp="20230223 15:03:07.366" level="INFO">Verifying element '//div[text()='Appointment Date ']' contains exact text 'Appointment Date
+*'.</msg>
+<status status="PASS" starttime="20230223 15:03:07.366" endtime="20230223 15:03:07.424"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${You_canSet_your_label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:07.466" level="INFO">Current page contains element '//p[text()='You can set your branch appointment 7 days in advance.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:07.424" endtime="20230223 15:03:07.466"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,1000)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:07.507" level="INFO">Executing JavaScript:
+window.scrollTo(1,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:07.466" endtime="20230223 15:03:07.523"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Calender_DatePicker}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:07.563" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[7]/div/div/div/div/div' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:07.524" endtime="20230223 15:03:07.564"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Date_Picker}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:07.564" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/form/div/div[7]/div/div/div/div/div'.</msg>
+<status status="PASS" starttime="20230223 15:03:07.564" endtime="20230223 15:03:07.732"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:12.739" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:07.737" endtime="20230223 15:03:12.739"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${DATE_PICKER_DATE}</arg>
+</arguments>
+<assign>
+<var>${Date_Count}</var>
+</assign>
+<msg timestamp="20230223 15:03:12.773" level="INFO">${Date_Count} = 28</msg>
+<status status="PASS" starttime="20230223 15:03:12.739" endtime="20230223 15:03:12.773"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Deposit_Details_label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:12.798" level="INFO">Current page contains element '//p[text()='Deposit Details']'.</msg>
+<status status="PASS" starttime="20230223 15:03:12.773" endtime="20230223 15:03:12.798"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Account_Number_Label}</arg>
+<arg>Account Number\n*</arg>
+</arguments>
+<msg timestamp="20230223 15:03:12.806" level="INFO">Verifying element '//div[text()='Account Number']' contains exact text 'Account Number
+*'.</msg>
+<status status="PASS" starttime="20230223 15:03:12.806" endtime="20230223 15:03:12.874"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Account_Number_Textfield}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:12.938" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[9]/div/div/div/div[1]/input' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:12.874" endtime="20230223 15:03:12.938"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Account_Name_Label}</arg>
+<arg>Account Name\n*</arg>
+</arguments>
+<msg timestamp="20230223 15:03:12.938" level="INFO">Verifying element '//div[text()='Account Name']' contains exact text 'Account Name
+*'.</msg>
+<status status="PASS" starttime="20230223 15:03:12.938" endtime="20230223 15:03:13.005"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:13.063" level="INFO">Element '//*[@id="__next"]/div/div[3]/div/form/div/div[10]/div/div[1]/input' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:13.011" endtime="20230223 15:03:13.063"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${Amount_to_Deposit_Label}</arg>
+<arg>Amount to Deposit\n*</arg>
+</arguments>
+<msg timestamp="20230223 15:03:13.069" level="INFO">Verifying element '//div[text()='Amount to Deposit']' contains exact text 'Amount to Deposit
+*'.</msg>
+<status status="PASS" starttime="20230223 15:03:13.069" endtime="20230223 15:03:13.139"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${PHP_Currency_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:13.173" level="INFO">Current page contains element '//div[text()='PHP']'.</msg>
+<status status="PASS" starttime="20230223 15:03:13.139" endtime="20230223 15:03:13.173"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Amount_Textfield}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:13.233" level="INFO">Element '//*[@id="amount_textfield"]' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:03:13.173" endtime="20230223 15:03:13.235"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${PHP_Currency_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:13.235" level="INFO">Clicking element '//div[text()='PHP']'.</msg>
+<status status="PASS" starttime="20230223 15:03:13.235" endtime="20230223 15:03:13.643"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.649" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:13.643" endtime="20230223 15:03:15.649"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Option_Php_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.683" level="INFO">Current page contains element '//button[text()='PHP']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.649" endtime="20230223 15:03:15.684"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Option_USD_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.714" level="INFO">Current page contains element '//button[text()='USD']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.684" endtime="20230223 15:03:15.714"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Option_GBP_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.743" level="INFO">Current page contains element '//button[text()='GBP']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.714" endtime="20230223 15:03:15.743"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Option_CAD_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.773" level="INFO">Current page contains element '//button[text()='CAD']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.743" endtime="20230223 15:03:15.773"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Option_RMB_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.802" level="INFO">Current page contains element '//button[text()='RMB']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.773" endtime="20230223 15:03:15.802"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Option_AUD_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.826" level="INFO">Current page contains element '//button[text()='AUD']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.802" endtime="20230223 15:03:15.826"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Option_SGD_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.860" level="INFO">Current page contains element '//button[text()='SGD']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.826" endtime="20230223 15:03:15.860"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Option_AUD_Currency}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:15.864" level="INFO">Clicking element '//button[text()='AUD']'.</msg>
+<status status="PASS" starttime="20230223 15:03:15.860" endtime="20230223 15:03:16.043"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Digital_Form_NextBtn}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:16.094" level="INFO">Current page contains element '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20230223 15:03:16.043" endtime="20230223 15:03:16.094"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:04.486" endtime="20230223 15:03:16.094"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:04.486" endtime="20230223 15:03:16.094" critical="yes"></status>
+</test>
+<test id="s1-t6" name="Digital Form Error Message Validation">
+<kw name="Digital Form Error Message Validation" library="CashDeposit_Keywords">
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:03:16.104" endtime="20230223 15:03:16.438"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:19.444" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:16.444" endtime="20230223 15:03:19.444"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_textfield}</arg>
+<arg>945558770</arg>
+</arguments>
+<msg timestamp="20230223 15:03:19.444" level="INFO">Typing text '945558770' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[3]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:19.444" endtime="20230223 15:03:20.163"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Mobile_Error_Message}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:20.195" level="INFO">Current page contains element '//p[text()='Please enter your 10-digit mobile number.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:20.163" endtime="20230223 15:03:20.195"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+<arg>Automation@gmail</arg>
+</arguments>
+<msg timestamp="20230223 15:03:20.195" level="INFO">Typing text 'Automation@gmail' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:20.195" endtime="20230223 15:03:20.613"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Email_Address_Error_Msg}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:20.658" level="INFO">Current page contains element '//p[text()='The email you entered is invalid.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:20.613" endtime="20230223 15:03:20.658"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Brach_Dropdown}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:20.658" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/form/div/div[6]/div/div/div/div[1]/select'.</msg>
+<status status="PASS" starttime="20230223 15:03:20.658" endtime="20230223 15:03:20.823"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Branches_Limited_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:20.823" level="INFO">Clicking element '//p[text()='Branches are limited in the meantime.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:20.823" endtime="20230223 15:03:20.974"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Global_Error_Msg}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:21.006" level="INFO">Current page contains element '//p[text()='Please provide input.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:20.974" endtime="20230223 15:03:21.006"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,900)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:21.006" level="INFO">Executing JavaScript:
+window.scrollTo(1,900)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:21.006" endtime="20230223 15:03:21.024"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:23.029" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:21.029" endtime="20230223 15:03:23.029"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${AppointmentDate_Error_Msg}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:23.061" level="INFO">Current page contains element '//p[text()='Please enter appointment date.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:23.029" endtime="20230223 15:03:23.061"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Number_Textfield}</arg>
+<arg>9998887878</arg>
+</arguments>
+<msg timestamp="20230223 15:03:23.064" level="INFO">Typing text '9998887878' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[9]/div/div/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:23.061" endtime="20230223 15:03:23.774"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Account_Number_Error_Msg}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:23.813" level="INFO">Current page contains element '//p[text()='Please enter a 12 or 13-digit account number..']'.</msg>
+<status status="PASS" starttime="20230223 15:03:23.774" endtime="20230223 15:03:23.813"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+<arg>Rye</arg>
+</arguments>
+<msg timestamp="20230223 15:03:23.813" level="INFO">Typing text 'Rye' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[10]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:23.813" endtime="20230223 15:03:24.202"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:26.204" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:24.203" endtime="20230223 15:03:26.204"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:26.207" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[10]/div/div[1]/input element.</msg>
+<msg timestamp="20230223 15:03:26.540" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:26.540" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:26.541" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:26.573" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:26.573" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:26.205" endtime="20230223 15:03:26.691"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Account_Name_Error_Msg}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:26.733" level="INFO">Current page contains element '//p[text()='Please enter an account name.']'.</msg>
+<status status="PASS" starttime="20230223 15:03:26.692" endtime="20230223 15:03:26.733"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:28.735" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:26.734" endtime="20230223 15:03:28.735"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,900)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:28.738" level="INFO">Executing JavaScript:
+window.scrollTo(1,900)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:28.736" endtime="20230223 15:03:28.752"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Amount_Textfield}</arg>
+<arg>999999999999999.99</arg>
+</arguments>
+<msg timestamp="20230223 15:03:28.754" level="INFO">Typing text '999999999999999.99' into text field '//*[@id="amount_textfield"]'.</msg>
+<status status="PASS" starttime="20230223 15:03:28.753" endtime="20230223 15:03:29.938"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:34.941" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:29.939" endtime="20230223 15:03:34.941"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:16.102" endtime="20230223 15:03:34.943"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:16.094" endtime="20230223 15:03:34.944" critical="yes"></status>
+</test>
+<test id="s1-t7" name="Digital Form Input Validation">
+<kw name="Digital Form Input Validation" library="CashDeposit_Keywords">
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:34.950" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[10]/div/div[1]/input element.</msg>
+<msg timestamp="20230223 15:03:35.335" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:35.336" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:35.336" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:35.360" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:35.361" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:34.948" endtime="20230223 15:03:35.375"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:35.378" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input element.</msg>
+<msg timestamp="20230223 15:03:35.726" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:35.727" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:35.728" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:35.767" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:35.768" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:35.376" endtime="20230223 15:03:35.915"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Account_Number_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:35.917" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[9]/div/div/div/div[1]/input element.</msg>
+<msg timestamp="20230223 15:03:36.260" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:36.261" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:36.261" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:36.289" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:36.289" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:35.915" endtime="20230223 15:03:36.388"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Amount_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:36.390" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="amount_textfield"] element.</msg>
+<msg timestamp="20230223 15:03:36.710" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:36.710" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:36.711" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:36.741" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:36.742" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:36.389" endtime="20230223 15:03:36.827"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_textfield}</arg>
+<arg>94555ASH-882-012</arg>
+</arguments>
+<msg timestamp="20230223 15:03:36.828" level="INFO">Typing text '94555ASH-882-012' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[3]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:36.827" endtime="20230223 15:03:37.524"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+<arg>l.rye0014@gmail.com</arg>
+</arguments>
+<msg timestamp="20230223 15:03:37.527" level="INFO">Typing text 'l.rye0014@gmail.com' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:37.525" endtime="20230223 15:03:37.883"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,1000)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:37.885" level="INFO">Executing JavaScript:
+window.scrollTo(1,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:37.884" endtime="20230223 15:03:37.901"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Number_Textfield}</arg>
+<arg>99900HH-GHH-0001-188888</arg>
+</arguments>
+<msg timestamp="20230223 15:03:37.903" level="INFO">Typing text '99900HH-GHH-0001-188888' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[9]/div/div/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:37.902" endtime="20230223 15:03:38.365"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+<arg>Rye D-111</arg>
+</arguments>
+<msg timestamp="20230223 15:03:38.367" level="INFO">Typing text 'Rye D-111' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[10]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:38.366" endtime="20230223 15:03:38.573"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Amount_Textfield}</arg>
+<arg>99999HH-GHH-999-AA-999</arg>
+</arguments>
+<msg timestamp="20230223 15:03:38.575" level="INFO">Typing text '99999HH-GHH-999-AA-999' into text field '//*[@id="amount_textfield"]'.</msg>
+<status status="PASS" starttime="20230223 15:03:38.574" endtime="20230223 15:03:38.934"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:43.936" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:38.935" endtime="20230223 15:03:43.937"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:34.947" endtime="20230223 15:03:43.937"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:34.946" endtime="20230223 15:03:43.938" critical="yes"></status>
+</test>
+<test id="s1-t8" name="Count the number of Business Enabled Dates">
+<kw name="Date of Transaction Validation" library="CashDeposit_Keywords">
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${You_canSet_your_label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:03:43.941" endtime="20230223 15:03:44.245"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Date_Picker}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:44.246" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/form/div/div[7]/div/div/div/div/div'.</msg>
+<status status="PASS" starttime="20230223 15:03:44.245" endtime="20230223 15:03:44.371"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${NEXT_BUTTON_CALENDAR}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:44.373" level="INFO">Clicking element '//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeStart MuiIconButton-sizeSmall MuiPickersArrowSwitcher-button css-fp6ecq']'.</msg>
+<status status="PASS" starttime="20230223 15:03:44.372" endtime="20230223 15:03:44.519"></status>
+</kw>
+<kw name="Get Element Count" library="Selenium2Library">
+<doc>Returns the number of elements matching ``locator``.</doc>
+<arguments>
+<arg>${ENABLED_APPOINTMENT_DATE}</arg>
+</arguments>
+<assign>
+<var>${GET_DATE_COUNT_PAGE2}</var>
+</assign>
+<msg timestamp="20230223 15:03:44.554" level="INFO">${GET_DATE_COUNT_PAGE2} = 6</msg>
+<status status="PASS" starttime="20230223 15:03:44.519" endtime="20230223 15:03:44.555"></status>
+</kw>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>${GET_DATE_COUNT_PAGE2}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:44.556" level="INFO">6</msg>
+<status status="PASS" starttime="20230223 15:03:44.555" endtime="20230223 15:03:44.557"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:47.557" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:44.557" endtime="20230223 15:03:47.558"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>None</arg>
+<arg>ESC</arg>
+</arguments>
+<msg timestamp="20230223 15:03:47.559" level="INFO">Sending key(s) ('ESC',) to page.</msg>
+<msg timestamp="20230223 15:03:47.560" level="INFO">Pressing special key ESCAPE to browser.</msg>
+<msg timestamp="20230223 15:03:47.560" level="INFO">Releasing special key ESCAPE.</msg>
+<status status="PASS" starttime="20230223 15:03:47.558" endtime="20230223 15:03:47.596"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:43.941" endtime="20230223 15:03:47.597"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:43.939" endtime="20230223 15:03:47.597" critical="yes"></status>
+</test>
+<test id="s1-t9" name="Digital Form Happy Path">
+<kw name="Digital Form Happy Path" library="CashDeposit_Keywords">
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:50.603" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:47.601" endtime="20230223 15:03:50.603"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:50.605" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[10]/div/div[1]/input element.</msg>
+<msg timestamp="20230223 15:03:50.919" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:50.919" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:50.919" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:50.946" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:50.946" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:50.604" endtime="20230223 15:03:50.986"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:50.988" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input element.</msg>
+<msg timestamp="20230223 15:03:51.309" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:51.309" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:51.309" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:51.334" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:51.335" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:50.987" endtime="20230223 15:03:51.378"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Account_Number_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:51.380" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[9]/div/div/div/div[1]/input element.</msg>
+<msg timestamp="20230223 15:03:51.692" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:51.692" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:51.692" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:51.716" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:51.716" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:51.379" endtime="20230223 15:03:51.756"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Amount_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:51.759" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="amount_textfield"] element.</msg>
+<msg timestamp="20230223 15:03:52.080" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:52.081" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:52.081" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:52.110" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:52.111" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:51.757" endtime="20230223 15:03:52.148"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:03:52.150" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[3]/div/div[1]/input element.</msg>
+<msg timestamp="20230223 15:03:52.466" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:03:52.467" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:03:52.467" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:03:52.492" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:03:52.492" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:03:52.148" endtime="20230223 15:03:52.531"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:03:52.532" endtime="20230223 15:03:52.839"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_textfield}</arg>
+<arg>9687698900</arg>
+</arguments>
+<msg timestamp="20230223 15:03:52.839" level="INFO">Typing text '9687698900' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[3]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:52.839" endtime="20230223 15:03:53.044"></status>
+</kw>
+<kw name="Get Value" library="Selenium2Library">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Depositors_MobileNumber_textfield}</arg>
+</arguments>
+<assign>
+<var>${GET_MOBILE_NUMBER_VALUE}</var>
+</assign>
+<msg timestamp="20230223 15:03:53.082" level="INFO">${GET_MOBILE_NUMBER_VALUE} = 968 769 8900</msg>
+<status status="PASS" starttime="20230223 15:03:53.045" endtime="20230223 15:03:53.082"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${MOBILE_INPUT_DIGITAL_FORM}</arg>
+<arg>+63 ${GET_MOBILE_NUMBER_VALUE}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:53.084" level="INFO">${MOBILE_INPUT_DIGITAL_FORM} = +63 968 769 8900</msg>
+<status status="PASS" starttime="20230223 15:03:53.083" endtime="20230223 15:03:53.084"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Apointment_Details_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:03:53.084" endtime="20230223 15:03:53.402"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+<arg>loro.ryancristopher@gmail.com</arg>
+</arguments>
+<msg timestamp="20230223 15:03:53.403" level="INFO">Typing text 'loro.ryancristopher@gmail.com' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:53.402" endtime="20230223 15:03:53.591"></status>
+</kw>
+<kw name="Get Value" library="Selenium2Library">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+</arguments>
+<assign>
+<var>${GET_VALUE_FROM_EMAIL_ADD}</var>
+</assign>
+<msg timestamp="20230223 15:03:53.627" level="INFO">${GET_VALUE_FROM_EMAIL_ADD} = loro.ryancristopher@gmail.com</msg>
+<status status="PASS" starttime="20230223 15:03:53.592" endtime="20230223 15:03:53.627"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${EMAIL_INPUT_DIGITAL_FORM}</arg>
+<arg>${GET_VALUE_FROM_EMAIL_ADD}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:53.628" level="INFO">${EMAIL_INPUT_DIGITAL_FORM} = loro.ryancristopher@gmail.com</msg>
+<status status="PASS" starttime="20230223 15:03:53.627" endtime="20230223 15:03:53.628"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,400)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:53.630" level="INFO">Executing JavaScript:
+window.scrollTo(1,400)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:53.630" endtime="20230223 15:03:53.645"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Brach_Dropdown}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:53.646" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/form/div/div[6]/div/div/div/div[1]/select'.</msg>
+<status status="PASS" starttime="20230223 15:03:53.645" endtime="20230223 15:03:53.787"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:55.788" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:53.788" endtime="20230223 15:03:55.788"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Branch_option_Legazpi}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:55.790" level="INFO">Clicking element '//option[text()='Makati - Legazpi']'.</msg>
+<status status="PASS" starttime="20230223 15:03:55.789" endtime="20230223 15:03:55.871"></status>
+</kw>
+<kw name="Get Value" library="Selenium2Library">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Brach_Dropdown}</arg>
+</arguments>
+<assign>
+<var>${GET_VALUE_FROM_BRANCH}</var>
+</assign>
+<msg timestamp="20230223 15:03:55.905" level="INFO">${GET_VALUE_FROM_BRANCH} = Makati - Legazpi</msg>
+<status status="PASS" starttime="20230223 15:03:55.872" endtime="20230223 15:03:55.905"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${BRANCH_INPUT_DIGITAL_FORM}</arg>
+<arg>Makati - Legazpi</arg>
+</arguments>
+<msg timestamp="20230223 15:03:55.907" level="INFO">${BRANCH_INPUT_DIGITAL_FORM} = Makati - Legazpi</msg>
+<status status="PASS" starttime="20230223 15:03:55.906" endtime="20230223 15:03:55.907"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,500)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:55.909" level="INFO">Executing JavaScript:
+window.scrollTo(1,500)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:55.907" endtime="20230223 15:03:55.924"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Date_Picker}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:55.925" level="INFO">Clicking element '//*[@id="__next"]/div/div[3]/div/form/div/div[7]/div/div/div/div/div'.</msg>
+<status status="PASS" starttime="20230223 15:03:55.924" endtime="20230223 15:03:56.127"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:03:58.130" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:56.128" endtime="20230223 15:03:58.130"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Select_AppointmentDate}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:58.132" level="INFO">Clicking element '//button[contains(text(),'28')]'.</msg>
+<status status="PASS" starttime="20230223 15:03:58.131" endtime="20230223 15:03:58.263"></status>
+</kw>
+<kw name="Get Element Attribute" library="Selenium2Library">
+<doc>Returns the value of ``attribute`` from the element ``locator``.</doc>
+<arguments>
+<arg>//input[@name='appointmentDate']</arg>
+<arg>value</arg>
+</arguments>
+<assign>
+<var>${GET_USER_APPOINTMENT}</var>
+</assign>
+<msg timestamp="20230223 15:03:58.309" level="INFO">${GET_USER_APPOINTMENT} = 02-28-2023</msg>
+<status status="PASS" starttime="20230223 15:03:58.263" endtime="20230223 15:03:58.309"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}</arg>
+<arg>${GET_USER_APPOINTMENT}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:58.311" level="INFO">${APPOINTMENT_DATE_INPUT_DIGITAL_FORM} = 02-28-2023</msg>
+<status status="PASS" starttime="20230223 15:03:58.310" endtime="20230223 15:03:58.311"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,1000)</arg>
+</arguments>
+<msg timestamp="20230223 15:03:58.313" level="INFO">Executing JavaScript:
+window.scrollTo(1,1000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:03:58.311" endtime="20230223 15:03:58.326"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Number_Textfield}</arg>
+<arg>9010000856004</arg>
+</arguments>
+<msg timestamp="20230223 15:03:58.327" level="INFO">Typing text '9010000856004' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[9]/div/div/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:58.326" endtime="20230223 15:03:58.733"></status>
+</kw>
+<kw name="Get Value" library="Selenium2Library">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Number_Textfield}</arg>
+</arguments>
+<assign>
+<var>${GET_VALUE_FROM_ACCOUNT_NUMBER}</var>
+</assign>
+<msg timestamp="20230223 15:03:58.774" level="INFO">${GET_VALUE_FROM_ACCOUNT_NUMBER} = 901 0 00085600 4</msg>
+<status status="PASS" starttime="20230223 15:03:58.734" endtime="20230223 15:03:58.774"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ACCOUNT_NUMBER_DIGITAL_FORM}</arg>
+<arg>9010 0008 5600 4</arg>
+</arguments>
+<msg timestamp="20230223 15:03:58.776" level="INFO">${ACCOUNT_NUMBER_DIGITAL_FORM} = 9010 0008 5600 4</msg>
+<status status="PASS" starttime="20230223 15:03:58.775" endtime="20230223 15:03:58.776"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+<arg>Ryan Cristopher Loro</arg>
+</arguments>
+<msg timestamp="20230223 15:03:58.777" level="INFO">Typing text 'Ryan Cristopher Loro' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[10]/div/div[1]/input'.</msg>
+<status status="PASS" starttime="20230223 15:03:58.776" endtime="20230223 15:03:59.313"></status>
+</kw>
+<kw name="Get Value" library="Selenium2Library">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Name_Textfield}</arg>
+</arguments>
+<assign>
+<var>${GET_VALUE_FROM_ACCNAME}</var>
+</assign>
+<msg timestamp="20230223 15:03:59.355" level="INFO">${GET_VALUE_FROM_ACCNAME} = Ryan Cristopher Loro</msg>
+<status status="PASS" starttime="20230223 15:03:59.314" endtime="20230223 15:03:59.356"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${ACCOUNT_NAME_DIGITAL_FORM}</arg>
+<arg>${GET_VALUE_FROM_ACCNAME}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:59.358" level="INFO">${ACCOUNT_NAME_DIGITAL_FORM} = Ryan Cristopher Loro</msg>
+<status status="PASS" starttime="20230223 15:03:59.357" endtime="20230223 15:03:59.358"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Amount_Textfield}</arg>
+<arg>25000</arg>
+</arguments>
+<msg timestamp="20230223 15:03:59.360" level="INFO">Typing text '25000' into text field '//*[@id="amount_textfield"]'.</msg>
+<status status="PASS" starttime="20230223 15:03:59.359" endtime="20230223 15:03:59.594"></status>
+</kw>
+<kw name="Get Value" library="Selenium2Library">
+<doc>Returns the value attribute of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Amount_Textfield}</arg>
+</arguments>
+<assign>
+<var>${GET_VALUE_FROM_AMOUNT}</var>
+</assign>
+<msg timestamp="20230223 15:03:59.649" level="INFO">${GET_VALUE_FROM_AMOUNT} = 25000</msg>
+<status status="PASS" starttime="20230223 15:03:59.595" endtime="20230223 15:03:59.650"></status>
+</kw>
+<kw name="Set Suite Variable" library="BuiltIn">
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<arguments>
+<arg>${CUSTOMER_AMOUT_DIGITAL_FORM}</arg>
+<arg>${CURRENCY_VARIABLE} 25,000.00</arg>
+</arguments>
+<msg timestamp="20230223 15:03:59.652" level="INFO">${CUSTOMER_AMOUT_DIGITAL_FORM} = AUD 25,000.00</msg>
+<status status="PASS" starttime="20230223 15:03:59.650" endtime="20230223 15:03:59.653"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Account_Name_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:03:59.655" level="INFO">Clicking element '//div[text()='Account Name']'.</msg>
+<status status="PASS" starttime="20230223 15:03:59.653" endtime="20230223 15:03:59.776"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:02.778" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:03:59.777" endtime="20230223 15:04:02.778"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Digital_Form_NextBtn}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:02.780" level="INFO">Clicking element '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20230223 15:04:02.779" endtime="20230223 15:04:02.924"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:05.927" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:02.925" endtime="20230223 15:04:05.927"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:47.600" endtime="20230223 15:04:05.928"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:03:47.599" endtime="20230223 15:04:05.928" critical="yes"></status>
+</test>
+<test id="s1-t10" name="Service Fee Modal Validation">
+<kw name="Service Fee Modal Validation" library="CashDeposit_Keywords">
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Service_Fee_Modal_Title}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:05.931" endtime="20230223 15:04:05.961"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${Service_Fee_Modal_Icon}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:06.012" level="INFO">Element '//div[@class='css-17x0w33']' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:04:05.962" endtime="20230223 15:04:06.013"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Service_Fee_Modal_Title}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:06.032" level="INFO">Current page contains element '//p[text()='This transaction may have a service fee']'.</msg>
+<status status="PASS" starttime="20230223 15:04:06.014" endtime="20230223 15:04:06.033"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Service_Fee_Modal_Details}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:06.059" level="INFO">Current page contains element '//p[text()='Please note that a service fee may incur because of interbranch transactions or amount restrictions.']'.</msg>
+<status status="PASS" starttime="20230223 15:04:06.034" endtime="20230223 15:04:06.059"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Service_Fee_Modal_Matrix}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:06.087" level="INFO">Current page contains element '//button[text()='See service fee matrix here']'.</msg>
+<status status="PASS" starttime="20230223 15:04:06.060" endtime="20230223 15:04:06.088"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Service_Fee_Continue_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:06.109" level="INFO">Current page contains element '//button[text()='Continue']'.</msg>
+<status status="PASS" starttime="20230223 15:04:06.088" endtime="20230223 15:04:06.110"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Service_Fee_Go_Back_to_form}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:06.131" level="INFO">Current page contains element '//button[text()='Go back to form']'.</msg>
+<status status="PASS" starttime="20230223 15:04:06.110" endtime="20230223 15:04:06.131"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:05.931" endtime="20230223 15:04:06.132"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:05.929" endtime="20230223 15:04:06.132" critical="yes"></status>
+</test>
+<test id="s1-t11" name="Click Go Back to Form">
+<kw name="Click Go Back to Form" library="CashDeposit_Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Service_Fee_Go_Back_to_form}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:06.138" level="INFO">Clicking element '//button[text()='Go back to form']'.</msg>
+<status status="PASS" starttime="20230223 15:04:06.137" endtime="20230223 15:04:06.250"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Digital_Form_NextBtn}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:06.250" endtime="20230223 15:04:06.274"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:11.276" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:06.274" endtime="20230223 15:04:11.276"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Digital_Form_NextBtn}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:11.278" level="INFO">Clicking element '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20230223 15:04:11.277" endtime="20230223 15:04:11.389"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Service_Fee_Modal_Title}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:11.390" endtime="20230223 15:04:11.419"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:13.421" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:11.420" endtime="20230223 15:04:13.422"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:06.136" endtime="20230223 15:04:13.422"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:06.135" endtime="20230223 15:04:13.423" critical="yes"></status>
+</test>
+<test id="s1-t12" name="Click Continue Button">
+<kw name="Click Continue Button" library="CashDeposit_Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Service_Fee_Continue_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:13.429" level="INFO">Clicking element '//button[text()='Continue']'.</msg>
+<status status="PASS" starttime="20230223 15:04:13.428" endtime="20230223 15:04:13.565"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:18.568" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:13.566" endtime="20230223 15:04:18.569"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:13.427" endtime="20230223 15:04:18.569"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:13.425" endtime="20230223 15:04:18.570" critical="yes"></status>
+</test>
+<test id="s1-t13" name="Submission of cash deposit details (Transaction Summary)">
+<kw name="View and Navigate to Review Screen" library="CashDeposit_Keywords">
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Branch_transaction_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:18.573" endtime="20230223 15:04:18.894"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${REVIEW_DETAILS_LABEL}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:18.894" endtime="20230223 15:04:18.920"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Branch_transaction_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:18.941" level="INFO">Current page contains element '//p[text()='Branch Transaction']'.</msg>
+<status status="PASS" starttime="20230223 15:04:18.920" endtime="20230223 15:04:18.942"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${X_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:18.966" level="INFO">Current page contains element '//*[@id="__next"]/div/div[1]/div[2]/button'.</msg>
+<status status="PASS" starttime="20230223 15:04:18.943" endtime="20230223 15:04:18.967"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Book_Appointment_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:18.989" level="INFO">Current page contains element '//p[text()='You are booking an appointment for']'.</msg>
+<status status="PASS" starttime="20230223 15:04:18.968" endtime="20230223 15:04:18.990"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Cash_Deposit_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:19.014" level="INFO">Current page contains element '//p[text()='Cash Deposit']'.</msg>
+<status status="PASS" starttime="20230223 15:04:18.990" endtime="20230223 15:04:19.014"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_DETAILS_LABEL}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:19.036" level="INFO">Current page contains element '//h6[text()='Review your details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:19.015" endtime="20230223 15:04:19.036"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${REVIEW_DETAILS_CONTENT}</arg>
+<arg>Please check if the information you entered is correct.\nIf there are any corrections after the submission, the details can only be edited by the teller.</arg>
+</arguments>
+<msg timestamp="20230223 15:04:19.037" level="INFO">Verifying element '//p[contains(text(),'Please check if the information you entered is correct. ')]' contains exact text 'Please check if the information you entered is correct.
+If there are any corrections after the submission, the details can only be edited by the teller.'.</msg>
+<status status="PASS" starttime="20230223 15:04:19.037" endtime="20230223 15:04:19.084"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.086" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:19.085" endtime="20230223 15:04:22.086"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_DEPOSITOR_CONTACT_DETAILS}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.113" level="INFO">Current page contains element '//h6[text()='Depositor Contact Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.087" endtime="20230223 15:04:22.113"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${REVIEW_DEPOSITOR_MOBILE_NUMBER}</arg>
+<arg>Depositor's Mobile No.</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.114" level="INFO">Verifying element '//*[@id="__next"]/div/div[3]/div/div/div[2]/div/div/div[1]/div[1]/p' contains exact text 'Depositor's Mobile No.'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.114" endtime="20230223 15:04:22.155"></status>
+</kw>
+<kw name="Element Text Should Be" library="Selenium2Library">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${REVIEW_DEPOSITOR_EMAIL_ADDRESS}</arg>
+<arg>Depositor's Email Address</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.156" level="INFO">Verifying element '//*[@id="__next"]/div/div[3]/div/div/div[2]/div/div/div[2]/div[1]/p' contains exact text 'Depositor's Email Address'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.155" endtime="20230223 15:04:22.201"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${APPOINTMENT_DETAILS_LABEL}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.226" level="INFO">Current page contains element '//h6[text()='Appointment Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.202" endtime="20230223 15:04:22.226"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${BRANCH_LABEL}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.249" level="INFO">Current page contains element '//p[text()='Branch']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.226" endtime="20230223 15:04:22.249"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_APPOINTMENT_DATE}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.275" level="INFO">Current page contains element '//p[text()='Appointment Date']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.250" endtime="20230223 15:04:22.276"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,400)</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.278" level="INFO">Executing JavaScript:
+window.scrollTo(1,400)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:04:22.277" endtime="20230223 15:04:22.291"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_DEPOSIT_DETAILS}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.318" level="INFO">Current page contains element '//h6[text()='Deposit Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.292" endtime="20230223 15:04:22.318"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_ACCOUNT_NUMBER}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.344" level="INFO">Current page contains element '//p[text()='Account Number']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.319" endtime="20230223 15:04:22.344"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_ACCOUNT_NAME}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.372" level="INFO">Current page contains element '//p[text()='Account Name']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.345" endtime="20230223 15:04:22.373"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_AMOUNT_TO_DEPOSIT}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.397" level="INFO">Current page contains element '//p[text()='Amount to Deposit']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.373" endtime="20230223 15:04:22.398"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${SERVICE_FEE_NOTES}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.418" level="INFO">Current page contains element '//p[text()='Please note that a service fee may incur because of interbranch transactions or amount restrictions.']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.399" endtime="20230223 15:04:22.419"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${SERVICE_FEE_MATRIX_LINK}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.439" level="INFO">Current page contains element '//button[text()='See service fee matrix here']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.419" endtime="20230223 15:04:22.440"></status>
+</kw>
+<kw name="Element Should Be Visible" library="Selenium2Library">
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<arguments>
+<arg>${REVIEW_EDIT_ICON}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.491" level="INFO">Element '//span[@class='MuiButton-startIcon MuiButton-iconSizeMedium css-1l6c7y9']' is displayed.</msg>
+<status status="PASS" starttime="20230223 15:04:22.440" endtime="20230223 15:04:22.491"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_EDIT_DETAILS_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.515" level="INFO">Current page contains element '//button[text()='Edit Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.492" endtime="20230223 15:04:22.516"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${REVIEW_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:22.542" level="INFO">Current page contains element '//button[text()='Submit']'.</msg>
+<status status="PASS" starttime="20230223 15:04:22.516" endtime="20230223 15:04:22.543"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:27.544" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:22.543" endtime="20230223 15:04:27.545"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:18.573" endtime="20230223 15:04:27.545"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:18.571" endtime="20230223 15:04:27.546" critical="yes"></status>
+</test>
+<test id="s1-t14" name="Transaction Summary Data Validation">
+<kw name="Customer Input Data Validation" library="CashDeposit_Keywords">
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Customer_MOBILE_NUMBER_INPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_MOBILE_NUM}</var>
+</assign>
+<msg timestamp="20230223 15:04:27.599" level="INFO">${GET_CUSTOMER_MOBILE_NUM} = +63 968 769 8900</msg>
+<status status="PASS" starttime="20230223 15:04:27.550" endtime="20230223 15:04:27.599"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_CUSTOMER_MOBILE_NUM}</arg>
+<arg>${MOBILE_INPUT_DIGITAL_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:27.600" endtime="20230223 15:04:27.601"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Customer_EMAIL_ADD_INPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_EMAIL_ADD}</var>
+</assign>
+<msg timestamp="20230223 15:04:27.644" level="INFO">${GET_CUSTOMER_EMAIL_ADD} = loro.ryancristopher@gmail.com</msg>
+<status status="PASS" starttime="20230223 15:04:27.601" endtime="20230223 15:04:27.645"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_CUSTOMER_EMAIL_ADD}</arg>
+<arg>${EMAIL_INPUT_DIGITAL_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:27.645" endtime="20230223 15:04:27.646"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CUSTOMER_SELECTED_BRANCH}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_BRANCH}</var>
+</assign>
+<msg timestamp="20230223 15:04:27.689" level="INFO">${GET_CUSTOMER_BRANCH} = Makati - Legazpi</msg>
+<status status="PASS" starttime="20230223 15:04:27.646" endtime="20230223 15:04:27.689"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_CUSTOMER_BRANCH}</arg>
+<arg>${BRANCH_INPUT_DIGITAL_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:27.689" endtime="20230223 15:04:27.690"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CUSTOMER_SELECTED_DATE}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_APPOINTMENT}</var>
+</assign>
+<msg timestamp="20230223 15:04:27.736" level="INFO">${GET_CUSTOMER_APPOINTMENT} = 2-28-2023</msg>
+<status status="PASS" starttime="20230223 15:04:27.691" endtime="20230223 15:04:27.736"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${ZERO}${GET_CUSTOMER_APPOINTMENT}</arg>
+<arg>${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:27.737" endtime="20230223 15:04:27.738"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CUSTOMER_ACC_NUMBER_INPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_ACCOUNT_NUMBER}</var>
+</assign>
+<msg timestamp="20230223 15:04:27.789" level="INFO">${GET_CUSTOMER_ACCOUNT_NUMBER} = 9010 0008 5600 4</msg>
+<status status="PASS" starttime="20230223 15:04:27.738" endtime="20230223 15:04:27.789"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_CUSTOMER_ACCOUNT_NUMBER}</arg>
+<arg>${ACCOUNT_NUMBER_DIGITAL_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:27.790" endtime="20230223 15:04:27.791"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CUSTOMER_ACC_NAME_INPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_NAME}</var>
+</assign>
+<msg timestamp="20230223 15:04:27.847" level="INFO">${GET_CUSTOMER_NAME} = Ryan Cristopher Loro</msg>
+<status status="PASS" starttime="20230223 15:04:27.791" endtime="20230223 15:04:27.848"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_CUSTOMER_NAME}</arg>
+<arg>${ACCOUNT_NAME_DIGITAL_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:27.848" endtime="20230223 15:04:27.849"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${CUSTOMER_AMOUNT_INPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_AMOUNT}</var>
+</assign>
+<msg timestamp="20230223 15:04:27.896" level="INFO">${GET_CUSTOMER_AMOUNT} = AUD 25,000.00</msg>
+<status status="PASS" starttime="20230223 15:04:27.850" endtime="20230223 15:04:27.897"></status>
+</kw>
+<kw name="Should Be Equal" library="BuiltIn">
+<doc>Fails if the given objects are unequal.</doc>
+<arguments>
+<arg>${GET_CUSTOMER_AMOUNT}</arg>
+<arg>${CUSTOMER_AMOUT_DIGITAL_FORM}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:27.898" endtime="20230223 15:04:27.899"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5S</arg>
+</arguments>
+<msg timestamp="20230223 15:04:32.900" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:27.899" endtime="20230223 15:04:32.900"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:27.549" endtime="20230223 15:04:32.900"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:27.548" endtime="20230223 15:04:32.900" critical="yes"></status>
+</test>
+<test id="s1-t15" name="Transaction Summary with Email Address">
+<kw name="Review Details with Email Address" library="CashDeposit_Keywords">
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//p[contains(text(),'Email Address')]</arg>
+</arguments>
+<msg timestamp="20230223 15:04:32.930" level="INFO">Current page contains element '//p[contains(text(),'Email Address')]'.</msg>
+<status status="PASS" starttime="20230223 15:04:32.906" endtime="20230223 15:04:32.930"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Customer_EMAIL_ADD_INPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_EMAIL_ADD}</var>
+</assign>
+<msg timestamp="20230223 15:04:32.962" level="INFO">${GET_CUSTOMER_EMAIL_ADD} = loro.ryancristopher@gmail.com</msg>
+<status status="PASS" starttime="20230223 15:04:32.930" endtime="20230223 15:04:32.962"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:32.903" endtime="20230223 15:04:32.962"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:32.903" endtime="20230223 15:04:32.962" critical="yes"></status>
+</test>
+<test id="s1-t16" name="Transaction Summary without Email Address">
+<kw name="Review Details without Email Address" library="CashDeposit_Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${REVIEW_EDIT_DETAILS_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:32.970" level="INFO">Clicking element '//button[text()='Edit Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:32.970" endtime="20230223 15:04:33.091"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Depositor_Contact_Details}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:33.091" endtime="20230223 15:04:33.116"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Depositor_Contact_Details}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:33.140" level="INFO">Current page contains element '//p[text()='Depositor Contact Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:33.116" endtime="20230223 15:04:33.140"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Depositors_Email_Address_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:33.140" endtime="20230223 15:04:33.452"></status>
+</kw>
+<kw name="Press Keys" library="Selenium2Library">
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+<arg>CTRL+a</arg>
+<arg>BACKSPACE</arg>
+</arguments>
+<msg timestamp="20230223 15:04:33.452" level="INFO">Sending key(s) ('CTRL+a', 'BACKSPACE') to //*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input element.</msg>
+<msg timestamp="20230223 15:04:33.768" level="INFO">Pressing special key CONTROL down.</msg>
+<msg timestamp="20230223 15:04:33.768" level="INFO">Sending key a</msg>
+<msg timestamp="20230223 15:04:33.768" level="INFO">Releasing special key CONTROL.</msg>
+<msg timestamp="20230223 15:04:33.793" level="INFO">Pressing special key BACKSPACE to element.</msg>
+<msg timestamp="20230223 15:04:33.793" level="INFO">Releasing special key BACKSPACE.</msg>
+<status status="PASS" starttime="20230223 15:04:33.452" endtime="20230223 15:04:33.833"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:36.833" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:33.833" endtime="20230223 15:04:36.833"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,700)</arg>
+</arguments>
+<msg timestamp="20230223 15:04:36.833" level="INFO">Executing JavaScript:
+window.scrollTo(1,700)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:04:36.833" endtime="20230223 15:04:36.846"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Digital_Form_NextBtn}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:36.854" level="INFO">Clicking element '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20230223 15:04:36.846" endtime="20230223 15:04:37.072"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:40.073" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:37.072" endtime="20230223 15:04:40.073"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Service_Fee_Continue_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:40.073" level="INFO">Clicking element '//button[text()='Continue']'.</msg>
+<status status="PASS" starttime="20230223 15:04:40.073" endtime="20230223 15:04:40.233"></status>
+</kw>
+<kw name="Page Should Not Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is not found on the current page.</doc>
+<arguments>
+<arg>//p[contains(text(),'Email Address')]</arg>
+</arguments>
+<msg timestamp="20230223 15:04:40.250" level="INFO">Current page does not contain element '//p[contains(text(),'Email Address')]'.</msg>
+<status status="PASS" starttime="20230223 15:04:40.233" endtime="20230223 15:04:40.250"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:45.257" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:40.256" endtime="20230223 15:04:45.257"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:32.970" endtime="20230223 15:04:45.257"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:32.970" endtime="20230223 15:04:45.258" critical="yes"></status>
+</test>
+<test id="s1-t17" name="Edit Customer Details">
+<kw name="Click Edit Details Button" library="CashDeposit_Keywords">
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${REVIEW_EDIT_DETAILS_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:45.262" level="INFO">Clicking element '//button[text()='Edit Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:45.262" endtime="20230223 15:04:45.373"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${Depositor_Contact_Details}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:45.373" endtime="20230223 15:04:45.392"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Depositor_Contact_Details}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:45.410" level="INFO">Current page contains element '//p[text()='Depositor Contact Details']'.</msg>
+<status status="PASS" starttime="20230223 15:04:45.393" endtime="20230223 15:04:45.411"></status>
+</kw>
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Depositors_Email_Address_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:04:45.411" endtime="20230223 15:04:45.718"></status>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>${Email_Address_Textfield}</arg>
+<arg>loro.ryancristopher@gmail.com</arg>
+</arguments>
+<msg timestamp="20230223 15:04:45.720" level="INFO">Typing text 'loro.ryancristopher@gmail.com' into text field '//*[@id="__next"]/div/div[3]/div/form/div/div[4]/div/div/input'.</msg>
+<status status="PASS" starttime="20230223 15:04:45.719" endtime="20230223 15:04:45.944"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:48.947" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:45.945" endtime="20230223 15:04:48.948"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,700)</arg>
+</arguments>
+<msg timestamp="20230223 15:04:48.950" level="INFO">Executing JavaScript:
+window.scrollTo(1,700)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230223 15:04:48.948" endtime="20230223 15:04:48.962"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Digital_Form_NextBtn}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:48.964" level="INFO">Clicking element '//button[text()='Next']'.</msg>
+<status status="PASS" starttime="20230223 15:04:48.963" endtime="20230223 15:04:49.078"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:52.079" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:49.078" endtime="20230223 15:04:52.080"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Service_Fee_Continue_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:52.081" level="INFO">Clicking element '//button[text()='Continue']'.</msg>
+<status status="PASS" starttime="20230223 15:04:52.080" endtime="20230223 15:04:52.183"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20230223 15:04:55.184" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:52.184" endtime="20230223 15:04:55.185"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>//p[contains(text(),'Email Address')]</arg>
+</arguments>
+<msg timestamp="20230223 15:04:55.209" level="INFO">Current page contains element '//p[contains(text(),'Email Address')]'.</msg>
+<status status="PASS" starttime="20230223 15:04:55.185" endtime="20230223 15:04:55.210"></status>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<arguments>
+<arg>${Customer_EMAIL_ADD_INPUT}</arg>
+</arguments>
+<assign>
+<var>${GET_CUSTOMER_EMAIL_ADD}</var>
+</assign>
+<msg timestamp="20230223 15:04:55.253" level="INFO">${GET_CUSTOMER_EMAIL_ADD} = loro.ryancristopher@gmail.com</msg>
+<status status="PASS" starttime="20230223 15:04:55.211" endtime="20230223 15:04:55.253"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>${REVIEW_SUBMIT_BUTTON}</arg>
+</arguments>
+<msg timestamp="20230223 15:04:55.253" level="INFO">Clicking element '//button[text()='Submit']'.</msg>
+<status status="PASS" starttime="20230223 15:04:55.253" endtime="20230223 15:04:55.383"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>5s</arg>
+</arguments>
+<msg timestamp="20230223 15:05:00.384" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230223 15:04:55.383" endtime="20230223 15:05:00.385"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:45.261" endtime="20230223 15:05:00.386"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:04:45.260" endtime="20230223 15:05:00.386" critical="yes"></status>
+</test>
+<test id="s1-t18" name="Confirmation Screen Validation">
+<kw name="View and Navigate to Transaction Confirmation Screen" library="CashDeposit_Keywords">
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<arguments>
+<arg>${Branch_transaction_Label}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:05:00.388" endtime="20230223 15:05:00.710"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${YOU_ARE_NOW_BOOKE_LABEL}</arg>
+</arguments>
+<status status="PASS" starttime="20230223 15:05:00.710" endtime="20230223 15:05:00.738"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Branch_transaction_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:05:00.756" level="INFO">Current page contains element '//p[text()='Branch Transaction']'.</msg>
+<status status="PASS" starttime="20230223 15:05:00.738" endtime="20230223 15:05:00.756"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${X_Button}</arg>
+</arguments>
+<msg timestamp="20230223 15:05:00.777" level="INFO">Current page contains element '//*[@id="__next"]/div/div[1]/div[2]/button'.</msg>
+<status status="PASS" starttime="20230223 15:05:00.757" endtime="20230223 15:05:00.777"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Book_Appointment_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:05:00.800" level="INFO">Current page contains element '//p[text()='You are booking an appointment for']'.</msg>
+<status status="PASS" starttime="20230223 15:05:00.778" endtime="20230223 15:05:00.800"></status>
+</kw>
+<kw name="Page Should Contain Element" library="Selenium2Library">
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<arguments>
+<arg>${Cash_Deposit_Label}</arg>
+</arguments>
+<msg timestamp="20230223 15:05:00.827" level="INFO">Current page contains element '//p[text()='Cash Deposit']'.</msg>
+<status status="PASS" starttime="20230223 15:05:00.800" endtime="20230223 15:05:00.828"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:05:00.388" endtime="20230223 15:05:00.828"></status>
+</kw>
+<status status="PASS" starttime="20230223 15:05:00.388" endtime="20230223 15:05:00.828" critical="yes"></status>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230223 15:05:00.829" endtime="20230223 15:05:03.084"></status>
+</kw>
+<doc>A test suite for Cash Deposit.</doc>
+<status status="PASS" starttime="20230223 15:02:34.405" endtime="20230223 15:05:03.085"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="18" fail="0">Critical Tests</stat>
+<stat pass="18" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="18" fail="0" id="s1" name="CashDeposit">CashDeposit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

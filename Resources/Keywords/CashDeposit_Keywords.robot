@@ -165,173 +165,221 @@ Digital Form Error Message Validation
     Sleep                                     5s
 
 Digital Form Input Validation
-    Press Keys                                ${Account_Name_Textfield}                     CTRL+a      BACKSPACE
-    Press Keys                                ${Email_Address_Textfield}                    CTRL+a      BACKSPACE
-    Press Keys                                ${Account_Number_Textfield}                   CTRL+a      BACKSPACE
-    Press Keys                                ${Amount_Textfield}                           CTRL+a      BACKSPACE
-    Input text                                ${Depositors_MobileNumber_textfield}          94555ASH-882-012
-    Input text                                ${Email_Address_Textfield}                    l.rye0014@gmail.com
-    Execute JavaScript                        window.scrollTo(1,1000)
-    Input text                                ${Account_Number_Textfield}                   99900HH-GHH-0001-188888
-    Input text                                ${Account_Name_Textfield}                     Rye D-111
-    Input text                                ${Amount_Textfield}                           99999HH-GHH-999-AA-999
-    Sleep                                     5s
+    Press Keys                                 ${Account_Name_Textfield}                     CTRL+a      BACKSPACE
+    Press Keys                                 ${Email_Address_Textfield}                    CTRL+a      BACKSPACE
+    Press Keys                                 ${Account_Number_Textfield}                   CTRL+a      BACKSPACE
+    Press Keys                                 ${Amount_Textfield}                           CTRL+a      BACKSPACE
+    Input text                                 ${Depositors_MobileNumber_textfield}          94555ASH-882-012
+    Input text                                 ${Email_Address_Textfield}                    l.rye0014@gmail.com
+    Execute JavaScript                         window.scrollTo(1,1000)
+    Input text                                 ${Account_Number_Textfield}                   99900HH-GHH-0001-188888
+    Input text                                 ${Account_Name_Textfield}                     Rye D-111
+    Input text                                 ${Amount_Textfield}                           99999HH-GHH-999-AA-999
+    Sleep                                      5s
 
 Date of Transaction Validation
-    Scroll element into view                  ${You_canSet_your_label}
-    Click element                             ${Date_Picker}
+    Scroll element into view                   ${You_canSet_your_label}
+    Click element                              ${Date_Picker}
 #    ${GET_DATE_COUNT_PAGE1}                   Get element count                             ${ENABLED_APPOINTMENT_DATE}
-    Click element                             ${NEXT_BUTTON_CALENDAR}
-    ${GET_DATE_COUNT_PAGE2}                   Get element count                             ${ENABLED_APPOINTMENT_DATE}
+    Click element                              ${NEXT_BUTTON_CALENDAR}
+    ${GET_DATE_COUNT_PAGE2}                    Get element count                             ${ENABLED_APPOINTMENT_DATE}
 #    ${CONVERT_TO_INT_PAGE1}                   Convert to string                            ${GET_DATE_COUNT_PAGE1}
 #    ${CONVERT_TO_INT_PAGE2}                   Convert to string                            ${GET_DATE_COUNT_PAGE2}
 #    ${EVALUATE_DATE_COUNT}                    Evaluate                                     ${CONVERT_TO_INT_PAGE2}
     log                                        ${GET_DATE_COUNT_PAGE2}
-    Sleep                                     3s
+    Sleep                                      3s
 #    ${COUNT_ENABLED_DATES}                    Get element count                             ${ENABLED_APPOINTMENT_DATE}
-    Press keys                                None                                           ESC
+    Press keys                                 None                                           ESC
 
 Digital Form Happy Path
-    Sleep                                     3s
-    Press Keys                                ${Account_Name_Textfield}                     CTRL+a      BACKSPACE
-    Press Keys                                ${Email_Address_Textfield}                    CTRL+a      BACKSPACE
-    Press Keys                                ${Account_Number_Textfield}                   CTRL+a      BACKSPACE
-    Press Keys                                ${Amount_Textfield}                           CTRL+a      BACKSPACE
-    Press Keys                                ${Depositors_MobileNumber_textfield}          CTRL+a      BACKSPACE
-    Scroll element into view                  ${Depositors_MobileNumber_Label}
-    Input text                                ${Depositors_MobileNumber_textfield}          9687698900
-    ${GET_MOBILE_NUMBER_VALUE}                Get Value                                     ${Depositors_MobileNumber_textfield}
-    Set suite variable                        ${MOBILE_INPUT_DIGITAL_FORM}                  +63 ${GET_MOBILE_NUMBER_VALUE}
-    Scroll element into view                  ${Apointment_Details_Label}
-    Input text                                ${Email_Address_Textfield}                    loro.ryancristopher@gmail.com
-    ${GET_VALUE_FROM_EMAIL_ADD}               Get Value                                     ${Email_Address_Textfield}
-    Set suite variable                        ${EMAIL_INPUT_DIGITAL_FORM}                   ${GET_VALUE_FROM_EMAIL_ADD}
-    Execute JavaScript                        window.scrollTo(1,400)
-    Click element                             ${Brach_Dropdown}
-    Sleep                                     2s
-    Click element                             ${Branch_option_Legazpi}
-    ${GET_VALUE_FROM_BRANCH}                  Get Value                                     ${Brach_Dropdown}
-    Set suite variable                        ${BRANCH_INPUT_DIGITAL_FORM}                  Makati - Legazpi
-    Execute JavaScript                        window.scrollTo(1,500)
-    Click element                             ${Date_Picker}
-    Sleep                                     2s
-    Click element                             ${Select_AppointmentDate}
-    ${GET_USER_APPOINTMENT}                   Get element attribute                           //input[@name='appointmentDate']     value
-    Set suite variable                        ${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}          ${GET_USER_APPOINTMENT}
-    Execute JavaScript                        window.scrollTo(1,1000)
-    Input text                                ${Account_Number_Textfield}                     9010000856004
-    ${GET_VALUE_FROM_ACCOUNT_NUMBER}          Get Value                                       ${Account_Number_Textfield}
-    Set suite variable                        ${ACCOUNT_NUMBER_DIGITAL_FORM}                  9010 0008 5600 4
-    Input text                                ${Account_Name_Textfield}                       Ryan Cristopher Loro
-    ${GET_VALUE_FROM_ACCNAME}                 Get Value                                       ${Account_Name_Textfield}
-    Set suite variable                        ${ACCOUNT_NAME_DIGITAL_FORM}                    ${GET_VALUE_FROM_ACCNAME}
-    Input text                                ${Amount_Textfield}                             25000
-    ${GET_VALUE_FROM_AMOUNT}                  Get Value                                       ${Amount_Textfield}
-    Set suite variable                        ${CUSTOMER_AMOUT_DIGITAL_FORM}                  ${CURRENCY_VARIABLE} 25,000.00
-    Click element                             ${Account_Name_Label}
-    Sleep                                     3s
-    Click element                             ${Digital_Form_NextBtn}
-    sleep                                     3s
+    Sleep                                       3s
+    Press Keys                                  ${Account_Name_Textfield}                     CTRL+a      BACKSPACE
+    Press Keys                                  ${Email_Address_Textfield}                    CTRL+a      BACKSPACE
+    Press Keys                                  ${Account_Number_Textfield}                   CTRL+a      BACKSPACE
+    Press Keys                                  ${Amount_Textfield}                           CTRL+a      BACKSPACE
+    Press Keys                                  ${Depositors_MobileNumber_textfield}          CTRL+a      BACKSPACE
+    Scroll element into view                    ${Depositors_MobileNumber_Label}
+    Input text                                  ${Depositors_MobileNumber_textfield}          9455586601
+    ${GET_MOBILE_NUMBER_VALUE}                  Get Value                                     ${Depositors_MobileNumber_textfield}
+    Set suite variable                          ${MOBILE_INPUT_DIGITAL_FORM}                  +63 ${GET_MOBILE_NUMBER_VALUE}
+    Scroll element into view                    ${Apointment_Details_Label}
+    Input text                                  ${Email_Address_Textfield}                    loro.ryancristopher@gmail.com
+    ${GET_VALUE_FROM_EMAIL_ADD}                 Get Value                                     ${Email_Address_Textfield}
+    Set suite variable                          ${EMAIL_INPUT_DIGITAL_FORM}                   ${GET_VALUE_FROM_EMAIL_ADD}
+    Execute JavaScript                          window.scrollTo(1,400)
+    Click element                               ${Brach_Dropdown}
+    Sleep                                       2s
+    Click element                               ${Branch_option_Legazpi}
+    ${GET_VALUE_FROM_BRANCH}                    Get Value                                     ${Brach_Dropdown}
+    Set suite variable                          ${BRANCH_INPUT_DIGITAL_FORM}                  Makati - Legazpi
+    Execute JavaScript                          window.scrollTo(1,500)
+    Click element                               ${Date_Picker}
+    Sleep                                       2s
+    Click element                               ${Select_AppointmentDate}
+    ${GET_USER_APPOINTMENT}                     Get element attribute                           //input[@name='appointmentDate']     value
+    Set suite variable                          ${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}          ${GET_USER_APPOINTMENT}
+    Execute JavaScript                          window.scrollTo(1,1000)
+    Input text                                  ${Account_Number_Textfield}                     9010000856004
+    ${GET_VALUE_FROM_ACCOUNT_NUMBER}            Get Value                                       ${Account_Number_Textfield}
+    Set suite variable                          ${ACCOUNT_NUMBER_DIGITAL_FORM}                  9010 0008 5600 4
+    Input text                                  ${Account_Name_Textfield}                       Ryan Cristopher Loro
+    ${GET_VALUE_FROM_ACCNAME}                   Get Value                                       ${Account_Name_Textfield}
+    Set suite variable                          ${ACCOUNT_NAME_DIGITAL_FORM}                    ${GET_VALUE_FROM_ACCNAME}
+    Input text                                  ${Amount_Textfield}                             25000
+    ${GET_VALUE_FROM_AMOUNT}                    Get Value                                       ${Amount_Textfield}
+    Set suite variable                          ${CUSTOMER_AMOUT_DIGITAL_FORM}                  ${CURRENCY_VARIABLE} 25,000.00
+    Click element                               ${Account_Name_Label}
+    Sleep                                       3s
+    Click element                               ${Digital_Form_NextBtn}
+    sleep                                       3s
 
 Service Fee Modal Validation
-    Wait until page contains element          ${Service_Fee_Modal_Title}
-    Element should be visible                 ${Service_Fee_Modal_Icon}
-    Page should contain element               ${Service_Fee_Modal_Title}
-    Page should contain element               ${Service_Fee_Modal_Details}
-    Page should contain element               ${Service_Fee_Modal_Matrix}
-    Page should contain element               ${Service_Fee_Continue_Button}
-    Page should contain element               ${Service_Fee_Go_Back_to_form}
+    Wait until page contains element            ${Service_Fee_Modal_Title}
+    Element should be visible                   ${Service_Fee_Modal_Icon}
+    Page should contain element                 ${Service_Fee_Modal_Title}
+    Page should contain element                 ${Service_Fee_Modal_Details}
+    Page should contain element                 ${Service_Fee_Modal_Matrix}
+    Page should contain element                 ${Service_Fee_Continue_Button}
+    Page should contain element                 ${Service_Fee_Go_Back_to_form}
 
 Click Go Back to Form
-    Click element                             ${Service_Fee_Go_Back_to_form}
-    Wait until page contains element          ${Digital_Form_NextBtn}
-    Sleep                                     5s
-    Click element                             ${Digital_Form_NextBtn}
-    Wait until page contains element          ${Service_Fee_Modal_Title}
-    sleep                                     2s
+    Click element                               ${Service_Fee_Go_Back_to_form}
+    Wait until page contains element            ${Digital_Form_NextBtn}
+    Sleep                                       5s
+    Click element                               ${Digital_Form_NextBtn}
+    Wait until page contains element            ${Service_Fee_Modal_Title}
+    sleep                                       2s
 
 Click Continue Button
-    Click element                             ${Service_Fee_Continue_Button}
-    Sleep                                     5s
+    Click element                               ${Service_Fee_Continue_Button}
+    Sleep                                       5s
 
 View and Navigate to Review Screen
+    Scroll element into view                   ${Branch_transaction_Label}
+    Wait until page contains element           ${REVIEW_DETAILS_LABEL}
+    Page should contain element                ${Branch_transaction_Label}
+    Page should contain element                ${X_Button}
+    Page should contain element                ${Book_Appointment_Label}
+    Page should contain element                ${Cash_Deposit_Label}
+    Page should contain element                ${REVIEW_DETAILS_LABEL}
+    Element Text Should Be                     ${REVIEW_DETAILS_CONTENT}                 Please check if the information you entered is correct.\nIf there are any corrections after the submission, the details can only be edited by the teller.
+    Sleep                                      3s
+    Page should contain element                ${REVIEW_DEPOSITOR_CONTACT_DETAILS}
+    Element Text Should Be                     ${REVIEW_DEPOSITOR_MOBILE_NUMBER}         Depositor's Mobile No.
+    Element Text Should Be                     ${REVIEW_DEPOSITOR_EMAIL_ADDRESS}         Depositor's Email Address
+    Page should contain element                ${APPOINTMENT_DETAILS_LABEL}
+    Page should contain element                ${BRANCH_LABEL}
+    Page should contain element                ${REVIEW_APPOINTMENT_DATE}
+    Execute JavaScript                         window.scrollTo(1,400)
+    Page should contain element                ${REVIEW_DEPOSIT_DETAILS}
+    Page should contain element                ${REVIEW_ACCOUNT_NUMBER}
+    Page should contain element                ${REVIEW_ACCOUNT_NAME}
+    Page should contain element                ${REVIEW_AMOUNT_TO_DEPOSIT}
+    Page should contain element                ${SERVICE_FEE_NOTES}
+    Page should contain element                ${SERVICE_FEE_MATRIX_LINK}
+    Element should be visible                  ${REVIEW_EDIT_ICON}
+    Page should contain element                ${REVIEW_EDIT_DETAILS_BUTTON}
+    Page should contain element                ${REVIEW_SUBMIT_BUTTON}
+    Sleep     5s
+
+Customer Input Data Validation
+    ${GET_CUSTOMER_MOBILE_NUM}                 Get text                                    ${Customer_MOBILE_NUMBER_INPUT}
+    Should be equal                            ${GET_CUSTOMER_MOBILE_NUM}                  ${MOBILE_INPUT_DIGITAL_FORM}
+    ${GET_CUSTOMER_EMAIL_ADD}                  Get text                                    ${Customer_EMAIL_ADD_INPUT}
+    Should be equal                            ${GET_CUSTOMER_EMAIL_ADD}                   ${EMAIL_INPUT_DIGITAL_FORM}
+    ${GET_CUSTOMER_BRANCH}                     Get text                                    ${CUSTOMER_SELECTED_BRANCH}
+    Should be equal                            ${GET_CUSTOMER_BRANCH}                      ${BRANCH_INPUT_DIGITAL_FORM}
+    ${GET_CUSTOMER_APPOINTMENT}                Get text                                    ${CUSTOMER_SELECTED_DATE}
+    Should be equal                            ${ZERO}${GET_CUSTOMER_APPOINTMENT}          ${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}
+    ${GET_CUSTOMER_ACCOUNT_NUMBER}             Get text                                    ${CUSTOMER_ACC_NUMBER_INPUT}
+    Should be equal                            ${GET_CUSTOMER_ACCOUNT_NUMBER}              ${ACCOUNT_NUMBER_DIGITAL_FORM}
+    ${GET_CUSTOMER_NAME}                       Get text                                    ${CUSTOMER_ACC_NAME_INPUT}
+    Should be equal                            ${GET_CUSTOMER_NAME}                        ${ACCOUNT_NAME_DIGITAL_FORM}
+    ${GET_CUSTOMER_AMOUNT}                     Get text                                    ${CUSTOMER_AMOUNT_INPUT}
+    Should be equal                            ${GET_CUSTOMER_AMOUNT}                      ${CUSTOMER_AMOUT_DIGITAL_FORM}
+    SLEEP                                      5S
+
+Review Details with Email Address
+    Page should contain element                //p[contains(text(),'Email Address')]
+    ${GET_CUSTOMER_EMAIL_ADD}                  Get text                                    ${Customer_EMAIL_ADD_INPUT}
+
+Review Details without Email Address
+    Click element                             ${REVIEW_EDIT_DETAILS_BUTTON}
+    Wait until page contains element          ${Depositor_Contact_Details}
+    Page should contain element               ${Depositor_Contact_Details}
+    Scroll element into view                  ${Depositors_Email_Address_Label}
+    Press Keys                                ${Email_Address_Textfield}                    CTRL+a      BACKSPACE
+    Sleep                                     3s
+    Execute JavaScript                        window.scrollTo(1,700)
+    Click element                             ${Digital_Form_NextBtn}
+    Sleep                                     3s
+    Click element                             ${Service_Fee_Continue_Button}
+    page should not contain element           //p[contains(text(),'Email Address')]
+    Sleep                                     5s
+
+Click Edit Details Button
+    Click element                             ${REVIEW_EDIT_DETAILS_BUTTON}
+    Wait until page contains element          ${Depositor_Contact_Details}
+    Page should contain element               ${Depositor_Contact_Details}
+    Scroll element into view                  ${Depositors_Email_Address_Label}
+    Input text                                ${Email_Address_Textfield}                    loro.ryancristopher@gmail.com
+    Sleep                                     3s
+    Execute JavaScript                        window.scrollTo(1,700)
+    Click element                             ${Digital_Form_NextBtn}
+    Sleep                                     3s
+    Click element                             ${Service_Fee_Continue_Button}
+    Sleep                                     3s
+    Page should contain element               //p[contains(text(),'Email Address')]
+    ${GET_CUSTOMER_EMAIL_ADD}                 Get text                                    ${Customer_EMAIL_ADD_INPUT}
+    Click element                             ${REVIEW_SUBMIT_BUTTON}
+    Sleep                                     5s
+
+View and Navigate to Transaction Confirmation Screen
     Scroll element into view                  ${Branch_transaction_Label}
-    Wait until page contains element          ${REVIEW_DETAILS_LABEL}
+    Sleep                                     5s
+    Wait until page contains element          ${YOU_ARE_NOW_BOOKED_LABEL}
     Page should contain element               ${Branch_transaction_Label}
     Page should contain element               ${X_Button}
     Page should contain element               ${Book_Appointment_Label}
     Page should contain element               ${Cash_Deposit_Label}
-    Page should contain element               ${REVIEW_DETAILS_LABEL}
-    Element Text Should Be                    ${REVIEW_DETAILS_CONTENT}                 Please check if the information you entered is correct.\nIf there are any corrections after the submission, the details can only be edited by the teller.
-    Sleep                                     3s
-    Page should contain element               ${REVIEW_DEPOSITOR_CONTACT_DETAILS}
-    Element Text Should Be                    ${REVIEW_DEPOSITOR_MOBILE_NUMBER}         Depositor's Mobile No.
-    Element Text Should Be                    ${REVIEW_DEPOSITOR_EMAIL_ADDRESS}         Depositor's Email Address
-    Page should contain element               ${APPOINTMENT_DETAILS_LABEL}
-    Page should contain element               ${BRANCH_LABEL}
-    Page should contain element               ${REVIEW_APPOINTMENT_DATE}
-    Execute JavaScript                        window.scrollTo(1,400)
-    Page should contain element               ${REVIEW_DEPOSIT_DETAILS}
-    Page should contain element               ${REVIEW_ACCOUNT_NUMBER}
-    Page should contain element               ${REVIEW_ACCOUNT_NAME}
-    Page should contain element               ${REVIEW_AMOUNT_TO_DEPOSIT}
-    Page should contain element               ${SERVICE_FEE_NOTES}
-    Page should contain element               ${SERVICE_FEE_MATRIX_LINK}
-    Element should be visible                 ${REVIEW_EDIT_ICON}
-    Page should contain element               ${REVIEW_EDIT_DETAILS_BUTTON}
-    Page should contain element               ${REVIEW_SUBMIT_BUTTON}
-    Sleep     5s
+    Page should contain element               ${YOU_ARE_NOW_BOOKED_LABEL}
+    Element Should Be Visible                 ${CHECK_ICON}
+    Element Should Be Visible                 ${WE_SENT_BOOOKING_LABEL}
+    ${GET_WE_SENT_A_BOOKING_VALUE}            Get Text                                   ${WE_SENT_BOOOKING_LABEL}
+    Page should contain element               ${WE_WILL_ALSO_SEND_LABEL}
+    Page should contain element               ${REFERENCE_N0_LABEL_CONFIRMATION}
+    Element Should Be Visible                 ${USER_REFERENCE_N0_CONFIRMATION}
+    Page should contain element               ${DEPOSITORS_MOBILE_CONFIRMATION}
+    Element Should Be Visible                 ${MOBILE_NUM_VALUE_CONFIRMATION}
+    Page should contain element               ${DEPOSITORS_EMAIL_CONFIRMATION}
+    Element Should Be Visible                 ${EMAIL_VALUE_CONFIRMATION}
+    Page should contain element               ${BRANCH_CONFIRMATION_PAGE}
+    Element Should Be Visible                 ${BRANCH_VALUE_CONFIRMATION}
+    Execute JavaScript                        window.scrollTo(1,1200)
+    Page should contain element               ${APPOINTMENT_DATE_CONFIRMATION}
+    Element Should Be Visible                 ${APPOINTMENT_VALUE_CONFIRMATION}
+    Page should contain element               ${ACCOUNT_NUMBER_LABEL_CONFIRMATION}
+    Element Should Be Visible                 ${ACCOUNT_NUMBER_VALUE_CONFIRMATION}
+    Page should contain element               ${ACCOUNT_NAME_LABEL_CONFIRMATION}
+    Element Should Be Visible                 ${ACCOUNT_NAME_VALUE_CONFIRMATION}
+    Page should contain element               ${AMOUNT_TO_DEPOSIT_CONFIRMATION}
+    Element Should Be Visible                 ${AMOUNT_VALUE_CONFIRMATION_PAGE}
+    Page should contain element               ${BOOK_A_NEW_TRANSACTION_BTN}
+    Page should contain element               ${RETURN_TO_METROBANK_BTN}
 
-Customer Input Data Validation
-    ${GET_CUSTOMER_MOBILE_NUM}              Get text                                    ${Customer_MOBILE_NUMBER_INPUT}
-    Should be equal                         ${GET_CUSTOMER_MOBILE_NUM}                  ${MOBILE_INPUT_DIGITAL_FORM}
-    ${GET_CUSTOMER_EMAIL_ADD}               Get text                                    ${Customer_EMAIL_ADD_INPUT}
-    Should be equal                         ${GET_CUSTOMER_EMAIL_ADD}                   ${EMAIL_INPUT_DIGITAL_FORM}
-    ${GET_CUSTOMER_BRANCH}                  Get text                                    ${CUSTOMER_SELECTED_BRANCH}
-    Should be equal                         ${GET_CUSTOMER_BRANCH}                      ${BRANCH_INPUT_DIGITAL_FORM}
-    ${GET_CUSTOMER_APPOINTMENT}             Get text                                    ${CUSTOMER_SELECTED_DATE}
-    Should be equal                         ${ZERO}${GET_CUSTOMER_APPOINTMENT}          ${APPOINTMENT_DATE_INPUT_DIGITAL_FORM}
-    ${GET_CUSTOMER_ACCOUNT_NUMBER}          Get text                                    ${CUSTOMER_ACC_NUMBER_INPUT}
-    Should be equal                         ${GET_CUSTOMER_ACCOUNT_NUMBER}              ${ACCOUNT_NUMBER_DIGITAL_FORM}
-    ${GET_CUSTOMER_NAME}                    Get text                                    ${CUSTOMER_ACC_NAME_INPUT}
-    Should be equal                         ${GET_CUSTOMER_NAME}                        ${ACCOUNT_NAME_DIGITAL_FORM}
-    ${GET_CUSTOMER_AMOUNT}                  Get text                                    ${CUSTOMER_AMOUNT_INPUT}
-    Should be equal                         ${GET_CUSTOMER_AMOUNT}                      ${CUSTOMER_AMOUT_DIGITAL_FORM}
-    SLEEP                                   5S
+Confirmation Screen Data Validation
+     ${GET_CUSTOMER_REFERENCE_NO}              Get Text                                   ${USER_REFERENCE_N0_CONFIRMATION}
+     ${GET_CUSTOMER_MOBILE_NO}                 Get Text                                   ${MOBILE_NUM_VALUE_CONFIRMATION}
+     ${GET_CUSTOMER_EMAIL_ADDRESS}             Get Text                                   ${EMAIL_VALUE_CONFIRMATION}
+     ${GET_CUSTOMER_BRANCH}                    Get Text                                   ${BRANCH_VALUE_CONFIRMATION}
+     ${GET_CUSTOMER_APPOINTMENT_DATE}          Get Text                                   ${APPOINTMENT_VALUE_CONFIRMATION}
+     ${GET_CUSTOMER_ACCOUNT_NO}                Get Text                                   ${ACCOUNT_NUMBER_VALUE_CONFIRMATION}
+     ${GET_CUSTOMER_ACC_NAME}                  Get Text                                   ${ACCOUNT_NAME_VALUE_CONFIRMATION}
+     ${GET_CUSTOMER_AMOUNT_VALUE}              Get Text                                   ${AMOUNT_VALUE_CONFIRMATION_PAGE}
+     Sleep                                     5s
 
-Review Details with Email Address
-    Page should contain element             //p[contains(text(),'Email Address')]
-    ${GET_CUSTOMER_EMAIL_ADD}               Get text                                    ${Customer_EMAIL_ADD_INPUT}
-
-Review Details without Email Address
-    Click element                          ${REVIEW_EDIT_DETAILS_BUTTON}
-    Wait until page contains element       ${Depositor_Contact_Details}
-    Page should contain element            ${Depositor_Contact_Details}
-    Scroll element into view               ${Depositors_Email_Address_Label}
-    Press Keys                             ${Email_Address_Textfield}                    CTRL+a      BACKSPACE
-    Sleep                                  3s
-    Execute JavaScript                     window.scrollTo(1,700)
-    Click element                          ${Digital_Form_NextBtn}
-    Sleep                                  3s
-    Click element                          ${Service_Fee_Continue_Button}
-    page should not contain element        //p[contains(text(),'Email Address')]
-    Sleep                                  5s
-
-Click Edit Details Button
-    Click element                          ${REVIEW_EDIT_DETAILS_BUTTON}
-    Wait until page contains element       ${Depositor_Contact_Details}
-    Page should contain element            ${Depositor_Contact_Details}
-    Scroll element into view               ${Depositors_Email_Address_Label}
-    Input text                             ${Email_Address_Textfield}                    loro.ryancristopher@gmail.com
-    Sleep                                  3s
-    Execute JavaScript                     window.scrollTo(1,700)
-    Click element                          ${Digital_Form_NextBtn}
-    Sleep                                  3s
-    Click element                          ${Service_Fee_Continue_Button}
-    Sleep                                  3s
-    Page should contain element            //p[contains(text(),'Email Address')]
-    ${GET_CUSTOMER_EMAIL_ADD}              Get text                                    ${Customer_EMAIL_ADD_INPUT}
-    Click element                          ${REVIEW_SUBMIT_BUTTON}
-    Sleep                                  10s
-
-
+Click Book a new Transaction button
+     Click Element                            ${BOOK_A_NEW_TRANSACTION_BTN}
+     Sleep                                    3s
+     Wait Until Page Contains Element         ${Provide_The_Details_Label}
+     Page Should Contain Element              ${Provide_The_Details_Label}
