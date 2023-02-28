@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20230228 09:18:41.942" rpa="false" schemaversion="3">
+<suite id="s1" name="EarnestPortal 46967" source="C:\Users\RomeoSuarezconsultan\PycharmProjects\Earnest_Portal\ux40\Resources\Test_Suites\EarnestPortal_46967.robot">
+<kw name="Opening Browser" library="CommonKeyword" type="SETUP">
+<arg>${url_earnest_portal}</arg>
+<arg>${browser_chrome}</arg>
+<kw name="Open Browser" library="Selenium2Library">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230228 09:18:42.181" level="INFO">Opening browser 'chrome' to base url 'https://dev-earnest-portal.nprod.platform-11.com/login'.</msg>
+<status status="PASS" starttime="20230228 09:18:42.181" endtime="20230228 09:18:45.021"/>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230228 09:18:45.021" endtime="20230228 09:18:45.201"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 09:18:47.203" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230228 09:18:45.202" endtime="20230228 09:18:47.203"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>Open Browser.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:18:47.314" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Open%20Browser.png"&gt;&lt;img src="Open%20Browser.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:18:47.203" endtime="20230228 09:18:47.314"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:42.180" endtime="20230228 09:18:47.314"/>
+</kw>
+<test id="s1-t1" name="LOGGING IN EARNEST PORTAL" line="16">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_login_btn}</arg>
+<arg>${wait_mid}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:47.317" endtime="20230228 09:18:47.356"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${earnestportal_login_btn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:18:47.357" level="INFO">Clicking element '//button[text()='Log in']'.</msg>
+<status status="PASS" starttime="20230228 09:18:47.356" endtime="20230228 09:18:47.805"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>Logging In.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:18:48.103" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Logging%20In.png"&gt;&lt;img src="Logging%20In.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:18:47.807" endtime="20230228 09:18:48.103"/>
+</kw>
+<doc>*** Owner RJ ***
+2/23/2023</doc>
+<status status="PASS" starttime="20230228 09:18:47.314" endtime="20230228 09:18:48.103"/>
+</test>
+<test id="s1-t2" name="VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION" line="25">
+<kw name="MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION" library="CommonKeyword">
+<kw name="Get Window Handles" library="Selenium2Library">
+<var>${handles}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20230228 09:18:48.126" level="INFO">${handles} = ['CDwindow-FFA857F101347B3A60BDD5BFE3CF7817', 'CDwindow-A04D97E349A1FD886AB49CD3A149888E']</msg>
+<status status="PASS" starttime="20230228 09:18:48.107" endtime="20230228 09:18:48.126"/>
+</kw>
+<kw name="Switch Window" library="Selenium2Library">
+<arg>${handles}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230228 09:18:48.127" endtime="20230228 09:18:48.203"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_email_input}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:48.205" endtime="20230228 09:18:49.725"/>
+</kw>
+<kw name="INPUTING TEXT VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_email_input}</arg>
+<arg>${email_rj}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:49.730" endtime="20230228 09:18:49.785"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:18:49.786" endtime="20230228 09:18:49.893"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>${input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 09:18:49.897" level="INFO">Typing text 'romeo.consultant@platform-11.com' into text field '//input[@id='i0116']'.</msg>
+<status status="PASS" starttime="20230228 09:18:49.894" endtime="20230228 09:18:50.163"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:49.726" endtime="20230228 09:18:50.164"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>Input Email.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:18:50.285" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Input%20Email.png"&gt;&lt;img src="Input%20Email.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:18:50.164" endtime="20230228 09:18:50.285"/>
+</kw>
+<kw name="CLICKING BUTTON VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_popup_next_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:50.288" endtime="20230228 09:18:50.324"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:18:50.324" endtime="20230228 09:18:50.369"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:18:50.371" level="INFO">Clicking element '//input[@id='idSIButton9']'.</msg>
+<status status="PASS" starttime="20230228 09:18:50.370" endtime="20230228 09:18:50.449"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:50.286" endtime="20230228 09:18:50.449"/>
+</kw>
+<kw name="INPUTING TEXT VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_passw_input}</arg>
+<arg>${passw_rj}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:50.451" endtime="20230228 09:18:51.451"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:18:51.451" endtime="20230228 09:18:51.512"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>${input_text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 09:18:51.514" level="INFO">Typing text 'RJVertere2023' into text field '//input[@id='i0118']'.</msg>
+<status status="PASS" starttime="20230228 09:18:51.513" endtime="20230228 09:18:51.653"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:50.449" endtime="20230228 09:18:51.654"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>Input Password.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:18:51.793" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Input%20Password.png"&gt;&lt;img src="Input%20Password.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:18:51.654" endtime="20230228 09:18:51.793"/>
+</kw>
+<kw name="CLICKING BUTTON VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_popup_next_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:51.794" endtime="20230228 09:18:51.834"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:18:51.835" endtime="20230228 09:18:51.891"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:18:51.893" level="INFO">Clicking element '//input[@id='idSIButton9']'.</msg>
+<status status="PASS" starttime="20230228 09:18:51.892" endtime="20230228 09:18:52.385"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:51.793" endtime="20230228 09:18:52.385"/>
+</kw>
+<kw name="CLICKING BUTTON VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_icantaccesmyauthenticator}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:52.386" endtime="20230228 09:18:53.306"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:18:53.306" endtime="20230228 09:18:53.362"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:18:53.363" level="INFO">Clicking element '//a[@id='signInAnotherWay']'.</msg>
+<status status="PASS" starttime="20230228 09:18:53.362" endtime="20230228 09:18:53.446"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:52.385" endtime="20230228 09:18:53.446"/>
+</kw>
+<kw name="CLICKING BUTTON VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_option_textmessage}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:53.448" endtime="20230228 09:18:53.932"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:18:53.932" endtime="20230228 09:18:53.987"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:18:53.990" level="INFO">Clicking element '//*[@class='table-row']/*[@class='table-cell text-left content']/div[contains (text(),'Text +')]'.</msg>
+<status status="PASS" starttime="20230228 09:18:53.989" endtime="20230228 09:18:54.059"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:53.447" endtime="20230228 09:18:54.060"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_codeotp_input}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:18:54.060" endtime="20230228 09:18:55.404"/>
+</kw>
+<kw name="ENTER OTP v2" library="CommonKeyword">
+<arg>${earnestportal_codeotp_input}</arg>
+<kw name="Get Value From User" library="Dialogs">
+<var>${otp}</var>
+<arg>Please Provide OTP code</arg>
+<doc>Pauses execution and asks user to input a value.</doc>
+<msg timestamp="20230228 09:19:06.872" level="INFO">${otp} = 064929</msg>
+<status status="PASS" starttime="20230228 09:18:55.405" endtime="20230228 09:19:06.872"/>
+</kw>
+<kw name="Input Text" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:06.872" level="INFO">Typing text '064929' into text field '//input[@id='idTxtBx_SAOTCC_OTC']'.</msg>
+<status status="PASS" starttime="20230228 09:19:06.872" endtime="20230228 09:19:06.995"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:55.404" endtime="20230228 09:19:06.995"/>
+</kw>
+<kw name="CLICKING BUTTON VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_popup_verify_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:06.995" endtime="20230228 09:19:07.023"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:19:07.023" endtime="20230228 09:19:07.054"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:07.055" level="INFO">Clicking element '//input[@id='idSubmit_SAOTCC_Continue']'.</msg>
+<status status="PASS" starttime="20230228 09:19:07.054" endtime="20230228 09:19:07.113"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:06.995" endtime="20230228 09:19:07.114"/>
+</kw>
+<kw name="CLICKING BUTTON VISIBLE AND ENABLED" library="CommonKeyword">
+<arg>${earnestportal_popup_no_btn}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:07.114" endtime="20230228 09:19:08.588"/>
+</kw>
+<kw name="Wait Until Element Is Enabled" library="Selenium2Library">
+<arg>${element_field}</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20230228 09:19:08.588" endtime="20230228 09:19:08.627"/>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<arg>${element_field}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:08.627" level="INFO">Clicking element '//input[@id='idBtn_Back']'.</msg>
+<status status="PASS" starttime="20230228 09:19:08.627" endtime="20230228 09:19:09.040"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:07.114" endtime="20230228 09:19:09.040"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230228 09:19:14.041" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20230228 09:19:09.040" endtime="20230228 09:19:14.041"/>
+</kw>
+<kw name="Switch Window" library="Selenium2Library">
+<arg>${handles}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20230228 09:19:14.042" endtime="20230228 09:19:14.065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_ep_img}</arg>
+<arg>60s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:14.066" endtime="20230228 09:19:14.099"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>dashboard.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:19:14.226" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="dashboard.png"&gt;&lt;img src="dashboard.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:14.099" endtime="20230228 09:19:14.226"/>
+</kw>
+<status status="PASS" starttime="20230228 09:18:48.107" endtime="20230228 09:19:14.227"/>
+</kw>
+<doc>*** Owner RJ ***
+2/23/2023</doc>
+<status status="PASS" starttime="20230228 09:18:48.106" endtime="20230228 09:19:14.227"/>
+</test>
+<test id="s1-t3" name="46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 1" line="35">
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<arg>(//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230228 09:19:14.233" endtime="20230228 09:19:14.527"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>(//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]</arg>
+<arg>20s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:14.528" endtime="20230228 09:19:14.556"/>
+</kw>
+<kw name="VALIDATING LEGENDS LABEL" library="EarnestPortal_Keyword">
+<arg>${earnestportal_legend_label}</arg>
+<kw name="Get Element Count" library="Selenium2Library">
+<var>${getcount}</var>
+<arg>${earnestportal_legend_label}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<msg timestamp="20230228 09:19:14.573" level="INFO">${getcount} = 3</msg>
+<status status="PASS" starttime="20230228 09:19:14.558" endtime="20230228 09:19:14.574"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${legend_list_1}</var>
+<arg>Branch</arg>
+<arg>Online</arg>
+<arg>Earnest</arg>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230228 09:19:14.574" level="INFO">${legend_list_1} = ['Branch', 'Online', 'Earnest']</msg>
+<status status="PASS" starttime="20230228 09:19:14.574" endtime="20230228 09:19:14.574"/>
+</kw>
+<kw name="Create List" library="BuiltIn">
+<var>${legend_list_2}</var>
+<doc>Returns a list containing given items.</doc>
+<msg timestamp="20230228 09:19:14.575" level="INFO">${legend_list_2} = []</msg>
+<status status="PASS" starttime="20230228 09:19:14.575" endtime="20230228 09:19:14.575"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>1</value>
+<value>${getcount}+1</value>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.576" level="INFO">1</msg>
+<status status="PASS" starttime="20230228 09:19:14.576" endtime="20230228 09:19:14.576"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${textval}</var>
+<arg>(${earnestportal_legend_label})[${counter}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:14.604" level="INFO">${textval} = Branch</msg>
+<status status="PASS" starttime="20230228 09:19:14.577" endtime="20230228 09:19:14.604"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${legend_list_2}</arg>
+<arg>${textval}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230228 09:19:14.605" endtime="20230228 09:19:14.605"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${legend_list_2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.621" level="INFO">['Branch']</msg>
+<status status="PASS" starttime="20230228 09:19:14.605" endtime="20230228 09:19:14.621"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:14.576" endtime="20230228 09:19:14.621"/>
+</iter>
+<iter>
+<var name="${counter}">2</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.622" level="INFO">2</msg>
+<status status="PASS" starttime="20230228 09:19:14.622" endtime="20230228 09:19:14.622"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${textval}</var>
+<arg>(${earnestportal_legend_label})[${counter}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:14.651" level="INFO">${textval} = Online</msg>
+<status status="PASS" starttime="20230228 09:19:14.623" endtime="20230228 09:19:14.651"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${legend_list_2}</arg>
+<arg>${textval}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230228 09:19:14.652" endtime="20230228 09:19:14.652"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${legend_list_2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.653" level="INFO">['Branch', 'Online']</msg>
+<status status="PASS" starttime="20230228 09:19:14.653" endtime="20230228 09:19:14.653"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:14.621" endtime="20230228 09:19:14.653"/>
+</iter>
+<iter>
+<var name="${counter}">3</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.654" level="INFO">3</msg>
+<status status="PASS" starttime="20230228 09:19:14.653" endtime="20230228 09:19:14.654"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${textval}</var>
+<arg>(${earnestportal_legend_label})[${counter}]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:14.685" level="INFO">${textval} = Earnest</msg>
+<status status="PASS" starttime="20230228 09:19:14.654" endtime="20230228 09:19:14.685"/>
+</kw>
+<kw name="Append To List" library="Collections">
+<arg>${legend_list_2}</arg>
+<arg>${textval}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" starttime="20230228 09:19:14.685" endtime="20230228 09:19:14.686"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${legend_list_2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.686" level="INFO">['Branch', 'Online', 'Earnest']</msg>
+<status status="PASS" starttime="20230228 09:19:14.686" endtime="20230228 09:19:14.686"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:14.653" endtime="20230228 09:19:14.686"/>
+</iter>
+<status status="PASS" starttime="20230228 09:19:14.575" endtime="20230228 09:19:14.686"/>
+</for>
+<kw name="Log" library="BuiltIn">
+<arg>${legend_list_2}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.687" level="INFO">['Branch', 'Online', 'Earnest']</msg>
+<status status="PASS" starttime="20230228 09:19:14.687" endtime="20230228 09:19:14.687"/>
+</kw>
+<kw name="Lists Should Be Equal" library="Collections">
+<arg>${legend_list_1}</arg>
+<arg>${legend_list_2}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="PASS" starttime="20230228 09:19:14.687" endtime="20230228 09:19:14.687"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:14.557" endtime="20230228 09:19:14.687"/>
+</kw>
+<kw name="GET BACKGROUND COLOR" library="EarnestPortal_Keyword">
+<arg>(${earnestportal_legend_color})[1]</arg>
+<arg>${earnestportal_color_green1}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ElementField}</arg>
+<arg>${wait_long}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:14.691" endtime="20230228 09:19:14.718"/>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${elem1}</var>
+<arg>${ElementField}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230228 09:19:14.730" level="INFO">${elem1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6bedfbfde1a7ef600403ba2039fe55ef", element="5801d5df-f512-466b-bbb6-f04816cc547e")&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:14.718" endtime="20230228 09:19:14.730"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${color}</var>
+<arg>${elem1}</arg>
+<arg>value_of_css_property</arg>
+<arg>background-color</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230228 09:19:14.745" level="INFO">${color} = rgba(216, 246, 183, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.732" endtime="20230228 09:19:14.745"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.745" level="INFO">rgba(216, 246, 183, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.745" endtime="20230228 09:19:14.746"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${static_color_val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.746" level="INFO">rgba(216, 246, 183, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.746" endtime="20230228 09:19:14.746"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${color}</arg>
+<arg>${static_color_val}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230228 09:19:14.747" endtime="20230228 09:19:14.747"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:14.689" endtime="20230228 09:19:14.747"/>
+</kw>
+<kw name="GET BACKGROUND COLOR" library="EarnestPortal_Keyword">
+<arg>(${earnestportal_legend_color})[2]</arg>
+<arg>${earnestportal_color_pink1}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ElementField}</arg>
+<arg>${wait_long}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:14.750" endtime="20230228 09:19:14.772"/>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${elem1}</var>
+<arg>${ElementField}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230228 09:19:14.782" level="INFO">${elem1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6bedfbfde1a7ef600403ba2039fe55ef", element="6e6813ac-27b6-40d0-b112-2308b43e8b18")&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:14.772" endtime="20230228 09:19:14.782"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${color}</var>
+<arg>${elem1}</arg>
+<arg>value_of_css_property</arg>
+<arg>background-color</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230228 09:19:14.796" level="INFO">${color} = rgba(243, 200, 208, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.783" endtime="20230228 09:19:14.796"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.797" level="INFO">rgba(243, 200, 208, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.796" endtime="20230228 09:19:14.797"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${static_color_val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.797" level="INFO">rgba(243, 200, 208, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.797" endtime="20230228 09:19:14.797"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${color}</arg>
+<arg>${static_color_val}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230228 09:19:14.797" endtime="20230228 09:19:14.797"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:14.749" endtime="20230228 09:19:14.799"/>
+</kw>
+<kw name="GET BACKGROUND COLOR" library="EarnestPortal_Keyword">
+<arg>(${earnestportal_legend_color})[3]</arg>
+<arg>${earnestportal_color_blue1}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ElementField}</arg>
+<arg>${wait_long}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:14.801" endtime="20230228 09:19:14.828"/>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${elem1}</var>
+<arg>${ElementField}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230228 09:19:14.841" level="INFO">${elem1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6bedfbfde1a7ef600403ba2039fe55ef", element="1d4c5b0c-814d-41bb-ac8d-c42b35e9ff1c")&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:14.829" endtime="20230228 09:19:14.841"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${color}</var>
+<arg>${elem1}</arg>
+<arg>value_of_css_property</arg>
+<arg>background-color</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230228 09:19:14.854" level="INFO">${color} = rgba(187, 228, 255, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.841" endtime="20230228 09:19:14.854"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.855" level="INFO">rgba(187, 228, 255, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.854" endtime="20230228 09:19:14.855"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${static_color_val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:14.855" level="INFO">rgba(187, 228, 255, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:14.855" endtime="20230228 09:19:14.855"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${color}</arg>
+<arg>${static_color_val}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230228 09:19:14.855" endtime="20230228 09:19:14.856"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:14.800" endtime="20230228 09:19:14.856"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>Active Intestor - Legend section validation.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:19:14.978" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Active%20Intestor%20-%20Legend%20section%20validation.png"&gt;&lt;img src="Active%20Intestor%20-%20Legend%20section%20validation.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:14.858" endtime="20230228 09:19:14.978"/>
+</kw>
+<doc>*** Owner RJ ***
+Created 2/27/2023
+Updated 2/27/2023
+The data should show the share of Earnest, Branch, and Online active investors of total UITF active investors
+- GIVEN a user is in the Acquisition section of the dashboard
+- WHEN a user looks at the "Active Investors"
+- THEN a user should see a donut chart of the share of Earnest, Branch, and Online active investors of
+total UITF active investors (See #2 on guide)
+- AND data labels of each segment (See #1 on guide) (Add colors to follow here)</doc>
+<status status="PASS" starttime="20230228 09:19:14.231" endtime="20230228 09:19:14.981"/>
+</test>
+<test id="s1-t4" name="46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 2" line="58">
+<kw name="Scroll Element Into View" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_vsperiod_percentage}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20230228 09:19:14.986" endtime="20230228 09:19:15.275"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_vsperiod_percentage}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.276" endtime="20230228 09:19:15.305"/>
+</kw>
+<kw name="GET BACKGROUND COLOR v2" library="EarnestPortal_Keyword">
+<arg>${earnestportal_totaltransaction_vsperiod_percentage}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ElementField}</arg>
+<arg>${wait_long}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.307" endtime="20230228 09:19:15.337"/>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${elem1}</var>
+<arg>${ElementField}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230228 09:19:15.349" level="INFO">${elem1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6bedfbfde1a7ef600403ba2039fe55ef", element="a6cdea01-3eac-4f7e-ba5c-62445176aabe")&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:15.337" endtime="20230228 09:19:15.349"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${color}</var>
+<arg>${elem1}</arg>
+<arg>value_of_css_property</arg>
+<arg>color</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230228 09:19:15.363" level="INFO">${color} = rgba(233, 0, 33, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.349" endtime="20230228 09:19:15.363"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.364" level="INFO">rgba(233, 0, 33, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.364" endtime="20230228 09:19:15.364"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${percentage_val}</var>
+<arg>${color}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230228 09:19:15.365" level="INFO">${percentage_val} = rgba(233, 0, 33, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.365" endtime="20230228 09:19:15.365"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${percentage_val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.366" level="INFO">rgba(233, 0, 33, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.365" endtime="20230228 09:19:15.366"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${percentage_val}' == '${earnestportal_color_red1}'</arg>
+<arg>Log To Console</arg>
+<arg>\n Percentage is Low</arg>
+<arg>ELSE IF</arg>
+<arg>'${percentage_val}' == '${earnestportal_color_gray1}'</arg>
+<arg>Log To Console</arg>
+<arg>\n Percentage is Default</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n Percentage is Low</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230228 09:19:15.367" endtime="20230228 09:19:15.367"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:15.366" endtime="20230228 09:19:15.367"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:15.307" endtime="20230228 09:19:15.368"/>
+</kw>
+<kw name="GET BACKGROUND COLOR v2" library="EarnestPortal_Keyword">
+<arg>${earnestportal_activeinvestor_vssovtarget_percentage}</arg>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${ElementField}</arg>
+<arg>${wait_long}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.370" endtime="20230228 09:19:15.404"/>
+</kw>
+<kw name="Get WebElement" library="Selenium2Library">
+<var>${elem1}</var>
+<arg>${ElementField}</arg>
+<doc>Returns the first WebElement matching the given ``locator``.</doc>
+<msg timestamp="20230228 09:19:15.416" level="INFO">${elem1} = &lt;selenium.webdriver.remote.webelement.WebElement (session="6bedfbfde1a7ef600403ba2039fe55ef", element="77c19ca5-8ca1-4488-9244-0d0cde59dd4b")&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:15.404" endtime="20230228 09:19:15.416"/>
+</kw>
+<kw name="Call Method" library="BuiltIn">
+<var>${color}</var>
+<arg>${elem1}</arg>
+<arg>value_of_css_property</arg>
+<arg>color</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<msg timestamp="20230228 09:19:15.431" level="INFO">${color} = rgba(139, 140, 149, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.416" endtime="20230228 09:19:15.431"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${color}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.432" level="INFO">rgba(139, 140, 149, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.431" endtime="20230228 09:19:15.432"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${percentage_val}</var>
+<arg>${color}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20230228 09:19:15.433" level="INFO">${percentage_val} = rgba(139, 140, 149, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.432" endtime="20230228 09:19:15.433"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${percentage_val}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.433" level="INFO">rgba(139, 140, 149, 1)</msg>
+<status status="PASS" starttime="20230228 09:19:15.433" endtime="20230228 09:19:15.433"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${percentage_val}' == '${earnestportal_color_red1}'</arg>
+<arg>Log To Console</arg>
+<arg>\n Percentage is Low</arg>
+<arg>ELSE IF</arg>
+<arg>'${percentage_val}' == '${earnestportal_color_gray1}'</arg>
+<arg>Log To Console</arg>
+<arg>\n Percentage is Default</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Log To Console" library="BuiltIn">
+<arg>\n Percentage is Default</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20230228 09:19:15.434" endtime="20230228 09:19:15.435"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:15.433" endtime="20230228 09:19:15.436"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:15.369" endtime="20230228 09:19:15.436"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>Active Intestor - Percentage VS Previous Period.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:19:15.567" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Active%20Intestor%20-%20Percentage%20VS%20Previous%20Period.png"&gt;&lt;img src="Active%20Intestor%20-%20Percentage%20VS%20Previous%20Period.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:15.437" endtime="20230228 09:19:15.567"/>
+</kw>
+<doc>*** Owner RJ ***
+Created 2/27/2023
+Updated 2/27/2023
+There should be a comparison of the data to the previous period and to the target
+- GIVEN a user is in the Acquisition section of the dashboard
+- WHEN a user looks at "Active Investors"
+- THEN a user should see the percentage growth of new users versus the previous period (See #9 on guide)
+- AND the percentage of progress or current achievement versus SOV target (See #10 on guide)</doc>
+<status status="PASS" starttime="20230228 09:19:14.984" endtime="20230228 09:19:15.569"/>
+</test>
+<test id="s1-t5" name="46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 3" line="75">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_totalactiveinvestor}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.574" endtime="20230228 09:19:15.602"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_newactiveinvestor}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.603" endtime="20230228 09:19:15.636"/>
+</kw>
+<kw name="CONVERTING STRING TO INTEGER" library="EarnestPortal_Keyword">
+<arg>${earnestportal_activeinvestor_newactiveinvestor_span}</arg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${val}</var>
+<arg>${earnestportal_activeinvestor_newactiveinvestor_span}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:15.672" level="INFO">${val} = +0</msg>
+<status status="PASS" starttime="20230228 09:19:15.638" endtime="20230228 09:19:15.672"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${splited_val}</var>
+<arg>${val}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230228 09:19:15.673" level="INFO">${splited_val} = ['+0']</msg>
+<status status="PASS" starttime="20230228 09:19:15.672" endtime="20230228 09:19:15.673"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${conver_val1}</var>
+<arg>${splited_val}[0]</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20230228 09:19:15.674" level="INFO">${conver_val1} = 0</msg>
+<status status="PASS" starttime="20230228 09:19:15.673" endtime="20230228 09:19:15.674"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${conver_val1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.674" level="INFO">0</msg>
+<status status="PASS" starttime="20230228 09:19:15.674" endtime="20230228 09:19:15.674"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:15.637" endtime="20230228 09:19:15.674"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_targetcount}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.676" endtime="20230228 09:19:15.707"/>
+</kw>
+<doc>*** Owner RJ ***
+Created 2/27/2023
+Updated 2/27/2023
+The progress or current achievement versus target should be visualized
+- GIVEN a user is in the Acquisition section of the dashboard
+- WHEN a user looks at "Active Investors" numbers
+- THEN a user should see the total active investors on Earnest (See #3 on guide)
+- AND the new active investors added for the current period as a numerical value (See #5 on guide)
+- AND the target count (See #6 on guide)</doc>
+<status status="PASS" starttime="20230228 09:19:15.572" endtime="20230228 09:19:15.709"/>
+</test>
+<test id="s1-t6" name="46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 4" line="92">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_totalactiveinvestor}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.714" endtime="20230228 09:19:15.742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_newactiveinvestor}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.742" endtime="20230228 09:19:15.769"/>
+</kw>
+<kw name="CONVERTING STRING TO INTEGER" library="EarnestPortal_Keyword">
+<arg>${earnestportal_activeinvestor_newactiveinvestor_span}</arg>
+<kw name="Get Text" library="Selenium2Library">
+<var>${val}</var>
+<arg>${earnestportal_activeinvestor_newactiveinvestor_span}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:15.803" level="INFO">${val} = +0</msg>
+<status status="PASS" starttime="20230228 09:19:15.771" endtime="20230228 09:19:15.803"/>
+</kw>
+<kw name="Split String" library="String">
+<var>${splited_val}</var>
+<arg>${val}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<msg timestamp="20230228 09:19:15.804" level="INFO">${splited_val} = ['+0']</msg>
+<status status="PASS" starttime="20230228 09:19:15.804" endtime="20230228 09:19:15.804"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${conver_val1}</var>
+<arg>${splited_val}[0]</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20230228 09:19:15.805" level="INFO">${conver_val1} = 0</msg>
+<status status="PASS" starttime="20230228 09:19:15.805" endtime="20230228 09:19:15.805"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${conver_val1}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.806" level="INFO">0</msg>
+<status status="PASS" starttime="20230228 09:19:15.805" endtime="20230228 09:19:15.806"/>
+</kw>
+<status status="PASS" starttime="20230228 09:19:15.771" endtime="20230228 09:19:15.806"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_targetcount}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.807" endtime="20230228 09:19:15.831"/>
+</kw>
+<doc>*** Owner RJ ***
+Created 2/27/2023
+Updated 2/27/2023
+The progress or current achievement versus target should be visualized
+- GIVEN a user is in the Acquisition section of the dashboard
+- WHEN a user looks at "Active Investors"
+- THEN a user should see a bar graph showing the current achievement vs target where the blue bar is the previous count
+and the green bar is the new count of users in the selected period (See #4 on guide)</doc>
+<status status="PASS" starttime="20230228 09:19:15.713" endtime="20230228 09:19:15.832"/>
+</test>
+<test id="s1-t7" name="46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 5" line="108">
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_percentearnestsov}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.837" endtime="20230228 09:19:15.873"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="Selenium2Library">
+<arg>${earnestportal_activeinvestor_datebelowsov}</arg>
+<arg>${wait_short}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20230228 09:19:15.874" endtime="20230228 09:19:15.903"/>
+</kw>
+<kw name="Get Text" library="Selenium2Library">
+<var>${static_text}</var>
+<arg>${earnestportal_activeinvestor_datebelowsov}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230228 09:19:15.934" level="INFO">${static_text} = As of Oct 28, 2022</msg>
+<status status="PASS" starttime="20230228 09:19:15.904" endtime="20230228 09:19:15.934"/>
+</kw>
+<kw name="Get Current Date" library="DateTime">
+<var>${current_date}</var>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20230228 09:19:15.937" level="INFO">${current_date} = 2023-02-28 09:19:15.936</msg>
+<status status="PASS" starttime="20230228 09:19:15.936" endtime="20230228 09:19:15.937"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${static_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.939" level="INFO">As of Oct 28, 2022</msg>
+<status status="PASS" starttime="20230228 09:19:15.937" endtime="20230228 09:19:15.939"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${current_date}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20230228 09:19:15.939" level="INFO">2023-02-28 09:19:15.936</msg>
+<status status="PASS" starttime="20230228 09:19:15.939" endtime="20230228 09:19:15.939"/>
+</kw>
+<kw name="Convert Date" library="DateTime">
+<var>${current_date}</var>
+<arg>${current_date}</arg>
+<arg>exclude_millis=yes</arg>
+<arg>result_format=%b %d, %Y</arg>
+<doc>Converts between supported `date formats`.</doc>
+<msg timestamp="20230228 09:19:15.949" level="INFO">${current_date} = Feb 28, 2023</msg>
+<status status="PASS" starttime="20230228 09:19:15.942" endtime="20230228 09:19:15.949"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${static_text}</arg>
+<arg>As of Oct 28, 2022</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230228 09:19:15.950" endtime="20230228 09:19:15.951"/>
+</kw>
+<doc>*** Owner RJ ***
+Created 2/27/2023
+Updated 2/27/2023
+The Share of Voice (SOV) of Earnest should be visible as a percentage of the total number of active investors
+- GIVEN a user is in the Acquisition section of the dashboard
+- WHEN a user looks at "Active Investors" numbers
+- THEN a user should see the percentage of Earnest's SOV of the total data set as of the
+current period (computation c/o Arvin) (See #7 on guide)
+- AND an "as of &lt;date&gt;" below the SOV (See #8 on guide)</doc>
+<status status="PASS" starttime="20230228 09:19:15.836" endtime="20230228 09:19:15.952"/>
+</test>
+<test id="s1-t8" name="46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 6" line="130">
+<kw name="Mouse Over" library="Selenium2Library">
+<arg>(//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div[@class='MuiBox-root css-1ac9jdt']</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20230228 09:19:15.957" level="INFO">Simulating Mouse Over on element '(//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div[@class='MuiBox-root css-1ac9jdt']'.</msg>
+<status status="PASS" starttime="20230228 09:19:15.956" endtime="20230228 09:19:16.254"/>
+</kw>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<arg>donut tooltip.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230228 09:19:16.383" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="donut%20tooltip.png"&gt;&lt;img src="donut%20tooltip.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230228 09:19:16.256" endtime="20230228 09:19:16.383"/>
+</kw>
+<doc>*** Owner RJ ***
+Created 2/27/2023
+Updated 2/27/2023
+Show a bubble on the donut chart when the user hovers on EACH section
+- GIVEN a user is in the Acquisition section of the dashboard
+- WHEN a user hovers on the donut chart under "Active Investors"
+- THEN display a bubble on EACH section of the graph (the bubbles will not appear all at once) where the source,
+%share, and the no. of users are shown</doc>
+<status status="PASS" starttime="20230228 09:19:15.954" endtime="20230228 09:19:16.385"/>
+</test>
+<status status="PASS" starttime="20230228 09:18:41.943" endtime="20230228 09:19:16.389"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="EarnestPortal 46967">EarnestPortal 46967</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

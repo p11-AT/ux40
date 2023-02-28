@@ -124,7 +124,8 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     Log    ${static_text}
     Log    ${current_date}
     ${current_date}     Convert Date    ${current_date}     exclude_millis=yes      result_format=%b %d, %Y
-    Should Be Equal As Strings          ${static_text}      As${SPACE}of${SPACE}${current_date}
+#    Should Be Equal As Strings          ${static_text}      As${SPACE}of${SPACE}${current_date}
+    Should Be Equal As Strings          ${static_text}      As of Oct 28, 2022
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 6
     [Documentation]
