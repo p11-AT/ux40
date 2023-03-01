@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.11.1 on win32)" generated="20230301 08:58:22.798" rpa="false">
+<suite id="s1" name="Asd" source="C:\Users\RyanChristopherLoroc\PycharmProjects\P11_Automation\ux40\Resources\Test_Suites\asd.robot">
+<test id="s1-t1" name="TC 1 HOMEPAGE">
+<kw name="Open Browser" library="Selenium2Library">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>https://web-dev-ux40-customer.nprod.platform-11.com/ct/cash-deposit/cash-deposit-details</arg>
+<arg>CHROME</arg>
+</arguments>
+<msg timestamp="20230301 08:58:23.009" level="INFO">Opening browser 'CHROME' to base url 'https://web-dev-ux40-customer.nprod.platform-11.com/ct/cash-deposit/cash-deposit-details'.</msg>
+<status status="PASS" starttime="20230301 08:58:23.009" endtime="20230301 08:58:25.141"></status>
+</kw>
+<kw name="Maximize Browser Window" library="Selenium2Library">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230301 08:58:25.142" endtime="20230301 08:58:25.291"></status>
+</kw>
+<kw name="Execute Javascript" library="Selenium2Library">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(1,2000)</arg>
+</arguments>
+<msg timestamp="20230301 08:58:25.292" level="INFO">Executing JavaScript:
+window.scrollTo(1,2000)
+Without any arguments.</msg>
+<status status="PASS" starttime="20230301 08:58:25.291" endtime="20230301 08:58:25.299"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="Selenium2Library">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>//*[@id="__next"]/div/div[3]/div/form/div/div[12]/button</arg>
+</arguments>
+<status status="PASS" starttime="20230301 08:58:25.299" endtime="20230301 08:58:25.318"></status>
+</kw>
+<kw name="Click Element" library="Selenium2Library">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>//button[contains(@class,'MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth')]</arg>
+</arguments>
+<msg timestamp="20230301 08:58:25.320" level="INFO">Clicking element '//button[contains(@class,'MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth')]'.</msg>
+<kw name="Capture Page Screenshot" library="Selenium2Library">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20230301 08:58:26.516" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20230301 08:58:26.402" endtime="20230301 08:58:26.516"></status>
+</kw>
+<msg timestamp="20230301 08:58:26.518" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1xos8lg-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="submit" disabled=""&gt;...&lt;/button&gt; is not clickable at point (631, 554). Other element would receive the click: &lt;div class="MuiBox-root css-167ujmh"&gt;...&lt;/div&gt;
+  (Session info: chrome=110.0.5481.178)
+</msg>
+<status status="FAIL" starttime="20230301 08:58:25.319" endtime="20230301 08:58:26.518"></status>
+</kw>
+<doc>*** Owner RJ ***</doc>
+<status status="FAIL" starttime="20230301 08:58:23.008" endtime="20230301 08:58:26.519" critical="yes">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-fullWidth css-1xos8lg-MuiButtonBase-root-MuiButton-root" tabindex="-1" type="submit" disabled=""&gt;...&lt;/button&gt; is not clickable at point (631, 554). Other element would receive the click: &lt;div class="MuiBox-root css-167ujmh"&gt;...&lt;/div&gt;
+  (Session info: chrome=110.0.5481.178)
+</status>
+</test>
+<kw name="Close All Browsers" library="Selenium2Library" type="teardown">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20230301 08:58:26.522" endtime="20230301 08:58:28.692"></status>
+</kw>
+<status status="FAIL" starttime="20230301 08:58:22.800" endtime="20230301 08:58:28.692"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Asd">Asd</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

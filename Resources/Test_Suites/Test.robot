@@ -3,12 +3,20 @@ Library         Selenium2Library
 Resource        ../../Resources/Keywords/UX40_Keyword.robot
 Resource        ../../Resources/Repository/UX40_Repo.robot
 
+*** Variables ***
+
 *** Test Cases ***
 TC 1 HOMEPAGE
     [Documentation]
     ...     *** Owner RJ ***
 
-    Opening Browser         ${ux40_url2}     ${browser_chrome}
+    Open Browser                https://web-dev-ux40-customer.nprod.platform-11.com/ct/cash-deposit/cash-deposit-details        CHROME
+    Maximize Browser Window
+    Execute JavaScript                        window.scrollTo(1,2000)
+    Click Element                       //*[@id="__next"]/div/div[3]/div/form/div/div[12]/button
+    Sleep    5s
+
+    Close All Browsers
 #    SCROLLING TO ELEMENT                ${regularsavings_container}
 #    Click Element                       ${regularsavings_container}
 #    Wait Until Element Is Visible       ${regularsavings_img}      ${wait_long}
@@ -33,39 +41,39 @@ TC 1 HOMEPAGE
 #    Capture Page Screenshot             t&c next.png
     
 TC 4 CONTACT DETAILS
-    
-    Wait Until Element Is Visible       ${numeric_input}        ${wait_long}
-    Input Text                          ${numeric_input}        9455586601
-    Input Text                          ${email_input}          arjaysuarez3@gmail.com
-    Wait Until Element Is Enabled       ${submit_btn}           ${wait_long}
-    Click Element                       ${submit_btn}
-    Sleep    3s
+#
+#    Wait Until Element Is Visible       ${numeric_input}        ${wait_long}
+#    Input Text                          ${numeric_input}        9455586601
+#    Input Text                          ${email_input}          arjaysuarez3@gmail.com
+#    Wait Until Element Is Enabled       ${submit_btn}           ${wait_long}
+#    Click Element                       ${submit_btn}
+#    Sleep    3s
+#
+#TC 5 MOBILE OTP VERIFICATION
+#
+#    Wait Until Element Is Visible       ${numeric_input}        ${wait_long}
+#    ENTER OTP
+#    Sleep    3s
+#    Capture Page Screenshot             mobile otp.png
+#    Wait Until Element Is Enabled       ${submit_btn}           ${wait_long}
+#    Click Element                       ${submit_btn}
+#
+#TC 6 EMAIL OTP VERIFICATION
+#
+#    Wait Until Element Is Visible       ${numeric_input}        ${wait_long}
+#    ENTER OTP
+#    Sleep    3s
+#    Capture Page Screenshot             email otp.png
+#    Wait Until Element Is Enabled       ${submit_btn}           ${wait_long}
+#    Click Element                       ${submit_btn}
+#
+#
+#
 
-TC 5 MOBILE OTP VERIFICATION
-
-    Wait Until Element Is Visible       ${numeric_input}        ${wait_long}
-    ENTER OTP
-    Sleep    3s
-    Capture Page Screenshot             mobile otp.png
-    Wait Until Element Is Enabled       ${submit_btn}           ${wait_long}
-    Click Element                       ${submit_btn}
-
-TC 6 EMAIL OTP VERIFICATION
-
-    Wait Until Element Is Visible       ${numeric_input}        ${wait_long}
-    ENTER OTP
-    Sleep    3s
-    Capture Page Screenshot             email otp.png
-    Wait Until Element Is Enabled       ${submit_btn}           ${wait_long}
-    Click Element                       ${submit_btn}
 
 
-
-
-
-
-    select *  from cash_deposit  where channel_ref_id = 'AD90765F'
-select * from "transaction" where txn_ref_id = 'ac194a7c-d488-4719-b66c-6b1575a6d8fc'
-select * from cash_deposit where txn_date  = '2023-02-24 00:00:00.000'
-select * from "transaction"
-SELECT COUNT(*) from "transaction"
+#    select *  from cash_deposit  where channel_ref_id = 'AD90765F'
+#select * from "transaction" where txn_ref_id = 'ac194a7c-d488-4719-b66c-6b1575a6d8fc'
+#select * from cash_deposit where txn_date  = '2023-02-24 00:00:00.000'
+#select * from "transaction"
+#SELECT COUNT(*) from "transaction"
