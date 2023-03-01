@@ -15,7 +15,7 @@ Resource            ../../Resources/Repository/Common_Repository.robot
 Suite Setup         Opening Browser         ${url_earnest_portal}     ${browser_chrome}
 Suite Teardown      Close All Browsers
 *** Test Cases ***
-LOGGING IN EARNEST PORTAL
+46966 LOGGING IN EARNEST PORTAL
     [Documentation]
     ...     *** Owner RJ ***
     ...     2/23/2023
@@ -24,7 +24,7 @@ LOGGING IN EARNEST PORTAL
     Click Element                       ${earnestportal_login_btn}
     Capture Page Screenshot             Logging In.png
 
-VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
+46966 VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     [Documentation]
     ...     *** Owner RJ ***
     ...     2/23/2023

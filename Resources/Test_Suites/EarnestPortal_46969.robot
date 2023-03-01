@@ -16,7 +16,7 @@ Resource            ../../Resources/Repository/Common_Repository.robot
 Suite Setup         Opening Browser         ${url_earnest_portal}     ${browser_chrome}
 Suite Teardown      Close All Browsers
 *** Test Cases ***
-LOGGING IN EARNEST PORTAL
+46969 LOGGING IN EARNEST PORTAL
     [Documentation]
     ...     *** Owner RJ ***
     ...     2/23/2023
@@ -25,10 +25,7 @@ LOGGING IN EARNEST PORTAL
     Click Element                       ${earnestportal_login_btn}
     Capture Page Screenshot             Logging In.png
 
-    Log    ${test_data_path}
-    Get Test Data From Excel v3         4
-
-VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
+46969 VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     [Documentation]
     ...     *** Owner RJ ***
     ...     2/23/2023
@@ -69,7 +66,8 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     ...     - AND the percentage of progress or current achievement versus SOV target (See #10 on guide)
 
     Scroll Element Into View            ${ep46969_newinvestor_vsperiod_percentage}
-    Wait Until Element Is Visible       ${ep46969_newinvestor_vsperiod_percentage}         ${wait_short}
+    Wait Until Element Is Visible       ${ep46969_newinvestor_vsperiod_percentage}          ${wait_short}
+    Wait Until Element Is Visible       ${ep46969_newinvestor_vssovtarget_percentage}       ${wait_short}
     GET BACKGROUND COLOR v2             ${ep46969_newinvestor_vsperiod_percentage}
     GET BACKGROUND COLOR v2             ${ep46969_newinvestor_vssovtarget_percentage}
     Capture Page Screenshot             New Investors - Percentage VS Previous Period.png

@@ -37,14 +37,3 @@ ${earnestportal_activeinvestor_targetcount}                     ((//*/*/*[@class
 ${earnestportal_activeinvestor_bargraph}                        ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[2]/div/div/div/canvas
 ${earnestportal_activeinvestor_percentearnestsov}               ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[3]/div/p[@class='MuiTypography-root MuiTypography-body1 css-14j5dp3']
 ${earnestportal_activeinvestor_datebelowsov}                    ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-0']/p
-
-# TOTAL TRANSACTION
-${earnestportal_totaltransaction_vsperiod_percentage}           ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-k008qs']/p[1]
-${earnestportal_totaltransaction_vssovtarget_percentage}        ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-1m29ivc']/p[1]
-${earnestportal_totaltransaction_totalactiveinvestor}           ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1ojvtih']
-${earnestportal_totaltransaction_newactiveinvestor}             ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1dzjmoo']
-${earnestportal_totaltransaction_newactiveinvestor_span}        ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1dzjmoo']/span
-${earnestportal_totaltransaction_targetcount}                   ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1vyjiic']
-${earnestportal_totaltransaction_bargraph}                      ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[2]/div/div/div/canvas
-${earnestportal_totaltransaction_percentearnestsov}             ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div/p[@class='MuiTypography-root MuiTypography-body1 css-14j5dp3']
-${earnestportal_totaltransaction_datebelowsov}                  ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-0']/p

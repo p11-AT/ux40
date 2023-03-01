@@ -69,8 +69,9 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     ...     - AND the percentage of progress or current achievement versus SOV target (See #10 on guide)
 
     Scroll Element Into View            ${earnestportal_activeinvestor_vsperiod_percentage}
-    Wait Until Element Is Visible       ${earnestportal_activeinvestor_vsperiod_percentage}     ${wait_short}
-    GET BACKGROUND COLOR v2             ${earnestportal_totaltransaction_vsperiod_percentage}
+    Wait Until Element Is Visible       ${earnestportal_activeinvestor_vsperiod_percentage}         ${wait_short}
+    Wait Until Element Is Visible       ${earnestportal_activeinvestor_vssovtarget_percentage}      ${wait_short}
+    GET BACKGROUND COLOR v2             ${earnestportal_activeinvestor_vsperiod_percentage}
     GET BACKGROUND COLOR v2             ${earnestportal_activeinvestor_vssovtarget_percentage}
     Capture Page Screenshot             Active Intestor - Percentage VS Previous Period.png
 

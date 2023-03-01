@@ -37,7 +37,7 @@ CLICKING BUTTON VISIBLE AND ENABLED
 MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
     ${handles}      Get Window Handles
     Switch Window       ${handles}[1]
-    Wait Until Element Is Visible           ${earnestportal_email_input}                    20s
+    Wait Until Element Is Visible           ${earnestportal_email_input}                    ${wait_long}
     INPUTING TEXT VISIBLE AND ENABLED       ${earnestportal_email_input}                    ${email_rj}
     Capture Page Screenshot                 Input Email.png
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_popup_next_btn}
