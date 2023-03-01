@@ -12,7 +12,8 @@ Resource            ../../Resources/Repository/EarnestPortal_46967_Repository.ro
 Resource            ../../Resources/Repository/Login_Repository.robot
 Resource            ../../Resources/Repository/Common_Repository.robot
 
-Suite Setup     Opening Browser         ${url_earnest_portal}     ${browser_chrome}
+Suite Setup         Opening Browser         ${url_earnest_portal}     ${browser_chrome}
+Suite Teardown      Close All Browsers
 *** Test Cases ***
 LOGGING IN EARNEST PORTAL
     [Documentation]
