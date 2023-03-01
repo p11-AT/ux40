@@ -37,16 +37,7 @@ ${earnestportal_activeinvestor_targetcount}                     ((//*/*/*[@class
 ${earnestportal_activeinvestor_bargraph}                        ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[2]/div/div/div/canvas
 ${earnestportal_activeinvestor_percentearnestsov}               ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[3]/div/p[@class='MuiTypography-root MuiTypography-body1 css-14j5dp3']
 ${earnestportal_activeinvestor_datebelowsov}                    ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-0']/p
-# NEW INVESTOR
-${earnestportal_newinvestor_vsperiod_percentage}                ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-k008qs']/p[1]
-${earnestportal_newinvestor_vssovtarget_percentage}             ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-1m29ivc']/p[1]
-${earnestportal_newinvestor_totalactiveinvestor}                ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1ojvtih']
-${earnestportal_newinvestor_newactiveinvestor}                  ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1dzjmoo']
-${earnestportal_newinvestor_newactiveinvestor_span}             ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1dzjmoo']/span
-${earnestportal_newinvestor_targetcount}                        ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[2]/div/div/p[@class='MuiTypography-root MuiTypography-body1 css-1vyjiic']
-${earnestportal_newinvestor_bargraph}                           ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[2]/div/div/div/canvas
-${earnestportal_newinvestor_percentearnestsov}                  ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[3]/div/p[@class='MuiTypography-root MuiTypography-body1 css-14j5dp3']
-${earnestportal_newinvestor_datebelowsov}                       ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[2]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-0']/p
+
 # TOTAL TRANSACTION
 ${earnestportal_totaltransaction_vsperiod_percentage}           ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-k008qs']/p[1]
 ${earnestportal_totaltransaction_vssovtarget_percentage}        ((//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[3]/div/div/div)[3]/div[@class='MuiBox-root css-0']/div[@class='MuiBox-root css-1m29ivc']/p[1]

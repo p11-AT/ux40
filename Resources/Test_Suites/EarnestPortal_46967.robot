@@ -1,15 +1,16 @@
 *** Settings ***
-Library         Selenium2Library
-Library         DateTime
+Documentation       [Portal] Dashboard - Show data for Acquisition - Active Investors
+Library             Selenium2Library
+Library             DateTime
 
 ### KEYWORDS ###
-Resource        ../../Resources/Keywords/EarnestPortal_46967_Keyword.robot
-Resource        ../../Resources/Keywords/CommonKeyword.robot
+Resource            ../../Resources/Keywords/EarnestPortal_46967_Keyword.robot
+Resource            ../../Resources/Keywords/CommonKeyword.robot
 
 ### REPOSITORY ###
-Resource        ../../Resources/Repository/EarnestPortal_46967_Repository.robot
-Resource        ../../Resources/Repository/Login_Repository.robot
-Resource        ../../Resources/Repository/Common_Repository.robot
+Resource            ../../Resources/Repository/EarnestPortal_46967_Repository.robot
+Resource            ../../Resources/Repository/Login_Repository.robot
+Resource            ../../Resources/Repository/Common_Repository.robot
 
 Suite Setup     Opening Browser         ${url_earnest_portal}     ${browser_chrome}
 *** Test Cases ***
@@ -100,10 +101,7 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     ...     - THEN a user should see a bar graph showing the current achievement vs target where the blue bar is the previous count
     ...     and the green bar is the new count of users in the selected period (See #4 on guide)
 
-    Wait Until Element Is Visible       ${earnestportal_activeinvestor_totalactiveinvestor}     ${wait_short}
-    Wait Until Element Is Visible       ${earnestportal_activeinvestor_newactiveinvestor}       ${wait_short}
-    CONVERTING STRING TO INTEGER        ${earnestportal_activeinvestor_newactiveinvestor_span}
-    Wait Until Element Is Visible       ${earnestportal_activeinvestor_targetcount}             ${wait_short}
+    Wait Until Element Is Visible       ${earnestportal_activeinvestor_bargraph}        ${wait_short}
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 5
     [Documentation]

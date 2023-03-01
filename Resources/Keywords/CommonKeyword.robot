@@ -5,7 +5,7 @@ Library             Collections
 Library             OperatingSystem
 Library             String
 Library             DateTime
-#Library             ExcelLibrary
+Library             ExcelLibrary
 #Library             AutoItLibrary
 #Library             DatabaseLibrary
 
@@ -83,6 +83,54 @@ VALIDATING LEGENDS LABEL
     Log                         ${legend_list_1}
     Log                         ${legend_list_2}
     Lists Should Be Equal       ${legend_list_1}    ${legend_list_2}
+
+GET BACKGROUND COLOR v2
+    [Arguments]     ${ElementField}
+    Wait Until Element Is Visible       ${ElementField}     ${wait_long}
+    ${elem1}    Get Webelement          ${ElementField}
+    ${color}    Call Method             ${elem1}    value_of_css_property    color
+    Log                                 ${color}
+
+    ${percentage_val}  set variable  ${color}
+    Log    ${percentage_val}
+    Run Keyword If      '${percentage_val}' == '${earnestportal_color_red1}'        Log To Console    \n Percentage is Low
+    ...  ELSE IF        '${percentage_val}' == '${earnestportal_color_gray1}'       Log To Console    \n Percentage is Default
+
+CONVERTING STRING TO INTEGER
+    [Arguments]         ${element_field}
+    ${val}              Get Text                ${element_field}
+    ${splited_val}      Split String    ${val}
+    ${conver_val1}      Convert To Integer    ${splited_val}[0]
+    Log    ${conver_val1}
+
+Get Test Data From Excel
+    [Arguments]   ${tc_no}
+    Open Excel Document    ${TestDataPath}\\TestData.xlsx     Sheet1
+    FOR  ${i}  IN RANGE  2  23
+        ${RowVal}   Read excel row      row_num=${i}      sheet_name=Sheet1
+        exit for loop if  '${RowVal[0]}'=='${tc_no}'
+    END
+    close all excel documents
+    [Return]  ${RowVal[1]}
+
+Get Test Data From Excel v2
+    [Arguments]   ${tc_no}      ${rownum}       ${getrowval}
+    Open Excel Document    ${test_data_path}\\Sample Test Data Excel.xlsx     Sheet1
+    FOR  ${i}  IN RANGE  1  5
+        ${RowVal}   Read excel row      row_num=${i}      sheet_name=Sheet1
+        exit for loop if  '${RowVal[${getrowval}]}'=='${tc_no}'
+    END
+    close all excel documents
+    [Return]  ${RowVal[${rownum}]}
+    Should Be Equal As Strings    ${tc_no}    ${RowVal[${rownum}]}
+
+Get Test Data From Excel v3
+    [Arguments]   ${row_num}
+    Open Excel Document    ${test_data_path}\\Sample Test Data Excel.xlsx     Sheet1
+    ${RowVal}   Read excel row      row_num=${row_num}     sheet_name=Sheet1
+    Log To Console    \n ${RowVal}
+
+    close all excel documents
 
 *** Comments ***
 GET BACKGROUND COLOR

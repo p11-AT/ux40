@@ -1,15 +1,16 @@
 *** Settings ***
-Library         Selenium2Library
-Library         DateTime
+Documentation       [Portal] Dashboard - Show data for Acquisition - Total Registered
+Library             Selenium2Library
+Library             DateTime
 
 ### KEYWORDS ###
-Resource        ../../Resources/Keywords/EarnestPortal_46966_Keyword.robot
-Resource        ../../Resources/Keywords/CommonKeyword.robot
+Resource            ../../Resources/Keywords/EarnestPortal_46966_Keyword.robot
+Resource            ../../Resources/Keywords/CommonKeyword.robot
 
 ### REPOSITORY ###
-Resource        ../../Resources/Repository/EarnestPortal_46966_Repository.robot
-Resource        ../../Resources/Repository/Login_Repository.robot
-Resource        ../../Resources/Repository/Common_Repository.robot
+Resource            ../../Resources/Repository/EarnestPortal_46966_Repository.robot
+Resource            ../../Resources/Repository/Login_Repository.robot
+Resource            ../../Resources/Repository/Common_Repository.robot
 
 Suite Setup     Opening Browser         ${url_earnest_portal}     ${browser_chrome}
 *** Test Cases ***

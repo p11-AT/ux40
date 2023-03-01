@@ -4,6 +4,8 @@ ${wait_long}            60s
 ${wait_mid}             30s
 ${wait_short}           15s
 
+${test_data_path}       C:\\Users\\RomeoSuarezconsultan\\PycharmProjects\\Earnest_Portal\\ux40\\Resources\\Test_Datas
+
 ### LEGENDS ###
 ${legend_branch}        Branch
 ${legend_earnest}       Earnest
