@@ -10,4 +10,3 @@ ${ep47082_tooltip_totaltransaction_btn}     (//*/*/*[@class='MuiGrid-root MuiGri
 ${ep47082_tooltip_value}                    //*[@class='MuiTooltip-tooltip MuiTooltip-tooltipPlacementBottom css-1spb1s5']
 ${ep47082_tooltip_value_1}                  Earnest % share vs all\nactive UITF clients
 ${ep47082_tooltip_value_2}                  Earnest % share vs all\nnew UITF clients
-

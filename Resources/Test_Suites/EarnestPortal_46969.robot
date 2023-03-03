@@ -30,7 +30,7 @@ Suite Teardown      Close All Browsers
     ...     *** Owner RJ ***
     ...     2/23/2023
 
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
+    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
 
 46969 [Portal] Dashboard - Show data for Acquisition - New Investors STEP 1
     [Documentation]
@@ -68,8 +68,8 @@ Suite Teardown      Close All Browsers
     Scroll Element Into View            ${ep46969_newinvestor_vsperiod_percentage}
     Wait Until Element Is Visible       ${ep46969_newinvestor_vsperiod_percentage}          ${wait_short}
     Wait Until Element Is Visible       ${ep46969_newinvestor_vssovtarget_percentage}       ${wait_short}
-    GET BACKGROUND COLOR v2             ${ep46969_newinvestor_vsperiod_percentage}
-    GET BACKGROUND COLOR v2             ${ep46969_newinvestor_vssovtarget_percentage}
+    GET BACKGROUND COLOR v2             ${ep46969_newinvestor_vsperiod_percentage}          ${earnestportal_color_gray1}
+    GET BACKGROUND COLOR v2             ${ep46969_newinvestor_vssovtarget_percentage}       ${earnestportal_color_gray1}
     Capture Page Screenshot             New Investors - Percentage VS Previous Period.png
 
 46969 [Portal] Dashboard - Show data for Acquisition - New Investors STEP 3

@@ -29,7 +29,7 @@ Suite Teardown      Close All Browsers
     ...     *** Owner RJ ***
     ...     2/23/2023
 
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
+    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
 #    Scroll Element Into View    (//table)[1]
 #    Capture Page Screenshot             bottom page.png
 
@@ -78,6 +78,11 @@ Suite Teardown      Close All Browsers
     ...     the green bar is the new count of users in the selected period (See #4 on the image guide above)
 
     Wait Until Element Is Visible       ${ep46966_acquisition_bargraphusercount}            ${wait_short}
+    Mouse Over                          ${ep46966_acquisition_bargraphusercount}
+    Sleep    1s
+    Capture Page Screenshot             bargraph tooltip.png
+#    Wait Until Page Contains    Annual target\n8400     ${wait_short}
+#    ${tooltip_val}                      Get Text        ${ep46966_bargraph_tooltip}
 
 #46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 4
 #    [Documentation]

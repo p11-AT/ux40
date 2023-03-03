@@ -33,7 +33,7 @@ Suite Teardown      Close All Browsers
     ...     *** Owner RJ ***
     ...     3/2/2023
 
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
+    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
 
 47082 [Portal] Dashboard - SOV tooltips STEP 1
     [Documentation]
@@ -47,25 +47,25 @@ Suite Teardown      Close All Browsers
     ...     - Note: Tooltips bubbles will not appear all at once
 
     ### ACTIVE INVESTOR TOOLTIP VALIDATION
-    Scroll Element Into View            ${ep47082_activeinvestor_form}
-    Wait Until Element Is Visible       ${ep47082_activeinvestor_form}              ${wait_short}
+    Scroll Element Into View            ${earnestportal_activeinvestor_form}
+    Wait Until Element Is Visible       ${earnestportal_activeinvestor_form}                ${wait_short}
     Mouse Over                          ${ep47082_tooltip_activeinvestor_btn}
     ${tooltip_actinvestorval}           Get Text        ${ep47082_tooltip_value}
-    Should Be Equal As Strings          ${ep47082_tooltip_value_1}                  ${tooltip_actinvestorval}
+    Should Be Equal As Strings          ${ep47082_tooltip_value_1}                          ${tooltip_actinvestorval}
     Capture Page Screenshot             Active Investor Tooltip validation.png
 
     ### NEW INVESTOR TOOLTIP VALIDATION
-    Scroll Element Into View            ${ep47082_newinvestor_form}
-    Wait Until Element Is Visible       ${ep47082_newinvestor_form}                 ${wait_short}
+    Scroll Element Into View            ${earnestportal_newinvestor_form}
+    Wait Until Element Is Visible       ${earnestportal_newinvestor_form}                   ${wait_short}
     Mouse Over                          ${ep47082_tooltip_newinvestor_btn}
     ${tooltip_newinvestorval}           Get Text        ${ep47082_tooltip_value}
-    Should Be Equal As Strings          ${ep47082_tooltip_value_2}                  ${tooltip_newinvestorval}
+    Should Be Equal As Strings          ${ep47082_tooltip_value_2}                          ${tooltip_newinvestorval}
     Capture Page Screenshot             New Investor Tooltip validation.png
 
     ### TOTAL TRANSACTION TOOLTIP VALIDATION
-    Scroll Element Into View            ${ep47082_totaltransaction_form}
-    Wait Until Element Is Visible       ${ep47082_totaltransaction_form}            ${wait_short}
+    Scroll Element Into View            ${earnestportal_totaltransaction_form}
+    Wait Until Element Is Visible       ${earnestportal_totaltransaction_form}              ${wait_short}
     Mouse Over                          ${ep47082_tooltip_totaltransaction_btn}
     ${tooltip_totaltransaction}         Get Text        ${ep47082_tooltip_value}
-    Should Be Equal As Strings          ${ep47082_tooltip_value_1}                  ${tooltip_totaltransaction}
+    Should Be Equal As Strings          ${ep47082_tooltip_value_1}                          ${tooltip_totaltransaction}
     Capture Page Screenshot             Total Transaction Tooltip validation.png

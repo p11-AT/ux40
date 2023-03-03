@@ -33,7 +33,7 @@ Suite Teardown      Close All Browsers
     ...     *** Owner RJ ***
     ...     3/1/2023
 
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
+    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
 
 46976 [[Portal] Dashboard - Show data for Learn - Investors with 1 lesson STEP 1
     [Documentation]

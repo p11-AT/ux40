@@ -35,6 +35,7 @@ CLICKING BUTTON VISIBLE AND ENABLED
     Click Element                       ${element_field}
 
 MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
+    [Arguments]     ${verify_your_identity}
     ${handles}      Get Window Handles
     Switch Window       ${handles}[1]
     Wait Until Element Is Visible           ${earnestportal_email_input}                    ${wait_long}
@@ -45,7 +46,10 @@ MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
     Capture Page Screenshot                 Input Password.png
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_popup_next_btn}
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_icantaccesmyauthenticator}
-    CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_option_textmessage}
+    ${option_for_verification_code}         Set Variable        ${verify_your_identity}
+    Run Keyword If    '${option_for_verification_code}' == '${earnestportal_textmessage_option3}'                   CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_option_textmessage}
+    Run Keyword If    '${option_for_verification_code}' == '${earnestportal_msteamsverificationcode_option2}'       CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_option_msteamsverificationcode}
+
     Wait Until Element Is Visible           ${earnestportal_codeotp_input}                  20s
     ENTER OTP v2                            ${earnestportal_codeotp_input}
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_popup_verify_btn}
@@ -85,7 +89,7 @@ VALIDATING LEGENDS LABEL
     Lists Should Be Equal       ${legend_list_1}    ${legend_list_2}
 
 GET BACKGROUND COLOR v2
-    [Arguments]     ${ElementField}
+    [Arguments]     ${ElementField}     ${static_color_val}
     Wait Until Element Is Visible       ${ElementField}     ${wait_long}
     ${elem1}    Get Webelement          ${ElementField}
     ${color}    Call Method             ${elem1}    value_of_css_property    color
@@ -95,6 +99,8 @@ GET BACKGROUND COLOR v2
     Log    ${percentage_val}
     Run Keyword If      '${percentage_val}' == '${earnestportal_color_red1}'        Log To Console    \n Percentage is Low
     ...  ELSE IF        '${percentage_val}' == '${earnestportal_color_gray1}'       Log To Console    \n Percentage is Default
+    ...  ELSE IF        '${percentage_val}' == '${earnestportal_color_green2}'      Log To Console    \n Percentage is High
+    Should Be Equal As Strings          ${color}    ${static_color_val}
 
 CONVERTING STRING TO INTEGER
     [Arguments]         ${element_field}
@@ -105,32 +111,37 @@ CONVERTING STRING TO INTEGER
 
 Get Test Data From Excel
     [Arguments]   ${tc_no}
-    Open Excel Document    ${TestDataPath}\\TestData.xlsx     Sheet1
+    Open Excel Document    ${testdatapath}\\TestData.xlsx     Sheet1
     FOR  ${i}  IN RANGE  2  23
-        ${RowVal}   Read excel row      row_num=${i}      sheet_name=Sheet1
-        exit for loop if  '${RowVal[0]}'=='${tc_no}'
+        ${rowval}   Read excel row      row_num=${i}      sheet_name=Sheet1
+        exit for loop if  '${rowval[0]}'=='${tc_no}'
     END
     close all excel documents
-    [Return]  ${RowVal[1]}
+    [Return]  ${rowval[1]}
 
 Get Test Data From Excel v2
     [Arguments]   ${tc_no}      ${rownum}       ${getrowval}
     Open Excel Document    ${test_data_path}\\Sample Test Data Excel.xlsx     Sheet1
     FOR  ${i}  IN RANGE  1  5
-        ${RowVal}   Read excel row      row_num=${i}      sheet_name=Sheet1
-        exit for loop if  '${RowVal[${getrowval}]}'=='${tc_no}'
+        ${rowval}   Read excel row      row_num=${i}      sheet_name=Sheet1
+        exit for loop if  '${rowval[${getrowval}]}'=='${tc_no}'
     END
     close all excel documents
-    [Return]  ${RowVal[${rownum}]}
-    Should Be Equal As Strings    ${tc_no}    ${RowVal[${rownum}]}
+    [Return]  ${rowval[${rownum}]}
+    Should Be Equal As Strings    ${tc_no}    ${rowval[${rownum}]}
 
 Get Test Data From Excel v3
     [Arguments]   ${row_num}
     Open Excel Document    ${test_data_path}\\Sample Test Data Excel.xlsx     Sheet1
-    ${RowVal}   Read excel row      row_num=${row_num}     sheet_name=Sheet1
-    Log To Console    \n ${RowVal}
+    ${rowval}   Read excel row      row_num=${row_num}     sheet_name=Sheet1
+    Log To Console    \n ${rowval}
 
     close all excel documents
+
+VALIDATE ELEMENT ATTRIBUTE VALUE
+    [Arguments]     ${element_field}        ${attribute}        ${attribute_Value}
+    Wait Until Element Is Visible    ${element_field}       60s
+    Element Attribute Value Should Be    ${element_field}    ${attribute}    ${attribute_Value}     #Element Attribute Value Should Be    ${element_field}    type    ${attribute_Value}
 
 *** Comments ***
 GET BACKGROUND COLOR

@@ -29,7 +29,7 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     ...     *** Owner RJ ***
     ...     2/23/2023
 
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
+    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
 #    Scroll Element Into View    (//table)[1]
 #    Capture Page Screenshot             bottom page.png
 
@@ -71,8 +71,8 @@ VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
     Scroll Element Into View            ${earnestportal_activeinvestor_vsperiod_percentage}
     Wait Until Element Is Visible       ${earnestportal_activeinvestor_vsperiod_percentage}         ${wait_short}
     Wait Until Element Is Visible       ${earnestportal_activeinvestor_vssovtarget_percentage}      ${wait_short}
-    GET BACKGROUND COLOR v2             ${earnestportal_activeinvestor_vsperiod_percentage}
-    GET BACKGROUND COLOR v2             ${earnestportal_activeinvestor_vssovtarget_percentage}
+    GET BACKGROUND COLOR v2             ${earnestportal_activeinvestor_vsperiod_percentage}         ${earnestportal_color_gray1}
+    GET BACKGROUND COLOR v2             ${earnestportal_activeinvestor_vssovtarget_percentage}      ${earnestportal_color_gray1}
     Capture Page Screenshot             Active Intestor - Percentage VS Previous Period.png
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 3

@@ -30,7 +30,7 @@ Suite Teardown      Close All Browsers
     ...     *** Owner RJ ***
     ...     3/1/2023
 
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
+    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
 
 46972 [Portal] Dashboard - Show data for Transactions - Total Transactions STEP 1
     [Documentation]
@@ -67,8 +67,8 @@ Suite Teardown      Close All Browsers
 
     Wait Until Element Is Visible       ${ep46972_vsperiod_percentage}          ${wait_short}
     Wait Until Element Is Visible       ${ep46972_vssovtarget_percentage}       ${wait_short}
-    GET BACKGROUND COLOR v2             ${ep46972_vsperiod_percentage}
-    GET BACKGROUND COLOR v2             ${ep46972_vssovtarget_percentage}
+    GET BACKGROUND COLOR v2             ${ep46972_vsperiod_percentage}          ${earnestportal_color_red1}
+    GET BACKGROUND COLOR v2             ${ep46972_vssovtarget_percentage}       ${earnestportal_color_gray1}
     Capture Page Screenshot             Total Transactions - Percentage VS Previous Period.png
 
 46972 [Portal] Dashboard - Show data for Transactions - Total Transactions STEP 3

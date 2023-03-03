@@ -5,3 +5,6 @@ ${ep46966_acquisition_percentgrowthnewuser}         (//*[@class='MuiCardContent-
 ${ep46966_acquisition_percentproglefttotartget}     (//*[@class='MuiCardContent-root css-wul74v'])[1]/div[4]/p
 ${ep46966_acquisition_targetcount}                  (//*[@class='MuiCardContent-root css-wul74v'])[1]/p
 ${ep46966_acquisition_bargraphusercount}            (//*[@class='MuiCardContent-root css-wul74v'])[1]/div[3]/canvas
+
+### TOOLTIP ###
+${ep46966_bargraph_tooltip}                         //*[@data-foo='bar']
