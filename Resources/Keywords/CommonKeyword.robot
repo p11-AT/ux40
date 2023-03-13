@@ -22,27 +22,40 @@ Opening Browser
     Sleep    2s
     Capture Page Screenshot             Open Browser.png
 
+    Wait Until Element Is Visible       ${earnestportal_login_btn}     ${wait_mid}
+    Click Element                       ${earnestportal_login_btn}
+    Capture Page Screenshot             Logging In.png
+
+    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
+
 INPUTING TEXT VISIBLE AND ENABLED
     [Arguments]     ${element_field}        ${input_text}
-    Wait Until Element Is Visible       ${element_field}        20s
-    Wait Until Element Is Enabled       ${element_field}        20s
+    Wait Until Element Is Visible       ${element_field}        ${wait_long}
+    Wait Until Element Is Enabled       ${element_field}        ${wait_long}
     Input Text                          ${element_field}        ${input_text}
 
 CLICKING BUTTON VISIBLE AND ENABLED
     [Arguments]     ${element_field}
-    Wait Until Element Is Visible       ${element_field}        20s
-    Wait Until Element Is Enabled       ${element_field}        20s
+    Wait Until Element Is Visible       ${element_field}        ${wait_long}
+    Wait Until Element Is Enabled       ${element_field}        ${wait_long}
     Click Element                       ${element_field}
 
 MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
     [Arguments]     ${verify_your_identity}
     ${handles}      Get Window Handles
     Switch Window       ${handles}[1]
+    Sleep    1s
     Wait Until Element Is Visible           ${earnestportal_email_input}                    ${wait_long}
-    INPUTING TEXT VISIBLE AND ENABLED       ${earnestportal_email_input}                    ${email_rj}
+    ${login_title}      Get Window Titles
+    Log To Console    \n${login_title[1]}
+    Should Be Equal As Strings    Sign in to your account    ${login_title[1]}
+
+    ${email_excel_input}            Get Test Data From Excel v4     Login Credentials       ${email_rj}     0
+    INPUTING TEXT VISIBLE AND ENABLED       ${earnestportal_email_input}                    ${email_excel_input}
     Capture Page Screenshot                 Input Email.png
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_popup_next_btn}
-    INPUTING TEXT VISIBLE AND ENABLED       ${earnestportal_passw_input}                    ${passw_rj}
+    ${email_pass_excel_input}       Get Test Data From Excel v4     Login Credentials       ${email_rj}     1
+    INPUTING TEXT VISIBLE AND ENABLED       ${earnestportal_passw_input}                    ${email_pass_excel_input}
     Capture Page Screenshot                 Input Password.png
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_popup_next_btn}
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_icantaccesmyauthenticator}
@@ -50,13 +63,16 @@ MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION
     Run Keyword If    '${option_for_verification_code}' == '${earnestportal_textmessage_option3}'                   CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_option_textmessage}
     Run Keyword If    '${option_for_verification_code}' == '${earnestportal_msteamsverificationcode_option2}'       CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_option_msteamsverificationcode}
 
-    Wait Until Element Is Visible           ${earnestportal_codeotp_input}                  20s
+    Wait Until Element Is Visible           ${earnestportal_codeotp_input}                  ${wait_long}
     ENTER OTP v2                            ${earnestportal_codeotp_input}
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_popup_verify_btn}
     CLICKING BUTTON VISIBLE AND ENABLED     ${earnestportal_popup_no_btn}
     Sleep    5s
     Switch Window                           ${handles}[0]
-    Wait Until Element Is Visible           ${earnestportal_ep_img}                         60s
+    Wait Until Element Is Visible           ${earnestportal_ep_img}                         ${wait_long}
+    Wait Until Element Is Visible           ${earnestportal_homepageheader_form}            ${wait_long}
+    Wait Until Element Is Visible           ${earnestportal_homepagesidepanel_form}         ${wait_long}
+    Wait Until Element Is Visible           ${earnestportal_main_form}                      ${wait_long}
     Capture Page Screenshot                 dashboard.png
 
 ENTER OTP v2
@@ -70,8 +86,31 @@ GET BACKGROUND COLOR
     ${elem1}    Get Webelement          ${ElementField}
     ${color}    Call Method             ${elem1}    value_of_css_property    background-color
     Log                                 ${color}
+    Log                                 ${ElementField}
     Log                                 ${static_color_val}
     Should Be Equal As Strings          ${color}    ${static_color_val}
+
+GET FONT WEIGHT
+    [Arguments]     ${ElementField}     ${static_fondweight_val_expected}
+    Wait Until Element Is Visible       ${ElementField}     ${wait_long}
+    ${elem1}    Get Webelement          ${ElementField}
+    ${fontweight_val_actual}    Call Method             ${elem1}    value_of_css_property    font-weight
+    Run Keyword If    '${fontweight_val_actual}'=='400'    Log To Console       \n${fontweight_val_actual} = Normal
+    Run Keyword If    '${fontweight_val_actual}'=='400'    Log                  ${fontweight_val_actual} = Normal
+    Run Keyword If    '${fontweight_val_actual}'=='500'    Log To Console       \n${fontweight_val_actual} = Medium
+    Run Keyword If    '${fontweight_val_actual}'=='500'    Log                  ${fontweight_val_actual} = Medium
+    Run Keyword If    '${fontweight_val_actual}'=='600'    Log To Console       \n${fontweight_val_actual} = Semi Bold
+    Run Keyword If    '${fontweight_val_actual}'=='600'    Log                  ${fontweight_val_actual} = Semi Bold
+    Run Keyword If    '${fontweight_val_actual}'=='700'    Log To Console       \n${fontweight_val_actual} = Bold
+    Run Keyword If    '${fontweight_val_actual}'=='700'    Log                  ${fontweight_val_actual} = Bold
+    Should Be Equal As Strings          ${fontweight_val_actual}    ${static_fondweight_val_expected}
+
+GET CSS STYLE VALUE
+    [Arguments]     ${ElementField}     ${css_style}        ${static_fondweight_val_expected}
+    Wait Until Element Is Visible       ${ElementField}     ${wait_long}
+    ${elem1}    Get Webelement          ${ElementField}
+    ${fontweight_val_actual}    Call Method             ${elem1}    value_of_css_property    ${css_style}
+    Should Be Equal As Strings          ${fontweight_val_actual}    ${static_fondweight_val_expected}
 
 VALIDATING LEGENDS LABEL
     [Arguments]                 ${element_field}        ${legend1}      ${legend2}      ${legend3}
@@ -110,14 +149,15 @@ CONVERTING STRING TO INTEGER
     Log    ${conver_val1}
 
 Get Test Data From Excel
-    [Arguments]   ${tc_no}
-    Open Excel Document    ${testdatapath}\\TestData.xlsx     Sheet1
-    FOR  ${i}  IN RANGE  2  23
+    [Arguments]   ${tc_no}      ${row_val_select_index}
+    Open Excel Document    ${testdatapath}\\Login Credentials.xlsx     Sheet1
+    FOR  ${i}  IN RANGE  2  5
         ${rowval}   Read excel row      row_num=${i}      sheet_name=Sheet1
         exit for loop if  '${rowval[0]}'=='${tc_no}'
     END
     close all excel documents
     [Return]  ${rowval[1]}
+    Log    ${rowval[1]}
 
 Get Test Data From Excel v2
     [Arguments]   ${tc_no}      ${rownum}       ${getrowval}
@@ -138,12 +178,31 @@ Get Test Data From Excel v3
 
     close all excel documents
 
+Get Test Data From Excel v4
+    [Arguments]   ${excel_file_name}        ${text_to_find}        ${row_val_select_index}
+    Open Excel Document    ${testdatapath}\\${excel_file_name}.xlsx     Sheet1
+    FOR  ${i}  IN RANGE  2  5
+        ${rowval}   Read excel row      row_num=${i}      sheet_name=Sheet1
+        exit for loop if  '${rowval[0]}'=='${text_to_find}'
+    END
+    close all excel documents
+    [Return]  ${rowval[${row_val_select_index}]}
+    Log    ${rowval[${row_val_select_index}]}
+
 VALIDATE ELEMENT ATTRIBUTE VALUE
     [Arguments]     ${element_field}        ${attribute}        ${attribute_Value}
     Wait Until Element Is Visible    ${element_field}       60s
     Element Attribute Value Should Be    ${element_field}    ${attribute}    ${attribute_Value}     #Element Attribute Value Should Be    ${element_field}    type    ${attribute_Value}
 
+VALIDATING GET TEXT VALUE
+    [Arguments]     ${element_field}        ${expected_value}
+    Wait Until Element Is Visible           ${element_field}        ${wait_long}
+    ${text_val}     Get Text                ${element_field}
+    Should Be Equal As Strings              ${text_val}             ${expected_value}
+
 *** Comments ***
+    Log    ${test_data_path}
+    Get Test Data From Excel v3         4
 GET BACKGROUND COLOR
     [Arguments]     ${ElementField}     ${Color}
     Wait Until Element Is Visible    ${ElementField}

@@ -16,30 +16,8 @@ Resource            ../../Resources/Repository/Common_Repository.robot
 Suite Setup         Opening Browser         ${url_earnest_portal}     ${browser_chrome}
 Suite Teardown      Close All Browsers
 *** Test Cases ***
-46975 LOGGING IN EARNEST PORTAL
-    [Documentation]
-    ...     *** Owner RJ ***
-    ...     2/23/2023
-
-    Wait Until Element Is Visible       ${earnestportal_login_btn}     ${wait_mid}
-    Click Element                       ${earnestportal_login_btn}
-    Capture Page Screenshot             Logging In.png
-
-    Log    ${test_data_path}
-    Get Test Data From Excel v3         4
-
-46975 VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
-    [Documentation]
-    ...     *** Owner RJ ***
-    ...     3/1/2023
-
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
-
 46975 [Portal] Dashboard - Show data for Learn - Users who completed 1 lesson STEP 1
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 3/1/2023
-    ...     Updated 3/1/2023
     ...     The numerical value of the total number of users who have completed at least 1 lesson should be visible.
     ...     - GIVEN a user is in the Learn section of the dashboard
     ...     - WHEN a user looks at "Total users who completed 1 lesson"
@@ -53,9 +31,6 @@ Suite Teardown      Close All Browsers
 
 46975 [Portal] Dashboard - Show data for Learn - Users who completed 1 lesson STEP 2
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 3/1/2023
-    ...     Updated 3/1/2023
     ...     There should be a comparison of the data to the previous period and to the target
     ...     - GIVEN a user is in the Learn section of the dashboard
     ...     - WHEN a user looks at "Total users who completed 1 lesson"
@@ -70,9 +45,6 @@ Suite Teardown      Close All Browsers
 
 46975 [Portal] Dashboard - Show data for Learn - Users who completed 1 lesson STEP 3
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 3/1/2023
-    ...     Updated 3/1/2023
     ...     The progress or current achievement versus target should be visualized
     ...     - GIVEN a user is in the Learn section of the dashboard
     ...     - WHEN a user looks at "Total users who completed 1 lesson"
@@ -84,9 +56,6 @@ Suite Teardown      Close All Browsers
 
 46975 [Portal] Dashboard - Show data for Learn - Users who completed 1 lesson STEP 4
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 3/1/2023
-    ...     Updated 3/1/2023
     ...     Show a bubble on the graph when the user hovers on it
     ...     - GIVEN a user is in the Learn section of the dashboard
     ...     - WHEN user hovers on ANY point in the graph the bar graph

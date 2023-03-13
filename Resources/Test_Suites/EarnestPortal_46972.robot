@@ -16,22 +16,6 @@ Resource            ../../Resources/Repository/Common_Repository.robot
 Suite Setup         Opening Browser         ${url_earnest_portal}     ${browser_chrome}
 Suite Teardown      Close All Browsers
 *** Test Cases ***
-46972 LOGGING IN EARNEST PORTAL
-    [Documentation]
-    ...     *** Owner RJ ***
-    ...     2/23/2023
-
-    Wait Until Element Is Visible       ${earnestportal_login_btn}     ${wait_mid}
-    Click Element                       ${earnestportal_login_btn}
-    Capture Page Screenshot             Logging In.png
-
-46972 VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
-    [Documentation]
-    ...     *** Owner RJ ***
-    ...     3/1/2023
-
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
-
 46972 [Portal] Dashboard - Show data for Transactions - Total Transactions STEP 1
     [Documentation]
     ...     *** Owner RJ ***

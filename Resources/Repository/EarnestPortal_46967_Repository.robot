@@ -1,8 +1,6 @@
 *** Variables ***
 ${email_rj}                                                 romeo.consultant@platform-11.com
 ${passw_rj}                                                 RJVertere2023
-### BUTTON ###
-${earnestportal_login_btn}                                      //button[text()='Log in']
 
 ### INPUT ###
 ${earnestportal_email_input}                                    //input[@id='i0116']
@@ -23,8 +21,7 @@ ${earnestportal_icantaccesmyauthenticator}                      //a[@id='signInA
 #${earnestportal_option_msteamsverificationcode}                 //*[@class='table-row']/*[@class='table-cell text-left content']/div[contains (text(),'Use a verification code')]
 #${earnestportal_option_msteamsverificationcode}                 //*[@class='table-row']/*[@class='table-cell text-left content']/div[contains (text(),'Approve a request on my Microsoft Authenticator app')]
 
-### IMG ###
-${earnestportal_ep_img}                                         //img[@alt='earnest logo']
+
 
 ### LABELS ###
 ${earnestportal_legend_label}                                   (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1dpqs7r']/div/div

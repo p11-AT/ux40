@@ -15,30 +15,9 @@ Resource            ../../Resources/Repository/Common_Repository.robot
 Suite Setup         Opening Browser         ${url_earnest_portal}     ${browser_chrome}
 Suite Teardown      Close All Browsers
 *** Test Cases ***
-46966 LOGGING IN EARNEST PORTAL
-    [Documentation]
-    ...     *** Owner RJ ***
-    ...     2/23/2023
-
-    Wait Until Element Is Visible       ${earnestportal_login_btn}     ${wait_mid}
-    Click Element                       ${earnestportal_login_btn}
-    Capture Page Screenshot             Logging In.png
-
-46966 VERIFYING CREDENTIAL AND TWO WAY FACTOR AUTHORIZATION
-    [Documentation]
-    ...     *** Owner RJ ***
-    ...     2/23/2023
-
-    MANAGING POP UP LOGIN SYSTEM WITH TWO WAY FACTOR AUTHENTICATION     ${earnestportal_msteamsverificationcode_option2}
-#    Scroll Element Into View    (//table)[1]
-#    Capture Page Screenshot             bottom page.png
-
-
 46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 1
     [Documentation]
     ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     The Total Registered Users data should show the total cumulative number of registered Earnest users since launch
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at the "Total Registered Users"
@@ -47,14 +26,21 @@ Suite Teardown      Close All Browsers
     
     Scroll Element Into View            ${ep46966_acquisition_target}
     Wait Until Element Is Visible       ${ep46966_acquisition_target}                   ${wait_short}
-    Wait Until Element Is Visible       ${ep46966_acquisition_totalregitereduser}       ${wait_short}
-    Capture Page Screenshot             Total registered user.png
+
+    ### VALIDATING total number of registered Earnest users
+    VALIDATING TEXT IS IN NUMERIC VALUE     ${ep46966_acquisition_totalregitereduser}
+#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_totalregitereduser}       32px        600     44.8px
+    Capture Page Screenshot                 Total registered user.png
+
+    ### VALIDATING total number of registered Earnest users
+    VALIDATING TEXT IS IN NUMERIC VALUE     ${ep46966_acquisition_percentgrowthnewuser}
+#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentgrowthnewuser}       14px        700     16.8px
+    GET CSS STYLE VALUE                     ${ep46966_acquisition_percentgrowthnewuser}    color        ${earnestportal_color_green2}
+    Capture Page Screenshot                 New user added.png
 
 46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 2
     [Documentation]
     ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     There should be a comparison of the data to the previous period and to the target
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at "Total Registered Users"
@@ -62,15 +48,24 @@ Suite Teardown      Close All Browsers
     ...     - AND the percentage of progress left to target (See #5 on the image guide above)
     ...     - AND the target count (See #6 on the image guide above)
 
-    Wait Until Element Is Visible       ${ep46966_acquisition_percentgrowthnewuser}         ${wait_short}
-    Wait Until Element Is Visible       ${ep46966_acquisition_percentproglefttotartget}     ${wait_short}
-    Wait Until Element Is Visible       ${ep46966_acquisition_targetcount}                  ${wait_short}
+    ### VALIDATING PERCENTAGE GROWTH OF NEW USERS VERSUS THE PREVIOUS PERIOD
+    Wait Until Element Is Visible       ${ep46966_acquisition_percentgrowthnewuservsperiod}         ${wait_short}
+#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentgrowthnewuservsperiod}       12px        400     16.8px
+    GET CSS STYLE VALUE                     ${ep46966_acquisition_percentgrowthnewuservsperiod}     color        ${earnestportal_color_red1}
+
+    ### VALIDATING PERCENTAGE OF PROGRESS LEFT TO TARGET
+    Wait Until Element Is Visible       ${ep46966_acquisition_percentproglefttotartget}         ${wait_short}
+#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentproglefttotartget}       12px        700     14.4px
+    GET CSS STYLE VALUE                 ${ep46966_acquisition_percentproglefttotartget}         color        ${earnestportal_color_gray1}
+
+    ### VALIDATING TARGET COUNT
+    Wait Until Element Is Visible       ${ep46966_acquisition_targetcount}                      ${wait_short}
+#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_targetcount}       16px        400     16.8px
+    GET CSS STYLE VALUE                 ${ep46966_acquisition_targetcount}         color        ${earnestportal_color_gray1}
 
 46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 3
     [Documentation]
     ...     *** Owner RJ ***
-    ...     Created 2/28/2023
-    ...     Updated 2/28/2023
     ...     The progress or current achievement versus target should be visualized
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at "Total Registered Users"
@@ -83,7 +78,7 @@ Suite Teardown      Close All Browsers
     Capture Page Screenshot             bargraph tooltip.png
 #    Wait Until Page Contains    Annual target\n8400     ${wait_short}
 #    ${tooltip_val}                      Get Text        ${ep46966_bargraph_tooltip}
-
+#
 #46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 4
 #    [Documentation]
 #    ...     *** Owner RJ ***
@@ -93,5 +88,3 @@ Suite Teardown      Close All Browsers
 #    ...     - GIVEN a user is in the Acquisition section of the dashboard
 #    ...     - WHEN user hovers on ANY point in the graph the bar graph
 #    ...     - THEN display a bubble that shows the new users added in a fixed area (follow the UI on Figma).
-#
-#
