@@ -29,12 +29,12 @@ Suite Teardown      Close All Browsers
 
     ### VALIDATING total number of registered Earnest users
     VALIDATING TEXT IS IN NUMERIC VALUE     ${ep46966_acquisition_totalregitereduser}
-#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_totalregitereduser}       32px        600     44.8px
+#    46966 GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_totalregitereduser}       32px        600     44.8px
     Capture Page Screenshot                 Total registered user.png
 
     ### VALIDATING total number of registered Earnest users
     VALIDATING TEXT IS IN NUMERIC VALUE     ${ep46966_acquisition_percentgrowthnewuser}
-#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentgrowthnewuser}       14px        700     16.8px
+#    46966 GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentgrowthnewuser}       14px        700     16.8px
     GET CSS STYLE VALUE                     ${ep46966_acquisition_percentgrowthnewuser}    color        ${earnestportal_color_green2}
     Capture Page Screenshot                 New user added.png
 
@@ -50,17 +50,17 @@ Suite Teardown      Close All Browsers
 
     ### VALIDATING PERCENTAGE GROWTH OF NEW USERS VERSUS THE PREVIOUS PERIOD
     Wait Until Element Is Visible       ${ep46966_acquisition_percentgrowthnewuservsperiod}         ${wait_short}
-#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentgrowthnewuservsperiod}       12px        400     16.8px
+#    46966 GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentgrowthnewuservsperiod}       12px        400     16.8px
     GET CSS STYLE VALUE                     ${ep46966_acquisition_percentgrowthnewuservsperiod}     color        ${earnestportal_color_red1}
 
     ### VALIDATING PERCENTAGE OF PROGRESS LEFT TO TARGET
     Wait Until Element Is Visible       ${ep46966_acquisition_percentproglefttotartget}         ${wait_short}
-#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentproglefttotartget}       12px        700     14.4px
+#    46966 GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_percentproglefttotartget}       12px        700     14.4px
     GET CSS STYLE VALUE                 ${ep46966_acquisition_percentproglefttotartget}         color        ${earnestportal_color_gray1}
 
     ### VALIDATING TARGET COUNT
     Wait Until Element Is Visible       ${ep46966_acquisition_targetcount}                      ${wait_short}
-#    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_targetcount}       16px        400     16.8px
+#    46966 GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${ep46966_acquisition_targetcount}       16px        400     16.8px
     GET CSS STYLE VALUE                 ${ep46966_acquisition_targetcount}         color        ${earnestportal_color_gray1}
 
 46966 [Portal] Dashboard - Show data for Acquisition - Total Registered STEP 3

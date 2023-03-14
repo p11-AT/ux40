@@ -6,6 +6,7 @@ Library             OperatingSystem
 Library             String
 Library             DateTime
 Library             ExcelLibrary
+Library             CommonValidationsKeywords.py
 #Library             AutoItLibrary
 #Library             DatabaseLibrary
 
@@ -13,6 +14,7 @@ Library             ExcelLibrary
 Resource            ../../Resources/Repository/Common_Repository.robot
 Resource            ../../Resources/Repository/EarnestPortal_46967_Repository.robot
 Resource            ../../Resources/Repository/EarnestPortal_46966_Repository.robot
+
 
 *** Keywords ***
 Opening Browser
@@ -200,6 +202,59 @@ VALIDATING GET TEXT VALUE
     ${text_val}     Get Text                ${element_field}
     Should Be Equal As Strings              ${text_val}             ${expected_value}
 
+GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT
+    [Arguments]     ${element_field}        ${element_fontsize}     ${element_fontweight}       ${element_fontheight}
+    GET CSS STYLE VALUE                 ${element_field}       ${css_font_size}        ${element_fontsize}
+    GET CSS STYLE VALUE                 ${element_field}       ${css_font_weight}      ${element_fontweight}
+    GET CSS STYLE VALUE                 ${element_field}       ${css_font_height}      ${element_fontheight}
+    Capture Page Screenshot             Total registered user.png
+
+SORTING OF COST SHEET NO Z TO A REVERSED EARNEST PORTAL
+    [Arguments]     ${Element1}
+    ${getcount}     Selenium2Library.Get Element Count    ${Element1}
+    @{list1}=        Create List
+    FOR    ${counter}    IN RANGE    1    ${getcount}+1
+        Log    ${counter}
+        ${newcounter}       Evaluate    ${counter}-1
+        ${elem}    Get Webelement    ${Element1}
+        Mouse Over    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${val}      Get Text    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${getcount}       Set Variable        ${val}
+        Append To List      ${list1}        ${val}
+        Log    ${list1}
+        @{original_order}       Copy List    ${list1}
+        Log    ${original_order}
+        ${reversed1_list}            reverse_sorting_ignore_case    ${original_order}
+        Log    ${reversed1_list}
+        Should Be Equal As Strings    ${original_order[${newcounter}]}    ${reversed1_list[${newcounter}]}
+    END
+    Log    ${original_order}
+    Log    ${reversed1_list}
+    Should Be True    ${original_order}==${reversed1_list}
+
+SORTING OF COST SHEET NO A TO Z EARNEST PORTAL
+    [Arguments]     ${Element1}
+    ${getcount}     Selenium2Library.Get Element Count    ${Element1}
+    @{list1}=        Create List
+    FOR    ${counter}    IN RANGE    1    ${getcount}+1
+        Log    ${counter}
+        ${newcounter}       Evaluate    ${counter}-1
+        ${elem}    Get Webelement    ${Element1}
+        Mouse Over    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${val}      Get Text    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${getcount}       Set Variable        ${val}
+        Append To List      ${list1}        ${val}
+        Log    ${list1}
+        ${original_order}       Copy List    ${list1}
+        Log    ${original_order}
+        ${sorted_list}          sorting_ignore_case    ${original_order}
+        Log    ${sorted_list}
+        Should Be Equal As Strings    ${original_order[${newcounter}]}    ${sorted_list[${newcounter}]}
+    END
+    Log    ${original_order}
+    Log    ${sorted_list}
+    Should Be True    @{original_order}==${sorted_list}
+
 *** Comments ***
     Log    ${test_data_path}
     Get Test Data From Excel v3         4
@@ -227,3 +282,50 @@ VALIDATE ELEMENT ATTRIBUTE VALUE
     [Arguments]     ${Element_field}        ${Attribute_Value}
     Wait Until Element Is Visible    ${Element_field}       60s
     Element Attribute Value Should Be    ${Element_field}    type    ${Attribute_Value}
+
+
+SORTING OF COST SHEET NO A TO Z PURCHASE EQUIPMENT
+    [Arguments]     ${Element1}
+    ${getcount}     Selenium2Library.Get Element Count    ${Element1}
+    @{list1}=        Create List
+    FOR    ${counter}    IN RANGE    1    ${getcount}+1
+        Log    ${counter}
+        ${newcounter}       Evaluate    ${counter}-1
+        ${elem}    Get Webelement    ${Element1}
+        Mouse Over    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${val}      Get Text    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${getcount}       Set Variable        ${val}
+        Append To List      ${list1}        ${val}
+        Log    ${list1}
+        ${original_order}       Copy List    ${list1}
+        Log    ${original_order}
+        ${sorted_list}          sorting_ignore_case    ${original_order}
+        Log    ${sorted_list}
+        Should Be Equal As Strings    ${original_order[${newcounter}]}    ${sorted_list[${newcounter}]}
+    END
+    Log    ${original_order}
+    Log    ${sorted_list}
+    Should Be True    @{original_order}==${sorted_list}
+
+SORTING OF COST SHEET NO Z TO A REVERSED PURCHASE EQUIPMENT
+    [Arguments]     ${Element1}
+    ${getcount}     Selenium2Library.Get Element Count    ${Element1}
+    @{list1}=        Create List
+    FOR    ${counter}    IN RANGE    1    ${getcount}+1
+        Log    ${counter}
+        ${newcounter}       Evaluate    ${counter}-1
+        ${elem}    Get Webelement    ${Element1}
+        Mouse Over    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${val}      Get Text    (//*[@id="cost-sheet-SearchList-table"]/tbody/tr/td[4])[${counter}]
+        ${getcount}       Set Variable        ${val}
+        Append To List      ${list1}        ${val}
+        Log    ${list1}
+        @{original_order}       Copy List    ${list1}
+        Log    ${original_order}
+        ${reversed1_list}            ReverseSortingIgnoreCase    ${original_order}
+        Log    ${reversed1_list}
+        Should Be Equal As Strings    ${original_order[${newcounter}]}    ${reversed1_list[${newcounter}]}
+    END
+    Log    ${original_order}
+    Log    ${reversed1_list}
+    Should Be True    ${original_order}==${reversed1_list}

@@ -12,7 +12,7 @@ Resource        ../../Resources/Repository/EarnestPortal_46966_Repository.robot
 Resource        ../../Resources/Repository/Common_Repository.robot
 
 *** Keywords ***
-GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT
+46966 GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT
     [Arguments]     ${element_field}        ${element_fontsize}     ${element_fontweight}       ${element_fontheight}
     GET CSS STYLE VALUE                 ${element_field}       ${css_font_size}        ${element_fontsize}
     GET CSS STYLE VALUE                 ${element_field}       ${css_font_weight}      ${element_fontweight}

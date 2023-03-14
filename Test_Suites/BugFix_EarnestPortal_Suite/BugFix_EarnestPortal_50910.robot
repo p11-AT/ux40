@@ -24,8 +24,9 @@ Suite Teardown      Close All Browsers
     ...     - WHEN a user is on the homepage
     ...     - THEN a user should see the Product Performance metrics
 
-    VALIDATE ELEMENT ATTRIBUTE VALUE        ${earnestportal_main_form}      ${earnestportal_id}     ${earnestportal_sidemenu_performance}
-    Wait Until Element Is Visible    ${earnestportal_body_main_form}        ${wait_long}
-    Sleep    300s
+    VALIDATE ELEMENT ATTRIBUTE VALUE        ${earnestportal_main_form}          ${earnestportal_id}     ${earnestportal_sidemenu_performance}
+    Wait Until Element Is Visible           ${earnestportal_body_main_form}     ${wait_long}
+    Wait Until Element Is Not Visible       ${earnestportal_body_main_form}     300s
+#    Sleep    300s
     Element Should Not Be Visible    ${earnestportal_body_main_form}
     Capture Page Screenshot         Should be Logged Out.png

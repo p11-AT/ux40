@@ -1,7 +1,8 @@
 # ux40
 
 # Run ALL TEST SUITES
-robot -d Result\EarnestPortal_all Resources\Test_Suites
+robot -d Result\EarnestPortal_Suite Test_Suites\EarnestPortal_Suite
+robot -d Result\EarnestPortal_Suite Test_Suites\EarnestPortal_Suite
 
 # Bug Fixes
 robot -d Result\BugFix_EarnestPortal_50910 Resources\Test_Suites\BugFix_EarnestPortal_50910.robot

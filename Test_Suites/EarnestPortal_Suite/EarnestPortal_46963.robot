@@ -24,6 +24,8 @@ Suite Teardown      Close All Browsers
     ...     - THEN a user should be able to successfully log into the portal
 
     Wait Until Element Is Visible           ${earnestportal_logout_btn}                 ${wait_long}
+    GETTING FONT WEIGH, FONT SIZE AND LINE HEIGHT OF ELEMENT        ${earnestportal_logout_btn}     16px        400     24px    # should 14px 400 16.8px
+
     Click Element                           ${earnestportal_logout_btn}
     Wait Until Element Is Not Visible       ${earnestportal_logout_btn}                 ${wait_long}
     Wait Until Element Is Not Visible       ${earnestportal_ep_img}                     ${wait_long}

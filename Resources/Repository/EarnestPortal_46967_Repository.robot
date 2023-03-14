@@ -21,7 +21,8 @@ ${earnestportal_icantaccesmyauthenticator}                      //a[@id='signInA
 #${earnestportal_option_msteamsverificationcode}                 //*[@class='table-row']/*[@class='table-cell text-left content']/div[contains (text(),'Use a verification code')]
 #${earnestportal_option_msteamsverificationcode}                 //*[@class='table-row']/*[@class='table-cell text-left content']/div[contains (text(),'Approve a request on my Microsoft Authenticator app')]
 
-
+### FORM ###
+${ep46967_active_investors_form}                                (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]
 
 ### LABELS ###
 ${earnestportal_legend_label}                                   (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]/div/div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-1dpqs7r']/div/div

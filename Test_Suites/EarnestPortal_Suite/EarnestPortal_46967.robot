@@ -17,9 +17,6 @@ Suite Teardown      Close All Browsers
 *** Test Cases ***
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 1
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     The data should show the share of Earnest, Branch, and Online active investors of total UITF active investors
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at the "Active Investors"
@@ -27,8 +24,8 @@ Suite Teardown      Close All Browsers
     ...     total UITF active investors (See #2 on guide)
     ...     - AND data labels of each segment (See #1 on guide) (Add colors to follow here)
 
-    Scroll Element Into View            (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]
-    Wait Until Element Is Visible       (//*/*/*[@class='MuiGrid-root MuiGrid-container css-1d3bbye'])[1]       20s
+    Scroll Element Into View            ${ep46967_active_investors_form}
+    Wait Until Element Is Visible       ${ep46967_active_investors_form}       20s
     ### VALIDATING LEGEND VALID TEXT/LABEL
     VALIDATING LEGENDS LABEL            ${earnestportal_legend_label}       ${legend_branch}        ${legend_online}        ${legend_earnest}
     ### VALIDATING BACKGROUND COLOR OF LEGEND
@@ -40,9 +37,6 @@ Suite Teardown      Close All Browsers
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 2
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     There should be a comparison of the data to the previous period and to the target
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at "Active Investors"
@@ -58,9 +52,6 @@ Suite Teardown      Close All Browsers
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 3
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     The progress or current achievement versus target should be visualized
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at "Active Investors" numbers
@@ -75,9 +66,6 @@ Suite Teardown      Close All Browsers
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 4
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     The progress or current achievement versus target should be visualized
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at "Active Investors"
@@ -88,9 +76,6 @@ Suite Teardown      Close All Browsers
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 5
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     The Share of Voice (SOV) of Earnest should be visible as a percentage of the total number of active investors
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user looks at "Active Investors" numbers
@@ -110,9 +95,6 @@ Suite Teardown      Close All Browsers
 
 46967 [Portal] Dashboard - Show data for Acquisition - Active Investors STEP 6
     [Documentation]
-    ...     *** Owner RJ ***
-    ...     Created 2/27/2023
-    ...     Updated 2/27/2023
     ...     Show a bubble on the donut chart when the user hovers on EACH section
     ...     - GIVEN a user is in the Acquisition section of the dashboard
     ...     - WHEN a user hovers on the donut chart under "Active Investors"
